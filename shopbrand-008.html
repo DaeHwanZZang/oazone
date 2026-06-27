@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="무한잉크 전문 오에이존. HP·엡손·캐논·브라더 호환 무한잉크 100ml·1000ml 판매.">
+<meta name="keywords" content="무한잉크, 아이시스잉크, HP무한잉크, 엡손무한잉크, 캐논무한잉크, 오에이존">
+<title>무한잉크 | 오에이존</title>
+<link rel="shortcut icon" href="http://www.ipctm.com/shopimages/dpcomputer/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --gray-light: #e2e8f0;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --radius: 12px;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06);
+    --shadow-hover: 0 4px 12px rgba(37,99,235,.15), 0 8px 32px rgba(0,0,0,.1);
+    --sidebar-w: 240px;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── 페이지 레이아웃 ── */
+  .page-layout { display: flex; align-items: flex-start; }
+
+  /* ── 사이드바 ── */
+  .sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    background: var(--white);
+    border-right: 1px solid var(--gray-light);
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-light) transparent;
+    z-index: 90;
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--gray-light); border-radius: 2px; }
+
+  .sidebar-title {
+    padding: 14px 18px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--gray);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--gray-light);
+    background: var(--bg);
+  }
+
+  .sb-item { border-bottom: 1px solid var(--gray-light); }
+
+  .sb-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    transition: background .15s, color .15s;
+    text-align: left;
+  }
+  .sb-toggle:hover { background: var(--primary-light); color: var(--primary); }
+  .sb-toggle.open { color: var(--primary); background: var(--primary-light); }
+  .sb-toggle svg { width: 14px; height: 14px; flex-shrink: 0; transition: transform .25s; opacity: .5; }
+  .sb-toggle.open svg { transform: rotate(180deg); opacity: 1; }
+
+  .sb-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .32s ease;
+    background: #fbfcfe;
+  }
+  .sb-submenu.open { max-height: 700px; }
+
+  .sb-group { padding: 6px 0; }
+  .sb-group-title {
+    display: block;
+    padding: 4px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: .4px;
+    text-transform: uppercase;
+  }
+  .sb-submenu a {
+    display: block;
+    padding: 5px 18px 5px 28px;
+    font-size: 13px;
+    color: var(--gray);
+    transition: color .15s, background .15s;
+  }
+  .sb-submenu a:hover { color: var(--primary); background: var(--primary-light); }
+  .sb-submenu a.active { color: var(--primary); font-weight: 600; background: var(--primary-light); }
+
+  .sb-link {
+    display: block;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    transition: background .15s, color .15s;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .sb-link:hover { background: var(--primary-light); color: var(--primary); }
+
+  /* ── 메인 콘텐츠 ── */
+  .main-content { flex: 1; min-width: 0; }
+
+  /* ── 모바일 사이드바 ── */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 150;
+  }
+  .sidebar-overlay.show { display: block; }
+
+  .btn-menu-toggle {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .btn-menu-toggle svg { width: 18px; height: 18px; }
+
+  @media (max-width: 900px) {
+    .btn-menu-toggle { display: flex; }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: calc(-1 * var(--sidebar-w) - 10px);
+      height: 100vh;
+      z-index: 160;
+      transition: left .3s ease;
+    }
+    .sidebar.open { left: 0; box-shadow: 4px 0 24px rgba(0,0,0,.2); }
+    .page-layout { display: block; }
+  }
+
+  /* ── 유틸바 ── */
+  .util-bar { background: var(--dark); color: #94a3b8; font-size: 12px; }
+  .util-bar .inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    height: 36px; display: flex; align-items: center;
+    justify-content: flex-end; gap: 16px;
+  }
+  .util-bar a { transition: color .2s; }
+  .util-bar a:hover { color: var(--white); }
+  .util-bar .sep { color: #334155; }
+
+  /* ── 헤더 ── */
+  header {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 8px rgba(0,0,0,.06);
+  }
+  .header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    height: 72px; display: flex; align-items: center; gap: 32px;
+  }
+  .logo { display: flex; align-items: center; flex-shrink: 0; }
+  .logo img { height: 44px; width: auto; display: block; }
+
+  .search-form { flex: 1; max-width: 480px; position: relative; }
+  .search-form input {
+    width: 100%; height: 42px;
+    border: 1.5px solid var(--gray-light); border-radius: 8px;
+    padding: 0 48px 0 16px; font-size: 14px; font-family: inherit;
+    outline: none; transition: border-color .2s; background: var(--bg);
+  }
+  .search-form input:focus { border-color: var(--primary); background: var(--white); }
+  .search-form button {
+    position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    background: var(--primary); color: var(--white); border: none;
+    border-radius: 6px; width: 36px; height: 34px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; transition: background .2s;
+  }
+  .search-form button:hover { background: var(--primary-dark); }
+
+  .header-right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .btn-icon {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 2px; color: var(--gray); font-size: 11px; padding: 6px 10px;
+    border-radius: 8px; transition: background .2s, color .2s; cursor: pointer;
+  }
+  .btn-icon:hover { background: var(--primary-light); color: var(--primary); }
+  .btn-icon svg { width: 20px; height: 20px; }
+
+  /* ── 카테고리 히어로 배너 ── */
+  .cat-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
+    color: var(--white);
+    padding: 32px 32px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cat-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .cat-hero-inner { position: relative; max-width: 100%; }
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255,255,255,.7);
+    margin-bottom: 12px;
+  }
+  .breadcrumb a { color: rgba(255,255,255,.7); transition: color .2s; }
+  .breadcrumb a:hover { color: var(--white); }
+  .breadcrumb svg { width: 12px; height: 12px; opacity: .6; }
+  .cat-hero h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+  .cat-hero p { font-size: 14px; opacity: .85; }
+
+  /* ── 서브카테고리 탭 ── */
+  .sub-tabs {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .sub-tabs::-webkit-scrollbar { display: none; }
+  .sub-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color .15s, border-color .15s;
+  }
+  .sub-tab:hover { color: var(--primary); }
+  .sub-tab.active { color: var(--primary); font-weight: 700; border-bottom-color: var(--primary); }
+  .sub-tab .count {
+    font-size: 11px;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .sub-tab.active .count { background: var(--primary); color: white; }
+
+  /* ── 정렬·필터바 ── */
+  .sort-bar {
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .sort-bar-left { display: flex; align-items: center; gap: 8px; }
+  .sort-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1.5px solid var(--gray-light);
+    background: var(--white);
+    color: var(--gray);
+    transition: all .15s;
+  }
+  .sort-btn:hover { border-color: var(--primary); color: var(--primary); }
+  .sort-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+  .total-count { font-size: 13px; color: var(--gray); }
+  .total-count strong { color: var(--primary); font-weight: 700; }
+
+  /* ── 상품 그리드 ── */
+  .listing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 24px 32px;
+  }
+  @media (max-width: 1100px) { .listing-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 700px) { .listing-grid { grid-template-columns: repeat(2, 1fr); padding: 16px; } }
+
+  .product-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
+    display: block;
+    position: relative;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+  .product-card .thumb-wrap {
+    position: relative;
+    background: #fafafa;
+    border-bottom: 1px solid var(--gray-light);
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+  .product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 16px;
+    display: block;
+    transition: transform .3s;
+  }
+  .product-card:hover img { transform: scale(1.04); }
+
+  .badge-wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+  .badge-new { background: var(--primary); color: white; }
+  .badge-sale { background: #dc2626; color: white; }
+  .badge-best { background: #f59e0b; color: white; }
+
+  .product-info { padding: 14px; }
+  .product-info .brand { font-size: 11px; color: var(--gray); margin-bottom: 4px; font-weight: 500; }
+  .product-info h4 { font-size: 13px; font-weight: 500; line-height: 1.45; margin-bottom: 10px; color: var(--dark); }
+  .price-row { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+  .price { font-size: 17px; font-weight: 700; color: var(--primary); }
+  .price-org { font-size: 12px; color: var(--gray); text-decoration: line-through; font-weight: 400; }
+  .discount-rate { font-size: 12px; font-weight: 700; color: #dc2626; }
+
+  .card-actions {
+    padding: 0 14px 14px;
+    display: flex;
+    gap: 8px;
+  }
+  .btn-cart {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: all .2s;
+  }
+  .btn-cart-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+  }
+  .btn-cart-primary:hover { background: var(--primary-dark); }
+  .btn-cart-secondary {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid rgba(37,99,235,.2);
+  }
+  .btn-cart-secondary:hover { background: #dbeafe; }
+  .btn-cart svg { width: 13px; height: 13px; }
+
+  /* ── 페이지네이션 ── */
+  .pagination {
+    padding: 24px 32px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .page-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1.5px solid var(--gray-light);
+    background: var(--white);
+    color: var(--gray);
+    transition: all .15s;
+  }
+  .page-btn:hover { border-color: var(--primary); color: var(--primary); }
+  .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); font-weight: 700; }
+  .page-btn svg { width: 14px; height: 14px; }
+
+  /* ── 푸터 ── */
+  footer { background: var(--dark); color: #94a3b8; font-size: 13px; }
+  .footer-nav { background: #0f172a; padding: 16px 24px; }
+  .footer-nav .inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; flex-wrap: wrap; gap: 8px 24px;
+  }
+  .footer-nav a { color: #cbd5e1; font-size: 13px; font-weight: 500; transition: color .2s; }
+  .footer-nav a:hover { color: var(--white); }
+  .footer-nav .sep { color: #334155; }
+
+  .footer-body {
+    max-width: 1200px; margin: 0 auto;
+    padding: 32px 24px; display: flex; gap: 40px; flex-wrap: wrap;
+  }
+  .footer-logo img { height: 36px; width: auto; display: block; }
+  .footer-info { flex: 1; min-width: 280px; }
+  .footer-info p { margin-bottom: 4px; line-height: 1.7; }
+  .footer-info a { color: #60a5fa; }
+  .footer-info a:hover { text-decoration: underline; }
+  .footer-copy {
+    max-width: 1200px; margin: 0 auto;
+    padding: 16px 24px; border-top: 1px solid #1e293b;
+    font-size: 12px; color: #475569;
+  }
+</style>
+</head>
+<body>
+
+<!-- 유틸 바 -->
+<div class="util-bar">
+  <div class="inner">
+    <a href="http://www.ipctm.com/shop/member.html?type=login">로그인</a>
+    <span class="sep">|</span>
+    <a href="http://www.ipctm.com/shop/member.html">회원가입</a>
+    <span class="sep">|</span>
+    <a href="http://www.ipctm.com/shop/member.html?type=mynewmain">마이페이지</a>
+    <span class="sep">|</span>
+    <a href="http://www.ipctm.com/shop/confirm_login.html?type=myorder">주문조회</a>
+    <span class="sep">|</span>
+    <a href="http://www.ipctm.com/board/board.html?code=dpcomputer_board1">공지사항</a>
+  </div>
+</div>
+
+<!-- 헤더 -->
+<header>
+  <div class="header-inner">
+    <button class="btn-menu-toggle" onclick="toggleSidebar()" aria-label="메뉴">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      메뉴
+    </button>
+    <a href="index-new.html" class="logo">
+      <img src="http://www.ipctm.com/design/dpcomputer/img/logo.gif" alt="오에이존">
+    </a>
+    <form class="search-form" action="http://www.ipctm.com/shop/shopbrand.html" method="post">
+      <input type="text" name="search" placeholder="상품명, 브랜드를 검색하세요">
+      <button type="submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </form>
+    <div class="header-right">
+      <a href="http://www.ipctm.com/shop/basket.html" class="btn-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        장바구니
+      </a>
+      <a href="http://www.ipctm.com/shop/confirm_login.html?type=myorder" class="btn-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+        주문조회
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- 모바일 오버레이 -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- 페이지 레이아웃 -->
+<div class="page-layout">
+
+<!-- 왼쪽 사이드바 -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-title">전체 메뉴</div>
+
+  <!-- 잉크 (기본 열림) -->
+  <div class="sb-item">
+    <button class="sb-toggle open" onclick="toggleMenu(this)">
+      잉크
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="sb-submenu open">
+      <div class="sb-group">
+        <span class="sb-group-title">무한잉크</span>
+        <a href="shopbrand-008.html?mcode=001" class="active">HP 무한잉크 100ml</a>
+        <a href="shopbrand-008.html?mcode=002">엡손 무한잉크 100ml</a>
+        <a href="shopbrand-008.html?mcode=003">캐논 무한잉크 100ml</a>
+        <a href="shopbrand-008.html?mcode=004">브라더 무한잉크 100ml</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=009&type=X">무한잉크 1000ml</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">정품잉크</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=013&type=X&mcode=001">HP 정품잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=013&type=X&mcode=002">엡손 정품잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=013&type=X&mcode=003">캐논 정품잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=013&mcode=006&type=X">브라더 정품잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=013&type=X&mcode=005">삼성 정품잉크</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">재생잉크</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=029&type=X&mcode=001">HP 재생잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=029&type=X&mcode=002">엡손 재생잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=029&type=X&mcode=003">캐논 재생잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=029&type=X&mcode=004">삼성 재생잉크</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">번들정품잉크</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=034&mcode=001&type=X">HP 번들잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=034&mcode=002&type=X">엡손 번들잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=034&mcode=003&type=X">캐논 번들잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=034&mcode=004&type=X">삼성 번들잉크</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=034&mcode=005&type=X">브라더 번들잉크</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 토너 -->
+  <div class="sb-item">
+    <button class="sb-toggle" onclick="toggleMenu(this)">
+      토너
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="sb-submenu">
+      <div class="sb-group">
+        <span class="sb-group-title">무한토너</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=038&mcode=001&type=X">HP 무한토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=038&mcode=003&type=X">캐논 무한토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=038&mcode=004&type=X">삼성 무한토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=038&mcode=005&type=X">브라더 무한토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=038&mcode=006&type=X">제록스 무한토너</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">정품토너</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=015&mcode=001&type=X">HP 정품토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=015&mcode=003&type=X">캐논 정품토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=015&mcode=004&type=X">삼성 정품토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=015&mcode=005&type=X">제록스 정품토너</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">재생토너</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=028&mcode=001&type=X">HP 재생토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=028&mcode=004&type=X">캐논 재생토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=028&mcode=003&type=X">삼성 재생토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=028&mcode=005&type=X">제록스 재생토너</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">번들정품토너</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=035&mcode=001&type=X">HP 번들토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=035&mcode=003&type=X">캐논 번들토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=035&mcode=004&type=X">삼성 번들토너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=035&mcode=006&type=X">제록스 번들토너</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 무한잉크공급기 -->
+  <div class="sb-item">
+    <button class="sb-toggle" onclick="toggleMenu(this)">
+      무한잉크공급기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="sb-submenu">
+      <div class="sb-group">
+        <span class="sb-group-title">유선 무한잉크공급기</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=010&mcode=002&type=X">HP</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=010&mcode=001&type=X">엡손</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=010&mcode=006&type=X">캐논</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=010&mcode=003&type=X">삼성</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=010&mcode=004&type=X">브라더</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">무선 무한잉크공급기</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=036&mcode=001&type=X">HP</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=036&mcode=002&type=X">엡손</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=036&mcode=003&type=X">캐논</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=036&mcode=004&type=X">삼성</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=036&mcode=005&type=X">브라더</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">자동 무한잉크충전기</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=037&mcode=001&type=X">HP</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=037&mcode=002&type=X">엡손</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=037&mcode=003&type=X">캐논</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=037&mcode=004&type=X">삼성</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 프린터/복합기 -->
+  <div class="sb-item">
+    <button class="sb-toggle" onclick="toggleMenu(this)">
+      프린터/복합기
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="sb-submenu">
+      <div class="sb-group">
+        <span class="sb-group-title">잉크젯</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=006&type=X">컬러잉크젯 프린터</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=001&type=X">컬러잉크젯 복합기</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=031&type=X">포토프린터</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">레이저</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=004&type=X">모노레이저 프린터</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=002&type=X">모노레이저 복합기</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=005&type=X">컬러레이저 프린터</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=003&type=X">컬러레이저 복합기</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">스캐너/팩스</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=007&type=X">스캐너</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=039&type=X">팩스전용</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=030&type=X">도트프린터</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 기타 OA용품 -->
+  <div class="sb-item">
+    <button class="sb-toggle" onclick="toggleMenu(this)">
+      기타 OA용품
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <div class="sb-submenu">
+      <div class="sb-group">
+        <span class="sb-group-title">소모품</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=014&type=X">헤드</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=027&type=X">세정액</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=012&type=O">석션 및 클립</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=032&type=X">무한칩</a>
+      </div>
+      <div class="sb-group">
+        <span class="sb-group-title">전산용품</span>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=022&type=X">공시디</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=021&type=X">마우스</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=020&type=X">마우스패드</a>
+        <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=019&type=X">USB메모리</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=024&type=X" class="sb-link">중고시장</a>
+  <a href="http://www.ipctm.com/html/company.html" class="sb-link">회사소개</a>
+  <a href="http://www.ipctm.com/board/board.html?code=dpcomputer_board1" class="sb-link">공지사항</a>
+</aside>
+
+<!-- 메인 콘텐츠 -->
+<div class="main-content">
+
+  <!-- 카테고리 히어로 -->
+  <div class="cat-hero">
+    <div class="cat-hero-inner">
+      <div class="breadcrumb">
+        <a href="index-new.html">홈</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        <span>잉크</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        <span>무한잉크</span>
+      </div>
+      <h1>무한잉크 100ml</h1>
+      <p>HP · 엡손 · 캐논 · 브라더 전 모델 호환 · 아이시스 정품</p>
+    </div>
+  </div>
+
+  <!-- 서브카테고리 탭 -->
+  <div class="sub-tabs">
+    <a href="shopbrand-008.html" class="sub-tab active">
+      전체 <span class="count">142</span>
+    </a>
+    <a href="shopbrand-008.html?mcode=001" class="sub-tab">
+      HP <span class="count">48</span>
+    </a>
+    <a href="shopbrand-008.html?mcode=002" class="sub-tab">
+      엡손 <span class="count">36</span>
+    </a>
+    <a href="shopbrand-008.html?mcode=003" class="sub-tab">
+      캐논 <span class="count">31</span>
+    </a>
+    <a href="shopbrand-008.html?mcode=004" class="sub-tab">
+      브라더 <span class="count">27</span>
+    </a>
+    <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=009&type=X" class="sub-tab">
+      1000ml
+    </a>
+  </div>
+
+  <!-- 정렬 바 -->
+  <div class="sort-bar">
+    <div class="sort-bar-left">
+      <button class="sort-btn active" onclick="setSort(this)">최신순</button>
+      <button class="sort-btn" onclick="setSort(this)">인기순</button>
+      <button class="sort-btn" onclick="setSort(this)">낮은가격순</button>
+      <button class="sort-btn" onclick="setSort(this)">높은가격순</button>
+    </div>
+    <span class="total-count">총 <strong>16</strong>개 상품</span>
+  </div>
+
+  <!-- 상품 그리드 -->
+  <div class="listing-grid">
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=169213&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010001352.jpg?1597567190" alt="HP OJ9010 무한잉크 100ml/962 963 잉크 등 호환/9012" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP OJ9010 무한잉크 100ml/962 963 잉크 등 호환/9012</h4>
+        <div class="price-row">
+          <span class="price">5,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=1777883&xcode=008&mcode=002&scode=001&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080020001002.jpg?1775191611" alt="오에이존 6색호환 안료무한잉크 120ml / 엡손 L800 L8" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">엡손</p>
+        <h4>오에이존 6색호환 안료무한잉크 120ml / 엡손 L800 L8</h4>
+        <div class="price-row">
+          <span class="price">6,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=142753&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000942.jpg?1408956934" alt="HP [564번용 무한잉크100ml] 4색1세트 B110A/B210A/B2" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP [564번용 무한잉크100ml] 4색1세트 B110A/B210A/B2</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=136858&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000902.jpg?1375433330" alt="HP [920/922번용 무한잉크100ml] 4색 1SET OJ6000/OJ6" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP [920/922번용 무한잉크100ml] 4색 1SET OJ6000/OJ6</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=115106&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000142.jpg?1332987295" alt="HP 무한잉크 100ml SET/ 호환기종: B111A(PS5510)/B21" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP 무한잉크 100ml SET/ 호환기종: B111A(PS5510)/B21</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=142485&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000922.jpg?1389934924" alt="HP 5색무한잉크100ml SET / 호환기종:PS7510,PS7520,C" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP 5색무한잉크100ml SET / 호환기종:PS7510,PS7520,C</h4>
+        <div class="price-row">
+          <span class="price">25,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=135720&xcode=008&mcode=006&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080060000042.jpg?1389423560" alt="삼성 무한잉크100ml INK200 4색1set / 호환기종:SCX14" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">삼성</p>
+        <h4>삼성 무한잉크100ml INK200 4색1set / 호환기종:SCX14</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=105&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000032.jpg?1322502680" alt="HP무한전용잉크 SET C3110/C3100/C3108/ C3210/C3308/" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP무한전용잉크 SET C3110/C3100/C3108/ C3210/C3308/</h4>
+        <div class="price-row">
+          <span class="price">27,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=148099&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010001112.jpeg?1762760620" alt="HP [No.678용] 무한잉크 100ml 4색1세트 1015,1515,15" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP [No.678용] 무한잉크 100ml 4색1세트 1015,1515,15</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=104&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000022.jpg?1322502680" alt="HP무한전용잉크 SET BI1000/BN1100/BI1200/ BI1200N/B" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP무한전용잉크 SET BI1000/BN1100/BI1200/ BI1200N/B</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=106&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000042.jpg?1322502680" alt="HP 무한잉크 100ml 5색1SET/ 호환기종:C5380,C6380, C" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP 무한잉크 100ml 5색1SET/ 호환기종:C5380,C6380, C</h4>
+        <div class="price-row">
+          <span class="price">25,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=102803&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000122.jpg?1322502683" alt="HP 무한잉크 100ml SET / 호환기종:CP2200/CP2250/CP1" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP 무한잉크 100ml SET / 호환기종:CP2200/CP2250/CP1</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=107&xcode=008&mcode=001&scode=&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080010000052.jpg?1322502680" alt="HP리필전용잉크 SET D1360/D1460/D1550/D1560/D2360/D" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">HP</p>
+        <h4>HP리필전용잉크 SET D1360/D1460/D1550/D1560/D2360/D</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=110&xcode=008&mcode=002&scode=001&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080020000012.jpg?1322502680" alt="6색 엡손무한잉크 SET R210/R230/R310/R350/RX510/RX6" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">엡손</p>
+        <h4>6색 엡손무한잉크 SET R210/R230/R310/R350/RX510/RX6</h4>
+        <div class="price-row">
+          <span class="price">30,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=122142&xcode=008&mcode=002&scode=001&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080020000432.jpg?1381558364" alt="엡손무한잉크전용 ME340/MO-960FWD/WF7521/WF7011/WF7" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">엡손</p>
+        <h4>엡손무한잉크전용 ME340/MO-960FWD/WF7521/WF7011/WF7</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+    <a href="http://www.ipctm.com/shop/shopdetail.html?branduid=112&xcode=008&mcode=002&scode=001&type=X&search=&sort=order" class="product-card">
+      <div class="thumb-wrap">
+        <img src="http://www.ipctm.com/shopimages/dpcomputer/0080020000032.jpg?1322502680" alt="엡손무한잉크전용 T10/T21/TX100/TX102/ TX103/TX110/" loading="lazy">
+      </div>
+      <div class="product-info">
+        <p class="brand">엡손</p>
+        <h4>엡손무한잉크전용 T10/T21/TX100/TX102/ TX103/TX110/</h4>
+        <div class="price-row">
+          <span class="price">20,000 원</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="btn-cart btn-cart-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          장바구니
+        </button>
+        <button class="btn-cart btn-cart-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.21 3.35 2 2 0 0 1 3.17 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+          문의
+        </button>
+      </div>
+    </a>
+
+  </div><!-- /listing-grid -->
+
+  <!-- 페이지네이션 -->
+  <div class="pagination">
+    <button class="page-btn" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <button class="page-btn">4</button>
+    <button class="page-btn">5</button>
+    <button class="page-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+
+</div><!-- /main-content -->
+</div><!-- /page-layout -->
+
+<script>
+  function toggleMenu(btn) {
+    var submenu = btn.nextElementSibling;
+    var isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.sb-toggle.open').forEach(function(b) {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      submenu.classList.add('open');
+    }
+  }
+
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebarOverlay').classList.toggle('show');
+  }
+
+  function setSort(btn) {
+    document.querySelectorAll('.sort-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+</script>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-nav">
+    <div class="inner">
+      <a href="http://www.ipctm.com/html/company.html">회사소개</a>
+      <span class="sep">|</span>
+      <a href="http://ipctm.com/html/newpage.html?code=6">오프라인 전시판매장</a>
+      <span class="sep">|</span>
+      <a href="http://www.ipctm.com/board/board.html?code=dpcomputer_board1">공지사항</a>
+      <span class="sep">|</span>
+      <a href="http://www.ipctm.com/html/newpage.html?code=9">안료vs염료</a>
+      <span class="sep">|</span>
+      <a href="http://www.ipctm.com/shop/shopbrand.html?xcode=024&mcode=001&type=X">중고시장</a>
+      <span class="sep">|</span>
+      <a href="http://cafe.naver.com/colpoda/" target="_blank">자주묻는 질문</a>
+    </div>
+  </div>
+  <div class="footer-body">
+    <div class="footer-logo">
+      <img src="http://www.ipctm.com/design/dpcomputer/img/logo.gif" alt="오에이존">
+    </div>
+    <div class="footer-info">
+      <p>(주)대풍컴퓨터 · 대표 : 서창원</p>
+      <p>서울 광진구 광나루로56길 85 테크노마트 8층 B-123호</p>
+      <p>TEL : <a href="tel:0234248789">02-3424-8789</a></p>
+      <p>사업자등록번호 : 206-86-13937 · 통신판매업 신고번호 광진 제3371호</p>
+      <p>개인정보 담당자 : <a href="mailto:iciss@ipctm.com">김광희 (iciss@ipctm.com)</a></p>
+    </div>
+  </div>
+  <div class="footer-copy">
+    Copyright © 오에이존 (주)대풍컴퓨터. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
