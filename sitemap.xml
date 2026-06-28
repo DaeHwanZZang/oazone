@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 메인 -->
+  <url>
+    <loc>https://www.ipctm.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 회사소개 -->
+  <url>
+    <loc>https://www.ipctm.com/html/company.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 공지사항 -->
+  <url>
+    <loc>https://www.ipctm.com/board/board.html?code=dpcomputer_board1</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 잉크 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=008&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=009&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=013&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=029&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=034&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 토너 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=038&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=015&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=028&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=035&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 무한잉크공급기 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=010&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=036&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=037&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=033&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 프린터/복합기 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=001&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=006&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=004&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=002&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=005&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=003&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=031&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=007&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 기타 OA용품 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=014&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=032&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 중고시장 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?xcode=024&amp;type=X</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 신상품 / 특별할인 -->
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?type=N</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ipctm.com/shop/shopbrand.html?type=S</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
