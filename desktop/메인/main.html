@@ -1,0 +1,163 @@
+<!--/script_scroll(1)/-->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="contentWrap">
+            <div id="content">
+                <div id="main">
+                    <div class="visual-bner">
+                        <div class="visual">
+                            <a href="#"><img src="/design/dpcomputer/9607/makeshop/temp/tmp_visual.jpg" alt="" title="" /></a>
+                        </div>
+                        <ul class="bner">
+                            <li><a href="#"><img src="/design/dpcomputer/9607/makeshop/temp/tmp_side.jpg" alt="" title="" /></a></li>
+                            <li><a href="#"><img src="/design/dpcomputer/9607/makeshop/temp/tmp_join.gif" alt="" title="" /></a></li>
+                        </ul>
+                        <!--/if_notice/-->
+                        <dl class="notice">
+                            <dt>NOTICE<a href="<!--/link_notice/-->">MORE &gt;</a></dt>
+                            <dd>
+                                <ul>
+                                    <!--/loop_notice(4)/-->
+                                    <li><a href="<!--/notice@link_view/-->"><!--/notice@subject(34,...)/--></a><span><!--/notice@date/--></span></li>
+                                    <!--/end_loop/-->
+                                </ul>
+                            </dd>
+                        </dl>
+                        <!--/end_if/-->
+                    </div><!-- .visual-bner -->
+                    <!--/if_best_product/-->
+                    <div class="weekly-best">
+                        <h2><strong>WEEKLY</strong> BEST</h2>
+                        <div id="slider">
+                            <ul>
+                                <!--/loop_best_product(10)/-->
+                                <li>
+                                    <a class="cvr" href="<!--/best_product@link/-->"></a>
+                                    <a class="img" href="<!--/best_product@link/-->"><img src="<!--/best_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+                                    <div class="dsc">
+                                        <p><!--/best_product@name/--></p>
+                                        <del><!--/number/best_product@price_consumer/-->원</del><br />
+                                        <strong><!--/number/best_product@price_sell/-->원</strong>
+                                    </div>
+                                </li>
+                                <!--/end_loop/-->
+                            </ul>
+                        </div>
+                        <a class="btn-prev" href="#">이전</a>
+                        <a class="btn-next" href="#">다음</a>
+                    </div><!-- .weekly-best -->
+                    <!--/end_if/-->
+                    <div class="mprd-cm new-prd-list">
+                        <h2 class="tit-prd"><span><strong>NEW</strong> ARRIVALS</span></h2>
+                        <div class="prd-list">
+                            <table summary="상품이미지, 상품 설명, 가격">
+                                <caption>신규 아이템 상품 리스트</caption>
+                                <colgroup>
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <!--/loop_new_product(8)/-->
+                                        <td>
+                                            <div class="tb-center">
+                                                <ul class="info">
+                                                    <li><div class="thumb"><a href="<!--/new_product@link/-->"><img src="<!--/new_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a></div></li>
+                                                    <li class="dsc"><!--/new_product@icons/--> <!--/new_product@name(20)/--></li>
+                                                    <li class="price">
+                                                    <!--/if_new_product@price_replace/-->
+                                                           <!--/new_product@price_replace/-->
+                                                        <!--/else_if_new_product@is_soldout/-->
+                                                           Sold Out
+                                                    <!--/else/-->
+                                                        <!--/if_new_product@price_discount/-->
+                                                          <span><s><!--/number/new_product@price_sell/--></s>원</span>
+                                                          <!--/number/new_product@price_discount/-->원</dd>
+                                                        <!--/else/-->
+                                                          <!--/if_new_product@price_consumer(+1)/-->
+                                                             <span><s><!--/number/new_product@price_consumer/--></s>원</span>
+                                                             <!--/number/new_product@price_sell/-->원
+                                                          <!--/else/-->
+                                                             <!--/number/new_product@price_sell/-->원
+                                                          <!--/end_if/-->
+                                                        <!--/end_if/-->
+                                                    <!--/end_if/-->
+                                                    </li>
+                                                    <!--/if_new_product@link_preview/-->
+                                                    <li class="mt-5"><a href="<!--/new_product@link_preview/-->" class="btn-overlay-show"><img src="<!--/new_product@preview_icon/-->" alt="미리보기" title="미리보기" /></a></li>
+                                                    <!--/end_if/-->
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <!--/if_step(4)/-->
+                                    </tr><tr>
+                                        <!--/end_if/-->
+                                        <!--/end_loop/-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- .new-prd-list -->
+                    <div class="mprd-cm best-prd-list">
+                        <h2 class="tit-prd"><span><strong>SPECIAL</strong> ITEM</span></h2>
+                        <div class="prd-list">
+                            <table summary="상품이미지, 상품 설명, 가격">
+                                <caption>베스트 아이템 상품 리스트</caption>
+                                <colgroup>
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                    <col width="25%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <!--/loop_special_product(8)/-->
+                                        <td>
+                                            <div class="tb-center">
+                                                <ul class="info">
+                                                    <li><div class="thumb"><a href="<!--/special_product@link/-->"><img src="<!--/special_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a></div></li>
+                                                    <li class="dsc"><!--/special_product@icons/--> <!--/special_product@name(20)/--></li>
+                                                    <li class="price">
+                                                    <!--/if_special_product@price_replace/-->
+                                                           <!--/special_product@price_replace/-->
+                                                        <!--/else_if_special_product@is_soldout/-->
+                                                           Sold Out
+                                                    <!--/else/-->
+                                                        <!--/if_special_product@price_discount/-->
+                                                          <span><s><!--/number/special_product@price_sell/--></s>원</span>
+                                                          <!--/number/special_product@price_discount/-->원</dd>
+                                                        <!--/else/-->
+                                                          <!--/if_special_product@price_consumer(+1)/-->
+                                                             <span><s><!--/number/special_product@price_consumer/--></s>원</span>
+                                                             <!--/number/special_product@price_sell/-->원
+                                                          <!--/else/-->
+                                                             <!--/number/special_product@price_sell/-->원
+                                                          <!--/end_if/-->
+                                                        <!--/end_if/-->
+                                                    <!--/end_if/-->
+                                                    </li>
+                                                    <!--/if_special_product@link_preview/-->
+                                                    <li class="mt-5"><a class="btn-overlay-show" href="<!--/special_product@link_preview/-->"><img src="<!--/special_product@preview_icon/-->" alt="미리보기" title="미리보기" /></a></li>
+                                                    <!--/end_if/-->
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <!--/if_step(4)/-->
+                                    </tr><tr>
+                                        <!--/end_if/-->
+                                        <!--/end_loop/-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><!-- .best-prd-list -->
+                </div><!-- #main -->
+            </div><!-- #content -->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper-->
+    <hr />
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

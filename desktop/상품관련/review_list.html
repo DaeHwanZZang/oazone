@@ -1,0 +1,210 @@
+<!--/script_scroll(1)/-->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="contentWrap">
+            <!--/include_menu(1)/-->
+            <div id="content">
+                <div id="review">
+                    <h2 class="tit-page">Review Board</h2>
+                    <div class="page-body">
+                        <h3 class="tit-page-sub-1st">사용후기 검색</h3>
+                        <!--/form_search_review/-->
+                            <fieldset>
+                                <legend>사용후기 검색 폼</legend>
+                                <div class="table-type-1 table-sch">
+                                    <table summary="분류별 검색, 상품명 검색">
+                                        <caption>사용후기 검색</caption>
+                                        <colgroup>
+                                            <col width="105" />
+                                            <col width="*" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr class="bg">
+                                                <th scope="row"><div class="tb-center">분류별 검색</div></th>
+                                                <td>
+                                                    <div class="tb-left">
+                                                        <!--/select_cate1/--> <!-- 대분류선택 -->
+                                                        <!--/select_cate2/--> <!-- 중분류선택 -->
+                                                        <!--/select_cate3/--> <!-- 소분류선택 -->
+                                                        <!--/select_product/--> <!-- 상품선택 -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="nbg">
+                                                <th scope="row"><div class="tb-center">상품명 검색</div></th>
+                                                <td>
+                                                    <div class="tb-left">
+                                                        <!--/input_product_name(src)/--> 
+                                                        <a href="<!--/link_search/-->"><span class="CSSbutton">검색</span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </fieldset>
+                        <!--/end_form/-->
+
+                        <div class="table-review-info table-d2-list">
+                            <table summary="이미지, 상품명/상품리뷰, 작성자/평점, 등록일">
+                                <caption>리뷰 상품 정보</caption>
+                                <colgroup>
+                                    <col width="110" />
+                                    <col width="*" />
+                                    <col width="115" />
+                                    <col width="115" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="row"><div class="tb-center">이미지</div></th>
+                                        <th scope="row"><div class="tb-center">상품명/상품리뷰</div></th>
+                                        <th scope="row"><div class="tb-center">작성자/평점</div></th>
+                                        <th scope="row"><div class="tb-center">등록일</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <!--/if_notice/-->
+                                    <!--/loop_notice/-->
+                                    <tr>
+                                        <td>
+                                            <div class="tb-center">
+                                                공지
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-left">
+                                                <ul class="notice-list">
+                                                    <li>
+                                                        <strong><!--/notice@content/--></strong>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center">
+                                                <span class="d-block">관리자</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center">
+                                                <!--/notice@date_write/-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_loop/-->
+                                <!--/end_if/-->
+                                <!--/if_review/-->
+                                    <!--/loop_review/-->
+                                    <tr>
+                                        <td id="<!--/review@link_target/-->">
+                                            <div class="tb-center tb-thumb">
+                                                <!--/if_review@product_image_s/-->
+                                                <a href="<!--/review@link_product/-->"><img src="<!--/review@product_image_s/-->" width="50" height="50" alt="상품 섬네일" /></a>
+                                                <!--/else/-->
+                                                <img src="/images/common/noimage.gif" width="50" height="50" />
+                                                <!--/end_if/-->
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-left">
+                                                <ul>
+                                                    <li>
+                                                        <strong>상품명 : <a href="<!--/review@link_product/-->"><!--/review@product_name(100)/--></a></strong>
+</li>
+                                                    <li>
+                                                        <!--/if_review@link/-->
+                                                        <a href="<!--/review@link/-->"><!--/review@subject(50)/--><a/>
+                                                        <!--/else/-->
+                                                        <!--/review@subject(50)/-->
+                                                        <!--/end_if/-->
+                                                        <!--/if_review@attach_icon/--><img src="<!--/review@attach_icon/-->" /><!--/end_if/-->
+                                                        <!--/if_review@reply/-->
+                                                            <img src="/images/common/replyicon.gif" />
+                                                        <!--/end_if/-->
+                                                        <!--/if_review@link_modify/-->
+                                                            <a href="<!--/review@link_modify/-->"><img src="/images/common/review_update_btn.gif" /></a>
+                                                        <!--/end_if/-->
+                                                        <!--/if_review@link_delete/-->
+                                                            <a href="<!--/review@link_delete/-->"><img src="/images/common/review_delete_btn.gif" /></a>
+                                                        <!--/end_if/-->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center">
+                                                <span class="d-block"><!--/if_review@group_icon/--><img src="<!--/review@group_icon/-->" /><!--/end_if/--><!--/review@writer/--></span>
+                                                <span class="d-block">
+                                                    <!--/loop_review@score/-->
+                                                    <div><!--/review@score@icon/--></div>
+                                                    <!--/end_loop/-->
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="tb-center">
+                                                <!--/review@date_write/-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr id="review<!--/idx/-->" style="display:none">
+                                        <td colspan="4">
+                                            <div class="tb-left">
+                                            <!--/if_review@attach_image/-->
+                                            <img src="<!--/review@attach_image/-->" /><br />
+                                            <!--/end_if/-->
+                                            <!--/review@content/-->
+                                                <!--/if_review@reply/-->
+                                                <div class="tb-left">
+                                                    <img src="/images/common/reviewreply.gif"> <!--/review@reply/-->
+                                                </div>
+                                                <!--/end_if/-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_loop/-->
+                                <!--/end_if/-->
+                                </tbody>
+                            </table>
+                        </div><!-- .table-review-info -->
+                        
+                        <!-- 페이지 시작 -->
+
+                            <ol class="paging">
+                                <!--/if_pager_review::first@link/-->
+                                <li class="first"><a href="<!--/pager_review::first@link/-->">[처음]</a></li>
+                                <!--/end_if/-->
+                                <!--/if_pager_review::prev@link/-->
+                                <li class="prev"><a href="<!--/pager_review::prev@link/-->">[이전]</a></li>
+                                <!--/end_if/-->
+
+                                <!--/loop_pager_review::page/-->
+                                    <!--/if_pager_review::page@current/-->
+                                <li class="now"><a href="<!--/pager_review::current@link/-->"><!--/pager_review::current/--></a></li>
+                                    <!--/else/-->
+                                <li><a href="<!--/pager_review::page@link/-->"><!--/pager_review::page/--></a></li>
+                                    <!--/end_if/-->
+                                <!--/end_loop/-->
+
+                                <!--/if_pager_review::next@link/-->
+                                <li class="next"><a href="<!--/pager_review::next@link/-->">[다음]</a></li>
+                                <!--/end_if/-->
+                                <!--/if_pager_review::last@link/-->
+                                <li class="last"><a href="<!--/pager_review::last@link/-->">[끝]</a></li>
+                                <!--/end_if/-->
+                            </ol>
+
+                        <!-- 페이지 끝 -->
+                        
+                        <p class="foot-msg">
+                            최근 10,000개 까지 등록된 상품 사용후기를 확인하실 수 있습니다.
+                        </p>
+                    </div><!-- .page-body -->
+                </div><!-- #review -->
+            </div><!-- #content -->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper-->
+    <hr />
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

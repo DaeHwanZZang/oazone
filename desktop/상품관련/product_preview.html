@@ -1,0 +1,90 @@
+<!--/form_product/-->
+<div class="cnt">
+    <p class="loc">
+        <span>
+            <!--/if_cate1_name/--><!--/cate1_name/--><!--/end_if/-->
+            <!--/if_cate2_name/--> &gt; <!--/cate2_name/--><!--/end_if/-->
+            <!--/if_cate3_name/--> &gt; <!--/cate3_name/--><!--/end_if/-->
+        </span>
+    </p>
+    <div class="hd">
+        <h2><!--/cate1_name/--></h2>
+    </div><!-- .hd -->
+    <div class="detail">
+        <div class="thumb-wrap">
+            <div class="thumb">
+                <!--/if_image_m/-->
+                <img src="<!--/image_m/-->" alt="상품 섬네일" />
+                <!--/else/-->
+                <img src="/images/mini.gif" alt="상품 섬네일" />
+                <!--/end_if/-->
+            </div>
+            <div class="btns">
+                <a href="<!--/link_view_image/-->"><img src="/images/d3/modern_simple/btn/btn_h20_bimg_view.gif" alt="큰이미지 보기" /></a>
+                <a href="<!--/link_product_detail/-->"><img src="/images/d3/modern_simple/btn/btn_h20_prdimg_view.gif" alt="상품 자세히보기" /></a>
+            </div>
+        </div><!-- .thumb-wrap -->
+        <div class="txt-wrap">
+            <div class="prd-wish"><p><!--/block_wish_cnt/--><!--/wish_cnt/--><!--/end_block/--></p></div>
+            <h3 class="ptit"><!--/name/--> <!--/icons/--></h3>
+            <div class="table-opt">
+                <ul class="opt">
+                    <!--/if_price_consumer(+1)/-->
+                    <li>소비자가격 : <!--/number/price_consumer/-->원</li>
+                    <!--/end_if/-->
+                    <!--/if_reserve(+1)/-->
+                    <li>적립금 : <!--/reserve/--><!--/reserve_unit/--></li>
+                    <!--/end_if/-->
+                    <li class="s-price">판매가격 : <!--/if_price_replace/--><!--/price_replace/--><!--/else/--><!--/number/price_sell/-->원<!--/end_if/--></li>
+                    <!--/if_option_price_sell/-->
+                        <li>옵션적용가격 : <!--/number/option_price_sell/-->원</li>
+                    <!--/end_if/-->
+                    <!--/if_option/-->
+                        <!--/loop_option/-->
+                    <li><!--/option@title/--> : <!--/option@select/--></li>
+                        <!--/end_loop/-->
+                    <!--/end_if/-->
+                    <li class="opt-wrap">
+                        <div class="opt-ment">수량 :</div>
+                        <div class="opt-btns">
+                            <!--/input_quantity/-->
+                            <a href="<!--/link_quantity_up/-->"><img class="btn-up" src="/images/common/basket_up.gif" alt="수량증가" title="수량증가" /></a>
+                            <a href="<!--/link_quantity_down/-->"><img class="btn-dw" src="/images/common/basket_down.gif" alt="수량감소" title="수량감소" /></a>
+                        </div>
+                    </li>
+                    <!--/if_addcode/-->
+                    <li>특이사항 : <!--/addcode/--></li>
+                    <!--/end_if/-->
+                    <!--/if_nhn_mileage/-->
+                    <li>네이버 마일리지 : <!--/nhn_mileage/--><!--/btn_nhn_mileage_help/--></li>
+                    <!--/end_if/-->
+                    <li>
+                        <!--/if_btn_scrap_fb/--><!--/btn_scrap_fb/--><!--/end_if/-->
+                        <!--/if_btn_scrap_m2/--><!--/btn_scrap_m2/--><!--/end_if/-->
+                        <!--/if_btn_scrap_tw/--><!--/btn_scrap_tw/--><!--/end_if/-->
+                    </li>
+                    <li>재고 수량 : <!--/stock/--></li>
+                </ul>
+            </div><!-- .table-opt -->
+            <div class="f-btns">
+                <!--/if_soldout/-->
+                <a><img src="/images/d3/modern_simple/btn/btn_h22_soldout.gif" alt="품절" /></a>
+                <!--/else/-->
+                    <!--/if_cart_free/-->
+                        <a href="<!--/link_basket/-->" class="btn_cartfree">장바구니담기</a>
+                    <!--/else/-->
+                        <a href="<!--/link_immediate/-->"><img src="/images/d3/modern_simple/btn/btn_h22_now_buy.gif" alt="즉시구매" /></a>
+                        <a href="<!--/link_basket/-->"><img src="/images/d3/modern_simple/btn/btn_h22_cart_add.gif" alt="장바구니담기" /></a>
+                    <!--/end_if/-->
+                <!--/end_if/-->
+                <!--/if_not_cart_free/-->
+                    <!--/if_link_wish_toggle/-->
+                        <a href="<!--/link_wish_toggle/-->" class="btn_cart"><!--/block_btn_wish/--><em class="ico-wish"></em> 관심상픔 등록<!--/end_block/--></a>
+                    <!--/end_if/-->
+                <!--/end_if/-->
+            </div>
+        </div><!-- .txt-wrap -->
+    </div><!-- .detail -->
+</div><!-- .cnt -->
+<a class="close-layer" href="<!--/link_close/-->"><img src="/images/d3/modern_simple/btn/btn_prd_thumb_view_close.gif" alt="닫기" /></a>
+<!--/end_form/-->

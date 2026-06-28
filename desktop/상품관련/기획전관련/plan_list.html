@@ -1,0 +1,108 @@
+<!--/script_scroll(1)/-->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="contentWrap">
+            <!--/include_menu(1)/-->
+            <div id="content">
+                <div id="productPlanList">
+                    <div class="page-body">
+
+                        <ul class="plan-tab">
+                            <li<!--/if_view_type(ALL)/--> class="now"<!--/end_if/-->><a href="/shop/plan_list.html">전체</a></li>
+                            <li<!--/if_view_type(hold)/--> class="now"<!--/end_if/-->><a href="/shop/plan_list.html?view_type=hold">대기</a></li>
+                            <li<!--/if_view_type(ing)/--> class="now"<!--/end_if/-->><a href="/shop/plan_list.html?view_type=ing">진행중</a></li>
+                            <li<!--/if_view_type(end)/--> class="now"<!--/end_if/-->><a href="/shop/plan_list.html?view_type=end">종료</a></li>
+                        </ul>
+
+                        <div class="bbs-sch">
+                        <!--/form_plan/--><!-- .검색 폼시작 -->
+                            <fieldset>
+                                <legend>기획전 검색 폼</legend>
+                                <label>
+                                    <!--/radio_name/-->
+                                    이름
+                                </label>
+                                <span class="key-wrap">
+                                    <!--/input_keyword/-->
+                                    <a href="<!--/link_search/-->"><img src="/images/d3/modern_simple/btn/btn_bbs_sch.gif" alt="검색" title="검색" /></a>
+                                </span>
+                            </fieldset>
+                        <!--/end_form/--><!-- .검색 폼 끝 -->
+                        </div><!-- .bbs-sch -->
+
+                        <div class="prd-list-wrap">
+                            <div class="prd-list">
+                            <!--/block_plan/-->
+                                <!--/if_plan_list/-->
+                                    <table summary="기획전이미지, 기획전 설명">
+                                        <caption>기획전 리스트</caption>
+                                        <colgroup>
+                                            <col width="33.33%" />
+                                            <col width="33.33%" />
+                                            <col width="33.33%" />
+                                        </colgroup>
+                                        <tbody>
+                                          <tr>
+                                          <!--/loop_plan_list(6)/-->
+                                              <td>
+                                                  <div class="tb-center">
+                                                      <ul class="info">
+                                                          <li>
+                                                              <div class="thumb"><a href="<!--/plan_list@link/-->"><img src="<!--/plan_list@title_image/-->" alt="" title="기획전 섬네일" /></a></div>
+                                                          </li>
+                                                          <li class="dsc">
+                                                              <!--/plan_list@name(30)/--> (<!--/date(%m.%d)/plan_list@start_date/-->~<!--/date(%m.%d)/plan_list@end_date/-->)
+                                                          </li>
+                                                          <li>
+                                                              <!--/date(%Y/%M/%D)/plan_list@reg_date/-->
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </td>
+                                              <!--/if_step(3)/-->
+                                          </tr>
+                                          <tr>
+                                              <!--/end_if/-->
+                                          <!--/end_loop/-->
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                <!--/end_if/-->
+
+                                <ol class="paging">
+                                <!--/if_pager_plan_list::first/-->
+                                    <li class="first"><a href="<!--/pager_plan_list::first@link/-->">[처음]</a></li>
+                                <!--/end_if/-->
+                                <!--/if_pager_plan_list::prev/-->
+                                    <li class="prev"><a href="<!--/pager_plan_list::prev@link/-->">[이전]</a></li>
+                                <!--/end_if/-->
+                                <!--/if_pager_plan_list/-->
+                                    <!--/loop_pager_plan_list::page/-->
+                                        <!--/if_pager_plan_list::page@current/-->
+                                    <li><strong><!--/pager_plan_list::page/--></strong></li>
+                                        <!--/else/-->
+                                    <li><a href="<!--/pager_plan_list::page@link/-->"><!--/pager_plan_list::page/--></a></li>
+                                        <!--/end_if/-->
+                                    <!--/end_loop/-->
+                                <!--/end_if/-->
+                                <!--/if_pager_plan_list::next/-->
+                                    <li class="next"><a href="<!--/pager_plan_list::next@link/-->">[다음]</a></li>
+                                <!--/end_if/-->
+                                <!--/if_pager_plan_list::last/-->
+                                    <li class="last"><a href="<!--/pager_plan_list::last@link/-->">[끝]</a></li>
+                                <!--/end_if/-->
+                                </ol>
+                                
+                            <!--/end_block/-->
+                            </div><!-- //plan_list -->
+                        </div><!-- .prd-list-wrap -->
+
+                    </div><!-- .page-body -->
+                </div><!-- #productPlanList -->
+            </div><!-- #content -->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper-->
+    <hr />
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

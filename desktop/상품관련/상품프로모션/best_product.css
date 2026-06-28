@@ -1,0 +1,15 @@
+    /* prd-class-hd */
+#productClass .prd-class-hd { zoom: 1; overflow: hidden; padding: 8px 15px 5px; background-color: #c9c9c9; }
+#productClass .prd-class-hd h2 { float: left; font-size: 14px; text-transform: uppercase; font-weight: bold; color: #fff; }
+#productClass .prd-class-hd .loc-navi { float: right; color: #fff;  }
+#productClass .prd-class-hd .loc-navi a { color: #fff; }
+    /* class-list */
+#productClass .class-list { zoom: 1; overflow: hidden; padding: 15px }
+#productClass .class-list li,
+#productClass .class-list li a { float: left; width: auto; white-space: nowrap; }
+#productClass .class-list li { padding-left: 12px; margin-right: 12px; background: url(/images/d3/modern_simple/common/bull_h2_sqr_gray.gif) no-repeat 0 50%; }
+    /* best-item */
+#productClass .best-item { padding-top: 20px; padding-bottom: 10px; border-top: 2px solid #5c5c5c; border-bottom: 2px solid #5c5c5c; background-color: #f8f8f8; }
+#productClass .best-item h3 { margin-left: 20px; font-size: 0; line-height: 0;}
+    /* total-sort */
+#productClass .total-sort { padding-top: 30px; }

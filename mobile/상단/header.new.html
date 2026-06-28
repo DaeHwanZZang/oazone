@@ -1,0 +1,121 @@
+<!--/if_head_banner/-->
+    <!--/head_banner/-->
+<!--/end_if/-->
+
+<!-- ── 유틸 바 ── -->
+<div class="oaz-util-bar">
+  <div class="oaz-util-inner">
+    <!--/if_login/-->
+    <a href="<!--/link_logout/-->">로그아웃</a>
+    <span class="oaz-sep">|</span>
+    <!--/else/-->
+    <a href="<!--/link_login/-->">로그인</a>
+    <span class="oaz-sep">|</span>
+    <a href="/shop/member.html">회원가입</a>
+    <span class="oaz-sep">|</span>
+    <!--/end_if/-->
+    <a href="<!--/link_mypage/-->">마이페이지</a>
+    <span class="oaz-sep">|</span>
+    <a href="/shop/confirm_login.html?type=myorder">주문조회</a>
+    <span class="oaz-sep">|</span>
+    <a href="/board/board.html?code=dpcomputer_board1">공지사항</a>
+  </div>
+</div>
+
+<!-- ── 헤더 ── -->
+<div id="oaz-header">
+  <div class="oaz-header-inner">
+
+    <button class="oaz-btn-menu" onclick="oazToggleSidebar()" aria-label="메뉴 열기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      메뉴
+    </button>
+
+    <h1 class="oaz-logo">
+      <a href="<!--/link_home/-->">
+        <!--/if_img_shop_logo/-->
+          <img src="<!--/img_shop_logo/-->" alt="<!--/shop_name/-->">
+        <!--/else/-->
+          <span><!--/shop_name/--></span>
+        <!--/end_if/-->
+      </a>
+    </h1>
+
+    <form class="oaz-search" action="/shop/shopsearch.html" method="get">
+      <input type="text" name="keyword" placeholder="상품명, 브랜드를 검색하세요" autocomplete="off">
+      <button type="submit" aria-label="검색">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+    </form>
+
+    <div class="oaz-header-right">
+      <a href="<!--/link_basket/-->" class="oaz-icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        장바구니<!--/if_user_basket_count(+1)/--> <span class="oaz-count"><!--/user_basket_count/--></span><!--/end_if/-->
+      </a>
+      <a href="<!--/link_wishlist/-->" class="oaz-icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        관심상품<!--/if_user_wishlist_count(+1)/--> <span class="oaz-count"><!--/user_wishlist_count/--></span><!--/end_if/-->
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── 모바일 사이드바 오버레이 ── -->
+<div class="oaz-overlay" id="oazOverlay" onclick="oazToggleSidebar()"></div>
+
+<!-- ── 다찾다 스마트파인더 (MakeShop 제공, 원본 유지) ── -->
+<!--/if_form_smart_finder/-->
+    <div id="allfinder-ctr"><a href="javascript:;" class="all-finder-open">스마트<br/>파인더</a></div>
+    <!--/form_smart_finder/-->
+        <div class="all-finder-layer" id="all-finder-layer" style="display:none;">
+            <div class="finder-hd">
+                <a href="javascript:;" class="fa fa-close all-finder-close"></a>
+                <div class="finder-tit">스마트 검색</div>
+            </div>
+            <div class="finder-opt">
+                <dl>
+                <!--/loop_smart_finder/-->
+                    <dt>
+                        <!--/smart_finder@title/--> <!--/if_smart_finder@tooltip/--><a href="javascript:;" class="finder-tooltip-btn finder-layer-open">?</a><!--/end_if/--> <!--/smart_finder@icon/-->
+                        <div class="finder-comm-layer">
+                            <a href="javascript:;" class="finder-tooltip-btn finder-btn-close fa fa-close finder-layer-close"></a>
+                            <div class="finder-layer-tit"><!--/smart_finder@title/--></div>
+                            <div class="finder-layer-cnt"><!--/smart_finder@tooltip/--></div>
+                        </div>
+                    </dt>
+                    <dd style="<!--/smart_finder@style/-->">
+                        <div class="<!--/smart_finder@class_name/-->">
+                            <!--/loop_smart_finder@items(20)/-->
+                                <!--/smart_finder@items@name/-->
+                            <!--/end_loop/-->
+                        </div>
+                    </dd>
+                    <!--/if_smart_finder@is_category/-->
+                    <dd class="finder-child-category">
+                        <div class="mobile-select-category"></div>
+                        <div class="finder-category2"></div>
+                    </dd>
+                    <!--/end_if/-->
+                <!--/end_loop/-->
+                </dl>
+            </div>
+            <div class="finder-btn-c">
+                <a href="#none" class="reset">초기화</a>
+                <button type="submit">
+                    <span class="fa fa-search"></span><span class="finder-count-toggle"><span class="finder-count"></span>개</span> 상품검색
+                </button>
+            </div>
+        </div>
+    <!--/end_form/-->
+<!--/end_if/-->
+
+<script>
+function oazToggleSidebar() {
+  var sidebar = document.getElementById('oazSidebar');
+  var overlay = document.getElementById('oazOverlay');
+  if (sidebar) sidebar.classList.toggle('open');
+  if (overlay) overlay.classList.toggle('show');
+}
+</script>

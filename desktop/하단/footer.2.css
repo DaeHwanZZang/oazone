@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+/* ────────────────────────────────────────
+   푸터 링크 바
+──────────────────────────────────────── */
+#oaz-footer {
+    font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+    background: #1e293b;
+    color: #94a3b8;
+    margin-top: 80px;
+}
+.oaz-footer-nav {
+    background: #0f172a;
+    padding: 14px 24px;
+}
+.oaz-footer-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+}
+.oaz-footer-nav a {
+    color: #cbd5e1;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 4px 10px;
+    transition: color .2s;
+}
+.oaz-footer-nav a:hover { color: #fff; }
+.oaz-footer-nav .oaz-bold { font-weight: 700; color: #e2e8f0; }
+.oaz-fnav-sep { color: #1e293b; }
+
+/* ────────────────────────────────────────
+   푸터 본문
+──────────────────────────────────────── */
+.oaz-footer-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.oaz-footer-logo { flex-shrink: 0; }
+.oaz-footer-logo a { display: block; }
+.oaz-footer-logo img { height: 36px; width: auto; display: block; }
+.oaz-footer-info {
+    flex: 1;
+    min-width: 280px;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #94a3b8;
+}
+.oaz-footer-info a { color: #60a5fa; text-decoration: none; }
+.oaz-footer-info a:hover { text-decoration: underline; }
+.oaz-ftc {
+    display: inline-block;
+    padding: 1px 7px;
+    background: #334155;
+    color: #94a3b8 !important;
+    font-size: 11px;
+    line-height: 1.6;
+    border-radius: 3px;
+}
+.oaz-ftc:hover { color: #fff !important; background: #475569; }
+
+/* ────────────────────────────────────────
+   저작권
+──────────────────────────────────────── */
+.oaz-footer-copy {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    border-top: 1px solid #1e293b;
+    font-size: 12px;
+    color: #475569;
+}

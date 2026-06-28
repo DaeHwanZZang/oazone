@@ -1,0 +1,77 @@
+<div id="oaz-header-wrap">
+
+<!-- 유틸바 -->
+<div class="oaz-util-bar">
+    <div class="oaz-util-inner">
+        <!--/if_login/-->
+        <a href="<!--/link_logout/-->">로그아웃</a>
+        <span class="oaz-sep">|</span>
+        <a href="<!--/link_join/-->">회원정보</a>
+        <!--/else/-->
+        <a href="<!--/link_login/-->">로그인</a>
+        <span class="oaz-sep">|</span>
+        <a href="<!--/link_join/-->">회원가입</a>
+        <!--/end_if/-->
+        <span class="oaz-sep">|</span>
+        <a href="<!--/link_mypage/-->">마이페이지</a>
+        <span class="oaz-sep">|</span>
+        <a href="<!--/link_order/-->">주문조회</a>
+        <span class="oaz-sep">|</span>
+        <a href="<!--/link_notice/-->">공지사항</a>
+    </div>
+</div>
+
+<!-- 헤더 -->
+<div id="oaz-header">
+    <div class="oaz-header-inner">
+        <h1 class="oaz-logo">
+            <a href="/"><img src="/design/dpcomputer/9607/makeshop/common/tmp_logo.gif" alt="오에이존" /></a>
+        </h1>
+        <div class="oaz-search">
+            <!--/form_search/-->
+            <fieldset>
+                <legend class="oaz-blind">검색</legend>
+                <!--/input_search_word/-->
+                <button type="submit" class="oaz-search-btn" aria-label="검색">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+            </fieldset>
+            <!--/end_form/-->
+        </div>
+        <div class="oaz-header-right">
+            <a href="<!--/link_basket/-->" class="oaz-btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                장바구니(<strong><!--/user_basket_quantity/--></strong>)
+            </a>
+            <a href="<!--/link_order/-->" class="oaz-btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
+                주문조회
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- GNB 네비게이션 -->
+<nav id="oaz-gnb">
+    <div class="oaz-nav-inner">
+        <!--/loop_category1/-->
+        <div class="oaz-nav-item">
+            <a href="<!--/category1@link/-->">
+                <!--/category1@name/-->
+                <!--/if_category1@category2/-->
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+                <!--/end_if/-->
+            </a>
+            <!--/if_category1@category2/-->
+            <div class="oaz-dropdown">
+                <!--/loop_category1@category2/-->
+                <a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a>
+                <!--/end_loop/-->
+            </div>
+            <!--/end_if/-->
+        </div>
+        <!--/end_loop/-->
+    </div>
+</nav>
+
+</div><!-- #oaz-header-wrap -->

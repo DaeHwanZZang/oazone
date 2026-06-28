@@ -1,0 +1,18 @@
+.tit-match {font-family: Trebuchet MS, Corbel, Nanum Gothic, monospace; position: relative; font-size: 20px; font-weight:bold; color: #181818; line-height:30px; border-bottom: 1px solid #ddd; margin: 25px 0; text-transform:uppercase; padding-left: 3px;}
+div#wrap { margin:10px; width:710px;}
+.table-gift-list .box-wrap { margin-left: 5px; margin-right: 5px; border-right: 3px solid #f2f2f2; border-bottom: 3px solid #f2f2f2; }
+.table-gift-list .box { padding: 15px; border: 1px solid #cdcdcd; text-align: center; }
+.table-gift-list .box .tit { font-weight: bold; color: #333; }
+.table-gift-list .box .tit em { color: #ff0000; }
+.table-gift-list .box .thumb { font-size:0; line-height: 0; margin-top: 5px; }
+.table-gift-list .box .opt { margin-top: 5px; }
+.table-gift-list .box .opt li { padding: 2px 0; }
+.table-gift-list .box .cond { margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; }
+.table-gift-list .box .btns { margin-top: 10px; }
+.table-gift-list .box .quantity { margin-top: 10px; }
+.table-gift-list .box .quantity label { margin-right: 10px; }
+#gifSelect .table-gift-list { margin-top: 20px; }
+#gifSelect .msg-point { width: 100%; margin-top: 15px; padding: 10px 0; text-align: center; background-color: #f0f0f0; }
+#gifSelect .msg-point img { vertical-align: middle; }
+#gifSelect .msg-point .basic_price_style { width: 70px; font-size: 12pt; font-weight: bold; text-align: right; background: #F0F0F0; color: #111; border: 0; vertical-align:bottom; }
+#gifSelect .btns { text-align: center; margin-top: 30px; }

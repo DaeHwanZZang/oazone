@@ -1,0 +1,12 @@
+.table-gift-list .box-wrap { margin-left: 5px; margin-right: 5px; border-right: 3px solid #f2f2f2; border-bottom: 3px solid #f2f2f2; }
+.table-gift-list .box { padding: 15px; border: 1px solid #cdcdcd; text-align: center;}
+.table-gift-list .box .tit { font-weight: bold; color: #333; }
+.table-gift-list .box .tit em { color: #c98508; }
+.table-gift-list .box .thumb { font-size:0; line-height: 0; margin-top: 5px; }
+.table-gift-list .box .opt { margin-top: 5px; }
+.table-gift-list .box .opt li { padding: 2px 0; }
+.table-gift-list .box .cond { margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc; }
+.table-gift-list .box .btns { margin-top: 10px; }
+.table-gift-list .box .quantity { margin-top: 10px; }
+.table-gift-list .box .quantity label { margin-right: 10px; }
+#giftList .table-gift-list { margin-top: 20px; }

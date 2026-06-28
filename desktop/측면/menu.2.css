@@ -1,0 +1,15 @@
+/* aside */
+#aside { width: 177px; margin-right: 20px; } 
+#content { float: right; width: 900px; }
+/* lnb */
+#aside .lnb-wrap h2 { font-size: 0; line-height: 0; zoom: 1; }
+#aside .lnb-wrap h2.txt { padding-right: 15px; background: url(/images/d3/modern_simple/common/bull_h13_dw_arw.gif) no-repeat right 45%; }
+#aside .lnb-wrap h2.txt span { display: block; font-size: 12px; line-height: 14px; font-weight: bold; color: #333; padding-bottom : 3px; border-bottom: 1px solid #999; }
+#aside .lnb { zoom: 1; padding-bottom: 25px; padding-left: 2px; }
+#aside .lnb:after{ content: ""; display: block; clear: both; }
+#aside .lnb li,
+#aside .lnb a { float: left; width: 100%; }
+#aside .lnb li { margin-top: 10px; }
+#aside .lnb li.now a { font-weight: bold; }
+#aside .lnb a:hover { font-weight: bold; }
+#aside .lnb li a { color: #767676; }

@@ -1,0 +1,17 @@
+/* page-hd */
+#productPlan .page-hd { padding: 8px 15px 5px; background-color: #c9c9c9; }
+#productPlan .page-hd h2 { color: #fff; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+/* page-body */
+#productPlan .page-body { padding-bottom: 80px; }
+#productPlan .page-body .visual { margin-top: 5px; }
+#productPlan .page-body .pick { margin-top: 10px; text-align: right; }
+#productPlan .page-body .pick select { width: 320px; border: 1px solid #c5c5c5; }
+#productPlan .page-body .clst { zoom: 1; overflow: hidden; margin-top: 10px; padding: 10px 7px 7px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; }
+#productPlan .page-body .clst li { float: left; margin-right: 15px; padding-left: 10px; background: url(/images/d3/modern_simple/common/bull_h2_sqr_gray.gif) no-repeat 0 45%; }
+#productPlan .page-body .clst li a { display: block; white-space: nowrap; }
+#productPlan .page-body .p-hd { position: relative; margin-top: 70px; padding: 0 10px 5px; border-bottom: 2px solid #5c5c5c; }
+#productPlan .page-body .p-hd.mt-35 { margin-top: 35px; }
+#productPlan .page-body .p-hd h3 { color: #5c5c5c; font-size: 14px; font-weight: bold; letter-spacing: -1px; }
+#productPlan .page-body .p-hd .top { position: absolute; top: 0; right: 5px; color: #5c5c5c; }
+#productPlan .page-body .plst { zoom: 1; overflow: hidden; margin: 25px auto 0; }
+#productPlan .page-body .prd-list .thumb { width: 176px; height: 176px;}:

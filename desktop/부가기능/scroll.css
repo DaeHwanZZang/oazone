@@ -1,0 +1,12 @@
+#quickMenu { z-index: 99; position: fixed; right: 0; top: 0; bottom: 0; width: 102px; height: 100%; border-left: 1px solid #ddd; background: #f0f0f0; }
+#quickMenu ul { margin-top: 200px; border-top: 1px solid #ddd; }
+#quickMenu li { position: relative; padding-left: 40px; border-bottom: 1px solid #ddd; line-height: 40px; }
+#quickMenu li a {display:block;}
+#quickMenu li.pit { border-bottom: 1px solid #fff; background: #ddd; }
+#quickMenu li span { position: absolute; top: 0; left: 0; width: 40px; text-align: center; line-height: 40px; }
+#quickMenu li span img { vertical-align: middle; }
+#quickMenu .btn-toggle { position: absolute; top: 50%; left: -18px; margin-top: -30px; width: 17px; height: 60px; line-height: 60px; background: #ddd; color: #565656; text-align: center; }
+#quickMenu .btn-top { position: absolute; bottom: 0; left: 0; width: 102px; padding: 3px 0; background: #827f7e; color: #fff; font-weight: bold; text-align: center; }
+@media screen and (max-width:1280px) {
+    #quickMenu { display: none; }
+}

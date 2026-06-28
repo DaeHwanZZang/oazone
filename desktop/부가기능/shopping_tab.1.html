@@ -1,0 +1,142 @@
+<div id="MS_shopping_tab_inner">
+    <div id="MS_control_area">
+        <ul class="MS_tab">
+            <!--/block_basket_tab/-->
+                <a class="basket" href="javascript:;" onclick="<!--/link_basket/-->" onfocus="this.blur();"><span>BASKET</span></a>
+            <!--/end_block/-->
+            <!--/block_today_tab/-->
+                <a class="today" href="javascript:;" onclick="<!--/link_today/-->" onfocus="this.blur();"><span>TODAY</span></a>
+            <!--/end_block/-->
+            <!--/block_wishlist_tab/-->
+                <a class="wishlist" href="javascript:;" onclick="<!--/link_wishlist/-->" onfocus="this.blur();"><span>WISHLIST</span></a>
+            <!--/end_block/-->
+        </ul>
+        <!--/block_shopping_tab_show_button/-->
+        <button onclick="<!--/link_show_hide/-->" onfocus="this.blur();" class="btn_open"></button>
+        <!--/end_block/-->
+        <!--/block_shopping_tab_hide_button/-->
+        <button onclick="<!--/link_show_hide/-->" onfocus="this.blur();" class="btn_close"></button>
+        <!--/end_block/-->
+    </div>
+    <!--/block_basket_product/-->
+        <!--/if_basket_product/-->
+        <div class="MS_image_slider">
+            <div class="btn_prev_wrap">
+                <input type="button" class="btn_prev" onclick="<!--/link_basket_product_prev/-->" onfocus="this.blur();" />
+            </div>
+            <div class="MS_image_slider_inner">
+                <!--/block_basket_product_slide/-->
+                    <!--/loop_basket_product/-->
+                    <li class="MS_basket_slide_item">
+                        <div class="MS_basket_slide_item_inner">
+                            <div class="check"><!--/basket_product@checkbox/--></div>
+                            <div class="thumb"><a href="<!--/basket_product@link/-->"><img src="<!--/basket_product@image_s/-->" style="width: 100px; height: 100px; border: 0;" onerror="this.src='/images/mini.gif'" /></a></div>
+                            <div class="pname"><a href="<!--/basket_product@link/-->" style="font-weight: bold;"><!--/basket_product@name(14,...)/--></a></div>
+                            <div class="dsc"><!--/basket_product@option(18,...)/--></div>
+                            <div class="price">￦ <!--/number/basket_product@price_sell/--></div>
+                            <div>
+                                <!--/basket_product@input_quantity/-->
+                                <img src="/images/beetab/amount_arrow.gif" class="MS_ctrl_amount" usemap="#amount_change_<!--/idx/-->" />
+                                <map name="amount_change_<!--/idx/-->">
+                                    <area href="<!--/basket_product@link_quantity_up/-->" shape="rect" alt="수량증가" target="" coords="0,0,9,8">
+                                    <area href="<!--/basket_product@link_quantity_down/-->" shape="rect" alt="수량감소" target="" coords="0,8,9,16">
+                                </map>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/end_loop/-->
+                <!--/end_block/-->
+            </div>
+            <div class="btn_next_wrap">
+                <input type="button" class="btn_next" onclick="<!--/link_basket_product_next/-->" onfocus="this.blur();" />
+            </div>
+        </div>
+        <div id="cmd_btn">
+            <div style="height: 20px; color: #333333; overflow: hidden; padding-top: 20px; clear: both; font-family: tahoma; font-size: 11px;"><img src="/images/beetab/txt_total.gif" alt="" /></div>
+            <div class="total"><span id="totalprice">￦ <!--/number/basket_product_total_price/--></span></div>
+            <div class="order"><a href="<!--/link_basket_product_order/-->" class="awrap"><span>주문하기</span></a></div>
+            <div class="sel-del"><a href="<!--/link_basket_product_delete/-->" class="awrap"><span>선택 상품 삭제</span></a></div>
+            <div class="all-del"><a href="<!--/link_basket_product_delete_all/-->" class="awrap"><span>전체 상품 삭제</span></a></div>
+        </div>
+        <!--/else/-->
+        <div class="empty_box">
+            장바구니에 담긴 상품이 없습니다.
+        </div>
+        <!--/end_if/-->
+    <!--/end_block/-->
+    <!--/block_today_product/-->
+        <!--/if_today_product/-->
+        <div class="MS_image_slider">
+            <div class="btn_prev_wrap">
+                <input type="button" class="btn_prev" onclick="<!--/link_today_product_prev/-->" onfocus="this.blur();" />
+            </div>
+            <div class="MS_image_slider_inner">
+                <!--/block_today_product_slide/-->
+                    <!--/loop_today_product/-->
+                    <li class="MS_today_slide_item">
+                        <div class="MS_today_slide_item_inner">
+                            <div class="check"><!--/today_product@checkbox/--></div>
+                            <div class="thumb"><a href="<!--/today_product@link/-->"><img src="<!--/today_product@image_s/-->" style="width: 100px; height: 100px; border: 0;" onerror="this.src='/images/mini.gif'" /></a></div>
+                            <div class="pname"><a href="<!--/today_product@link/-->" style="font-weight: bold;"><!--/today_product@name(14,...)/--></a></div>
+                            <div class="price">￦ <!--/number/today_product@price_sell/--></div>
+                        </div>
+                    </li>
+                    <!--/end_loop/-->
+                <!--/end_block/-->
+            </div>
+            <div class="btn_next_wrap">
+                <input type="button" class="btn_next" onclick="<!--/link_today_product_next/-->" onfocus="this.blur();" />
+            </div>
+        </div>
+        <div id="cmd_btn">
+            <div class="sel-del"><a href="<!--/link_today_product_delete/-->" class="awrap"><span>선택 상품 삭제</span></a></div>
+            <div class="all-del"><a href="<!--/link_today_product_delete_all/-->" class="awrap"><span>전체 상품 삭제</span></a></div>
+        </div>
+        <!--/else/-->
+        <div class="empty_box">
+            오늘 본 상품이 없습니다.
+        </div>
+        <!--/end_if/-->
+    <!--/end_block/-->
+    <!--/block_wishlist_product/-->
+        <!--/if_login/-->
+            <!--/if_wishlist_product/-->
+            <div class="MS_image_slider">
+                <div class="btn_prev_wrap">
+                    <input type="button" class="btn_prev" onclick="<!--/link_wishlist_product_prev/-->" onfocus="this.blur();" />
+                </div>
+                <div class="MS_image_slider_inner">
+                    <!--/block_wishlist_product_slide/-->
+                        <!--/loop_wishlist_product/-->
+                        <li class="MS_wishlist_slide_item">
+                            <div class="MS_wishlist_slide_item_inner">
+                                <div class="check"><!--/wishlist_product@checkbox/--></div>
+                                <div class="thumb"><a href="<!--/wishlist_product@link/-->"><img src="<!--/wishlist_product@image_s/-->" style="width: 100px; height: 100px; border: 0;" onerror="this.src='/images/mini.gif'" /></a></div>
+                                <div class="pname"><a href="<!--/wishlist_product@link/-->" style="font-weight: bold;"><!--/wishlist_product@name(14,...)/--></a></div>
+                                <div class="price">￦ <!--/number/wishlist_product@price_sell/--></div>
+                            </div>
+                        </li>
+                        <!--/end_loop/-->
+                    <!--/end_block/-->
+                </div>
+                <div class="btn_next_wrap">
+                    <input type="button" class="btn_next" onclick="<!--/link_wishlist_product_next/-->" onfocus="this.blur();" />
+                </div>
+            </div>
+            <div id="cmd_btn">
+                <div class="sel-del"><a href="<!--/link_wishlist_product_delete/-->" class="awrap"><span>선택 상품 삭제</span></a></div>
+                <div class="all-del"><a href="<!--/link_wishlist_product_delete_all/-->" class="awrap"><span>전체 상품 삭제</span></a></div>
+            </div>
+            <!--/else/-->
+            <div class="empty_box">
+                관심 상품이 없습니다.
+            </div>
+            <!--/end_if/-->
+        <!--/else/-->
+        <div class="empty_box">
+            로그인을 하시면 확인하실 수 있습니다.<br /><br />
+            <a href="<!--/link_login/-->">[로그인]</a>
+        </div>
+        <!--/end_if/-->
+    <!--/end_block/-->
+</div>

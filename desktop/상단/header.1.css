@@ -1,0 +1,23 @@
+#hdWrap { border-top: 6px solid #d7d7d7; }
+#header { z-index: 1; position: relative; height: 188px; }
+#header .bi { position: absolute; left: 415px; top: 90px; }
+#header .mlnk { position: absolute; top: 5px; right: 0; zoom: 1; overflow: hidden; }
+#header .mlnk li { float: left; width: auto; margin-left: 20px; }
+#header .mlnk li a { color: #444; }
+#header .search { position: absolute; top: 20px; left: 65px; width: 160px; height: 30px; padding-right: 30px; border-bottom: 1px solid #ddd; }
+#header .search span { position: absolute; top: 5px; left: 0; color: #444; }
+#header .search .MS_search_word,
+#header .search .btn-sch { float: left; width: auto; }
+#header .search .MS_search_word { width: 100%; height: 30px; line-height: 30px; border: 0 none; background: 0 none; }
+#header .search .btn-sch { position: absolute; top: 5px; right: 5px; }
+#header .bookmark { position: absolute; top: -6px; left: 0; width: 41px; height: 80px; background: url('/design/dpcomputer/9607/makeshop/common/bul_bookmark.gif') no-repeat 0 0; text-indent: -9999px; }
+#header .evt { position: absolute; right: 0; bottom: 0; }
+#header .evt img { display:block; }
+#header .sns { position: absolute; top: 150px; left: 0; zoom: 1; overflow: hidden; }
+#header .sns li { float: left; margin-right: 5px; }
+#gnb { z-index: 1; position: relative; zoom: 1; overflow: hidden; width: 1080px; margin: 0 auto; padding: 20px 0 20px 20px; border-top: 2px solid #444; border-bottom: 1px solid #bebebe; }
+#gnb > li { float: left; width: 120px; }
+#gnb > li > a { display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #444; font-size: 16px; font-weight: bold; letter-spacing: -1px; }
+#gnb > li ul { zoom: 1; overflow: hidden; margin-top: 10px; }
+#gnb > li ul li { float: left; width: 100%; }
+#gnb > li ul li a { display: block; line-height: 1.75; }

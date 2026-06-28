@@ -1,0 +1,19 @@
+#reviewPop { padding-bottom: 20px; }
+#reviewPop .hd { zoom: 1; overflow: hidden; background: url(/images/d3/modern_simple/bg_review_pop_tit.gif) repeat-x 0 0; }
+#reviewPop h1 { float: left; width: auto; }
+#reviewPop p { float: right; wiwdth: auto; }
+#reviewPop .cnt { margin: 10px; padding: 10px; border-bottom: 1px solid #b7b7b7; background-color: #fff; }
+#reviewPop .foot { margin-top:20px; text-align: center; }
+#reviewPop .writer-date { zoom: 1; overflow: hidden; padding-top: 7px; padding-bottom: 7px; padding-right: 90px; border-top: 1px solid #d7d7d7;  border-bottom: 1px solid #d7d7d7; }
+#reviewPop .writer-date .writer,
+#reviewPop .writer-date .date { position: relative; float: left; }
+#reviewPop .writer-date .writer dt,
+#reviewPop .writer-date .writer dd { display: inline; color: #333; }
+#reviewPop .writer-date .writer { width: 100%; }
+#reviewPop .writer-date .date { width: 80px; padding-left: 9px; border-left: 1px solid #d7d7d7; margin-left: -90px; right: -90px; }
+#reviewPop .rating { margin-top: 10px; }
+#reviewPop .rating th,
+#reviewPop .rating td { padding: 3px 0; }
+#reviewPop .rating th { font-weight: normal; }
+#reviewPop .rating th .tb-left { padding-left; 10px; background: url(/images/d3/modern_simple/common/bull_h2_sqr_gray.gif) no-repeat 0 5px; }
+#reviewPop .txt { margin-top: 10px; min-height: 150px; _height: 150px; }

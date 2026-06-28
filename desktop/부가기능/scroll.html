@@ -1,0 +1,33 @@
+<div id="quickMenu">
+    <a class="btn-toggle" href="#">▶</a>
+    <ul>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_beecon.gif" alt="beecon" /></span>비콘</a></li>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_attend.gif" alt="attend" /></span>출석체크</a></li>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_event.gif" alt="event" /></span>이벤트</a></li>
+        <li><a href=" /shop/reviewmore.html "><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_review.gif" alt="review" /></span>리뷰</a></li>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_qna.gif" alt="qna" /></span>문의게시판</a></li>
+        <li><a href="/board/board.html?code=<!--/shop_id/-->"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_notice.gif" alt="notice" /></span>공지사항</a></li>
+        <li><a href="/shop/mypage.html?mypage_type=myorder"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_delivery.gif" alt="delivery" /></span>배송조회</a></li>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_order.gif" alt="order" /></span>개인결제</a></li>
+        <li><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_cs.gif" alt="cs" /></span>고객센터</a></li>
+        <li class="pit"><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_malltalk.gif" alt="malltalk" /></span>몰톡</a></li>
+        <li class="pit"><a href="#"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_powerapp.gif" alt="powerapp" /></span>파워앱</a></li>
+        <li><a href="/shop/todaygoods.html"><span><img src="/design/dpcomputer/9607/makeshop/icon/ico_aside_today.gif" alt="today" /></span>오늘본상품</a></li>
+    </ul>
+    <a class="btn-top" href="#wrap">▲<br />TOP</a>
+</div><!-- #quickMenu -->
+
+<script type="text/javascript">
+$(function() {
+    $('.btn-toggle', '#quickMenu').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).text() == '▶') {
+            $(this).text('◀');
+            $(this).parent('#quickMenu').css('right', '-102px');
+        } else {
+            $(this).text('▶');
+            $(this).parent('#quickMenu').css('right', '0');
+        }
+    });
+});
+</script>

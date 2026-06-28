@@ -1,0 +1,6 @@
+#productPlanList .plan-tab { width: 100%; padding: 10px 0 0; }
+#productPlanList .plan-tab:after { clear: both; content: ""; display: block; }
+#productPlanList .plan-tab li { float: left; width: 165px; margin-left: -1px; border: 1px solid #e4e4e5; text-align: center; }
+#productPlanList .plan-tab li a { display: block; height: 35px; line-height: 37px; color: #000; }
+#productPlanList .plan-tab li:first-child { margin-left: 0; }
+#productPlanList .plan-tab li.now { width:163px; height: 33px; border-bottom: 3px solid #231f20; }

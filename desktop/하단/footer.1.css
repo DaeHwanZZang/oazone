@@ -1,0 +1,24 @@
+#footer { margin-top: 80px; border-top: 2px solid #333; }
+#footer .info { zoom: 1; overflow: hidden; }
+#footer .info .cscenter,
+#footer .info .shoplnks,
+#footer .info .bankinfo { float: left; }
+#footer .info .cscenter,
+#footer .info .bankinfo { width: 210px; padding: 20px 0 0 20px; }
+#footer .info h3 { color: #585858; font-size: 15px; font-weight: bold; }
+#footer .info p { margin-top: 10px; }
+#footer .info p.phone { color: #fd000c; font-size: 28px; letter-spacing: -1px; }
+#footer .info .shoplnks { width: 638px; padding: 30px 0; border-left: 1px solid #bfbfbf; border-right: 1px solid #bfbfbf; text-align: center; }
+#footer .info .shoplnks a { display: inline-block; width: 91px; margin: 0 12px; padding-top: 101px; font-weight:bold; color: #585858; }
+#footer .info .shoplnks a.notice { background: url('/design/dpcomputer/9607/makeshop/icon/bul_h91_notice.gif') no-repeat 0 0; }
+#footer .info .shoplnks a.qna { background: url('/design/dpcomputer/9607/makeshop/icon/bul_h91_qna.gif') no-repeat 0 0; }
+#footer .info .shoplnks a.review { background: url('/design/dpcomputer/9607/makeshop/icon/bul_h91_review.gif') no-repeat 0 0; }
+#footer .info .shoplnks a.delivery { background: url('/design/dpcomputer/9607/makeshop/icon/bul_h91_delivery.gif') no-repeat 0 0; }
+#footer .info .shoplnks a.qrcode { position: relative; background: url('/design/dpcomputer/9607/makeshop/icon/bul_h91_qrcode.gif') no-repeat 0 0; }
+#footer .info .shoplnks a.qrcode img { position: absolute; top: 18px; left: 50%; margin-left: -28px; width: 56px; height: 56px; }
+#footer .flnk { position: relative; height: 35px; line-height: 35px; background: #3f3b39; text-align: center; }
+#footer .flnk a { display: inline-block; padding: 0 12px; color: #adadad; }
+#footer .flnk a.top { position: absolute; top: 0; right: 0; height: 35px; line-height: 35px; padding: 0 15px; background: #777; color: #fff; }
+#footer address { padding: 20px 0; border-bottom: 1px solid #dadada; text-align: center; line-height: 20px; }
+#footer address a.ftc { display: inline-block; padding: 0 5px; background: #666; color: #ccc; font-size: 11px; line-height: 20px; }
+#footer .escrow { padding: 10px 0 30px; text-align: center; }

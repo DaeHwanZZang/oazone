@@ -1,0 +1,10 @@
+#review .tit-sch { margin-top: 35px; font-size: 0; line-height: 0; }
+#review .table-sch { margin-top: 10px; }
+#review .table-review-info .tb-thumb img { border: 2px solid #f3f4ef; }
+#review .table-review-info { margin-top: 50px; }
+#review .foot-msg { margin-top: 35px; padding-left: 10px; background: url(/images/d3/modern_simple/common/bull_h4_circle_gray.gif) no-repeat 0 5px; }
+#review .notice-list { width: 400px; }
+#review .notice-list li { word-wrap: break-word; }
+
+
+.src { height: 22px; line-height: 22px; padding: 2px; }
