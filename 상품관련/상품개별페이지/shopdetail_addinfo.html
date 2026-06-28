@@ -1,0 +1,47 @@
+<div id="container">
+    <div id="product-popup" class="layer-pop">
+        <h3><!--/notag/name/--></h3>
+            <!--/if_area_type(num1)/-->
+                <div class="detail-item">
+                    <!--/mobile_detail/-->
+                </div>
+            <!--/end_if/-->
+
+            <!--/if_area_type(num2)/-->
+                <!--/if_product_info/-->
+                <div id="productWrap">
+                    <h3 class="tb-tit"><img alt="GENERAL PRODUCT 상품 일반정보" src="/images/common/tit_generalproduct_h20.gif" /></h3>
+                    <table>
+                        <colgroup>
+                            <col width="140" /><col width="*" />
+                        </colgroup>
+                        <!--/loop_product_info/-->
+                        <tr>
+                            <th><span><!--/product_info@title/--></span></th>
+                            <td><span><!--/product_info@content/--></span></td>
+                        </tr>
+                        <!--/end_loop/-->
+                    </table>
+                </div>
+                <!--/end_if/-->
+            <!--/end_if/-->
+
+            <!--/if_area_type(num3)/-->
+                <!--/if_detail_common/-->
+		<div class="detail-item">
+			<!--/detail_common/-->
+		</div>
+                <!--/end_if/-->
+            <!--/end_if/-->
+
+        <div class="fixed-btn fixed">
+             <div>
+                  <a href="<!--/link_product_back/-->"><img src="/images/d3/m_01/btn/shopdetail_popup_close.png"/></a>
+             </div>
+             <div class="last-btn">
+                  <a href="#" onclick="setTimeout(function() { window.scrollTo(0, 1); }, 100);"><img src="/images/d3/m_01/btn/shopdetail_popup_top.png"/></a>
+             </div>
+        </div>
+        
+    </div>
+</div>

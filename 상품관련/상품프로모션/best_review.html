@@ -1,0 +1,114 @@
+<!--/include_header(1)/-->
+
+<div id="container">
+    <div class="wrapper clearfix">
+        <nav class="breadcrumb-cat">
+            <ul class="clearfix">
+                <li><a href="#">베스트 리뷰 50</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="product-list" class="wrapper">
+        <div class="results">
+            <div class="wrapper items-wrap">
+                <div class="paging-wrap">
+
+                    <!--/if_best_product/-->
+                    <!--/block_best_product/-->
+                  
+                    <div class="paging">
+                        <span> <!--/list_start_num/--> - <!--/list_end_num/--></span>
+                    </div>
+
+                    <ul class="items clearfix" data-type="gallery" data-open="on">
+                        <!--/loop_best_product(10)/-->
+                        <li>
+                            <dl>
+                                <dt class="hidden">상품 이미지</dt>
+                                <dd class="thumb-img gallery-img">
+                                    <img src="<!--/best_product@mobile_image/-->" />
+
+                                    <!--/if_best_product@is_soldout/-->
+                                        <div class="sold-out"></div>
+                                    <!--/end_if/-->
+
+                                <!--/if_not_best_product@is_soldout/-->
+                                    <!--/if_best_product@mobile_icons/-->
+                                        <div class="icons">
+                                            <!--/best_product@mobile_icons/-->
+                                        </div>
+                                    <!--/end_if/-->
+                                <!--/end_if/-->
+                                </dd>
+                                <dt class="hidden">상품 이름</dt>
+                                <dd class="pname"><!--/notag/best_product@name(16,..)/--></dd>
+                                <dd class="price-info">
+                                    <ul>
+                                        <li>
+                                            <span class="tit">상품가</span>
+                                            <!--/if_best_product@price_replace/-->
+                                            <span class="txt original"><!--/best_product@price_replace/--></span>
+                                            <!--/else/-->
+                                            <span class="txt original<!--/if_best_product@price_discount/--> strike<!--/end_if/-->"><!--/number/best_product@price_sell/-->원</span>
+                                            <!--/end_if/-->
+                                        </li>
+                                        
+                                        <!--/if_best_product@price_discount/-->
+                                        <li>
+                                            <!--/if_best_product@discount_apply_type(mobile)/-->
+                                            <span class="tit"><img src="/images/d3/m_01/icon/icon_phone_write@2x.gif" /> 모바일가</span>
+                                            <!--/else/-->
+                                            <span class="tit">할인가</span>
+                                            <!--/end_if/-->
+                                            <span class="txt discount"><!--/number/best_product@price_discount/-->원</span>
+                                        </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_best_product@reserve_price(+1)/-->
+                                            <li>
+                                                <span class="tit">
+                                                      <!--/if_best_product@used_mobile_reserve/-->
+                                                          <img src="/images/d3/m_01/icon/mobile_reserve_icon_s.png" />
+                                                      <!--/end_if/-->
+                                                적립금</span>
+                                                <span class="txt save"><!--/number/best_product@reserve_price/-->원</span>
+                                            </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_best_product@point_price(+1)/-->
+                                            <li>
+                                                <span class="tit">포인트</span>
+                                                <span class="txt save"><!--/best_product@point_price/--><!--/best_product@point_unit/--></span>
+                                            </li>     
+                                        <!--/end_if/-->
+                                    </ul>
+                                </dd>                 
+                                <dt class="hidden">자세히보기</dt>
+                                <dd class="link-view">
+                                    <a href="<!--/best_product@link/-->">상품 자세히보기</a>
+                                </dd>            
+                            </dl>
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                    <!--/end_block/-->
+                    <!--/else/-->
+                    <div class="none-data">
+                        <img src="/images/d3/m_01/bull/none_data@2x.gif" alt="" width="68.5" height="68.5" />
+                        <p>해당 데이터가 없습니다.</p>
+                    </div>
+                    <!--/end_if/-->
+                </div><!-- .paging-wrap -->
+
+                <!--/block_product_more/-->
+                <div class="more">
+                    <a href="<!--/link_more_best_product_list/-->" class="btn-type-04 box-gradient-03 box-shadow-03"><span>더보기</span></a>
+                </div>
+                <!--/end_block/--> 
+            </div><!-- .items-wrap -->
+        </div><!-- .results -->
+    </div><!-- #product-list -->
+</div>
+
+<!--/include_footer(1)/-->

@@ -1,0 +1,107 @@
+/* =============================================================================
+   상단 header.html
+   ========================================================================== */
+#header-container { padding: 15px 0 10px; }
+#header-container .wrapper { min-height: 23px; }
+#header-container h1 { font-size: 1em; margin: 0; padding: 0; float: left; margin-left: 10px; }
+#header-container #logo { width: 50%; }
+#header-container #logo img { }
+#header-container nav { position: absolute; right: 0; text-align: right; }
+#header-container nav li { line-height: 23.5px; display: inline-block;  padding-left: 24px; text-align: left; }
+#header-container nav li a { color: #999; font-size: .75em; font-weight: bold; margin-left: 7.143%; }
+#header-container nav li.cat { background: url(/images/d3/m_01/bull/category@2x.png) no-repeat 0 center; background-size: 23px 23px; width: 70px; }
+#header-container nav li.search { background: url(/images/d3/m_01/bull/search@2x.png) no-repeat 0 center; background-size: 23px 23px; width: 40px; }
+/* 홈|장바구니|관심상품|로그인 */
+#menu-container .menus ul { border-top: 1px solid #e3e3e3; border-bottom: 1px solid #e3e3e3; background-color: #f2f2f2; padding-left: 3.125%; padding-right: 3.125%; }
+#menu-container .menus ul li { float: left; background: url(/images/d3/m_01/bull/menus_li@2x.gif) no-repeat 100% 50%; background-size: 1px 13.5px; height: 34.5px; line-height: 34.5px; text-align: center; width: 25%; }
+#menu-container .menus ul li:last-child { background-image: none; }
+#menu-container .menus ul li a { color: #000; font-weight: bold; font-size: .75em; }
+#menu-container .menus ul li a span { color: #fff; font-size: smaller; background: url(/images/d3/m_01/bull/number_ico.png) no-repeat 0 50%; background-size: 21px 21px; text-align: center; width: 21px; height: 100%; display: inline-block; }
+/*
+#menu-container .menus ul li.wish { width: 19.286% }
+#menu-container .menus ul li.home,
+#menu-container .menus ul li.cart { width: 29.688% }
+#menu-container .menus ul li.login { width: 19.286% }
+*/
+.MK_top_banner { text-align: center; }
+
+
+/* 다찾다 검색 파인더 - 레이어 */
+#allfinder-ctr { z-index: 100; position: fixed; right:0; bottom:50%; }
+#allfinder-ctr a { display:block; width:77px; height:64px; background:url('/images/common/allfinder_ctrl_mo.png') no-repeat 0 0; background-size:100% 100%; border:none; outline:none; font-size:0; }
+
+.all-finder-layer { z-index:200; position:fixed; top:0; left:0; width:100%; height:100%; background:#fff; overflow-y:auto; }
+.all-finder-layer .finder-hd { z-index:1; position:fixed; top:0; left:0; width:100%; height:60px; border-bottom:1px solid #e7e7e7; background:#fff; }
+.all-finder-layer .finder-hd .fa-close { position:absolute; top:17px; right:10px; font-size:26px; color:#000; }
+.all-finder-layer .finder-hd .finder-tit { height:60px; line-height:60px; padding:0 10px; font-size:16px; font-weight:bold; color:#000; letter-spacing:-2px; }
+.all-finder-layer .finder-search { position:relative; margin:0 10px 20px; border:2px solid #000; border-radius:3px; }
+.all-finder-layer .finder-search .fa-search { display: inline-block; width: 40px; height: 42px; line-height: 42px; text-align: center; font-size: 18px; }
+.all-finder-layer .finder-search .txt-input { width:85%; height:42px; line-height:42px; margin:0; padding:0; font-size:14px; outline:none; border:none; color: #000; vertical-align:top; letter-spacing:-1px; }
+.all-finder-layer .finder-search .txt-input::-webkit-input-placeholder { color:#b1b1b1; }
+.all-finder-layer .finder-search dd { background:#FFF; }
+.all-finder-layer .finder-opt { padding:60px 0 55px; color:#000; }
+.all-finder-layer .finder-opt dl dt { position:relative; height:53px; line-height:53px; padding:0 10px; border-top:1px solid #e7e7e7; font-size:14px; font-weight:bold; color:#000; letter-spacing:-1px; }
+.all-finder-layer .finder-opt dl dt .fa { position:absolute; top:50%; right:10px; margin-top:-13px; font-size:25px; color:#b2b2b2; }
+.all-finder-layer .finder-opt dl dt > .finder-tooltip-btn { display:inline-block; width:20px; height:20px; line-height:20px; margin-top:0; border:1px solid #cecece; border-radius:20px; color:#666; font-size:11px; background:#fff; text-align:center; outline:none; }
+.all-finder-layer .finder-opt dl dt .finder-comm-layer { display:none; position:absolute; top:43px; left:10px; width:70%; padding:0 15px 11px; border:1px solid #000; background:#fff; text-align:left; font-weight:normal; color:#000; z-index:1 }
+.all-finder-layer .finder-opt dl dt .finder-comm-layer .finder-btn-close { display:inline-block; position:absolute; top:10px; right:14px; margin:0; font-size:19px; color:#000; outline:none; }
+.all-finder-layer .finder-opt dl dt .finder-comm-layer .finder-layer-tit { padding:13px 0; border-bottom:1px solid #e5e5e5; font-size:14px; font-weight:bold; line-height:14px; }
+.all-finder-layer .finder-opt dl dt .finder-comm-layer .finder-layer-cnt { padding-top:13px; line-height:1.5; font-size:13px; }
+.all-finder-layer .finder-opt dl dd { display:none; padding:10px 5px 0; border-top:1px solid #e7e7e7; background:#f4f4f4; font-size:0; }
+.all-finder-layer .finder-opt dl dd label { display:inline-block; width:33.3333%; text-align:center; line-height:18px;}
+.all-finder-layer .finder-opt .finder-color label { width:12.5%; }
+.all-finder-layer .finder-opt .finder-price .finder-price-input { padding:0 5px 10px; text-align:right; font-size:12px; }
+.all-finder-layer .finder-opt .finder-price .finder-price-input:after { clear: both; content: ""; display: block; }
+.all-finder-layer .finder-opt .finder-price .finder-price-input span { float:left; display:inline-block; height:34px; line-height:34px; }
+.all-finder-layer .finder-opt .finder-price .finder-price-input label { display: inline-block; width: 33%; padding: 0 8px; border: 1px solid #ccc; border-radius:3px; color: #666; background:#fff; }
+.all-finder-layer .finder-opt .finder-price .finder-price-input label .txt-input { display: inline-block; width: 84%; height: 32px; line-height: 32px; padding: 0; border: none; background: none; color: #000; outline:none; text-align:right; }
+
+.all-finder-layer .finder-opt .finder-child-category { padding:0; }
+.all-finder-layer .finder-opt .finder-child-category .mobile-select-category { padding:15px; margin-bottom:9px; border-bottom:1px solid #e7e7e7; font-size:14px; font-weight:bold; color:#9a9a9a; background:#fff; word-break:break-all; letter-spacing:-1px; }
+.all-finder-layer .finder-opt .finder-child-category .mobile-select-category .pd-2px { padding:0 2px; }
+.all-finder-layer .finder-opt .finder-child-category .mobile-select-category .fc-black { color:#000; }
+.all-finder-layer .finder-opt .finder-child-category .mobile-select-category .fa { margin-left:2px; color:#000; }
+
+.all-finder-layer .finder-btn-c { z-index:1; position:fixed; bottom:0; left:0; width:100%; height:55px; text-align: center; font-size:0; }
+.all-finder-layer .finder-btn-c a.reset { display: inline-block; width: 30%; height: 55px; line-height: 55px; background: #999; color: #fff; font-size: 16px; font-weight: bold; letter-spacing: 1px; border:none; }
+.all-finder-layer .finder-btn-c button { display: inline-block; width: 70%; height: 55px; padding:13px 0 18px; background: #000; color: #fff; font-size: 16px; font-weight: bold; letter-spacing: -0.5px; border:none; vertical-align:bottom; }
+.all-finder-layer .finder-btn-c button span.fa-search { margin-right:5px; margin-top:-2px; vertical-align:middle; font-size:0.750em; }
+.all-finder-layer .finder-btn-c button span.finder-count { display:inline-block; color:#ffd800; font-size:18px; font-style:normal; }
+
+.all-finder-layer .finder-opt .finder-options { display:inline-block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:80%; height:22px; padding: 5px 5%; line-height:22px; border: 1px solid #ccc; word-break:break-all; border-radius: 20px; background:#fff; color:#000; text-align:center; font-size:12px; }
+.all-finder-layer .finder-opt .finder-options.on { font-weight: bold; border: 1px solid #000; box-shadow:2px 2px 3px #d2d2d2; }
+.all-finder-layer .finder-opt .finder-option-color em { display: inline-block; width: 33px; height: 33px; border-radius:20px; font-size:0; vertical-align:middle; }
+.all-finder-layer .finder-opt .finder-option-color.color-picker { width:33px; height:33px; padding: 0; border: none; } 
+.all-finder-layer .finder-opt .finder-option-color.color-picker .fa-check { display:none; width:33px; height:33px; margin-top:-25px; color:#fff; text-align:center; font-size:16px; }
+.all-finder-layer .finder-opt .finder-option-color.color-picker.on .fa-check { display:block; }
+.all-finder-layer .finder-opt .finder-option-color.color-picker.on.finder-option-color-white .fa-check { color:#000; }
+
+.finder-option-color.finder-option-color-black em { background-color: #000; }
+.finder-option-color.finder-option-color-white em { background-color: #FFF; width: 20px; height: 20px; border: 1px solid #e5e5e5; }
+.finder-option-color.finder-option-color-gray em { background-color: #808080; }
+.finder-option-color.finder-option-color-beige em { background-color: #e5d0b2; }
+.finder-option-color.finder-option-color-brown em { background-color: #aa6810; }
+.finder-option-color.finder-option-color-navy em { background-color: #425583; }
+.finder-option-color.finder-option-color-blue em { background-color: #0000ff; }
+.finder-option-color.finder-option-color-light-blue em { background-color: #62acff; }
+.finder-option-color.finder-option-color-red em { background-color: #ff0000; }
+.finder-option-color.finder-option-color-orange em { background-color: #ffa500; }
+.finder-option-color.finder-option-color-yellow em { background-color: #ffff00; }
+.finder-option-color.finder-option-color-pink em { background-color: #ffc0cb; }
+.finder-option-color.finder-option-color-purple em { background-color: #800080; }
+.finder-option-color.finder-option-color-jaju em { background-color: #a63f7f; }
+.finder-option-color.finder-option-color-khaki em { background-color: #2f5e2f; }
+.finder-option-color.finder-option-color-green em { background-color: #008000; }
+.finder-option-color.finder-option-color-light-green em { background-color: #72dd95; }
+.finder-option-color.finder-option-color-silver em { background-color: #dfdfdf; }
+.finder-option-color.finder-option-color-gold em { background-color: #cfbc4e; }
+.finder-option-color.finder-option-color-apricot em { background-color: #fbceb1;  }
+
+.all-finder-layer .search-auto-complete-list { display:none; z-index:1; position:absolute; top:43px; left:0; width:100%; line-height:14px; background:#fff; box-shadow:0px 0px 5px 0px rgb(0 0 0 / 20%); }
+.all-finder-layer .search-auto-complete-list ul { width:100%; padding:8px 5px 10px 5px; border-bottom:1px solid #ddd; display: flex; flex-wrap: wrap;}
+.all-finder-layer .search-auto-complete-list ul li { text-align:center; margin: 3px; }
+.all-finder-layer .search-auto-complete-list ul li a { display:block; padding:8px 14px; color:#000; border: 1px solid #eee; border-radius: 10px; background:none; font-family:'malgun gothic'; font-size:11px; letter-spacing:-1px; } 
+.all-finder-layer .search-auto-complete-list ul li a strong { color:#ab3e41; }
+.all-finder-layer .search-auto-complete-list ul li a:hover { background:#f2f2f2; }
+.all-finder-layer .search-auto-complete-list ul li a:hover span {}
+.all-finder-layer .search-auto-complete-list .search-list-close { display:block; padding:10px 11px; text-align:right; color:#666; font-size:11px; }

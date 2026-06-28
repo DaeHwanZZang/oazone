@@ -1,0 +1,7 @@
+/* =============================================================================
+   카테고리 category.html
+   ========================================================================== */
+#category {}
+#category .cate-list { margin: 15px; border-top: 1px solid #e7e7e7; }
+#category .cate-list li { list-style-type: none; border-bottom: 1px solid #e7e7e7; padding-right: 10px; }
+#category .cate-list li a { display: block; padding: 10px 15px; font-weight: bold; font-size: .875em; color: #3d3d3d; background: url(/images/d3/m_01/bull/bull_category_list.gif) no-repeat right center; }

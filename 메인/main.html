@@ -1,0 +1,118 @@
+<!--/include_header(1)/-->
+
+<div id="container" class="main">
+    <!--/block_event_banner/-->
+    <div id="event" class="wrapper clearfix">
+        <!--/if_event_banner/-->
+        <!--/block_event_banner_list/-->
+        <div class="event-imgs">
+            <!--/loop_event_banner/-->
+            <!--/block_event_banner_image/--><!--/if_event_banner@link/--><a href="<!--/event_banner@link/-->"><!--/end_if/--><img src="<!--/event_banner@image/-->" alt="<!--/event_banner@subject/-->" /><!--/if_event_banner@link/--></a><!--/end_if/--><!--/end_block/-->
+            <!--/end_loop/-->
+        </div>
+        <!--/end_block/-->
+        <div class="pagination"></div>
+        <!--/end_if/-->
+    </div>
+    <!--/end_block/-->
+
+    
+    <!-- s:Main_Display_Area -->
+
+    <!--/makeshop{product_list_horizontal(신규 상품,new_product,4,on)}/-->
+
+    <!--/makeshop{product_list_vertical(특별 상품,special_product,2,on)}/-->
+
+    <!--/makeshop{product_list_vertical(추천  상품,recmd_product,2,on)}/-->
+
+    <!-- e:Main_Display_Area -->
+
+
+</div>
+
+<script type="text/javascript" src="/js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="/js/fitToParent.js"></script>
+<script type="text/javascript">
+$(function() {
+    // 화면 사이즈 변경시
+    var supportsOrientationChange = 'onorientationchange' in window,
+        orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize';
+
+    // 메인 이벤트 롤링
+    // 옵션 api는 http://www.idangero.us/sliders/swiper/api.php 에서 확인 가능합니다.
+    var is_loop = $('.MS_img-area').size() > 1 ? true : false;
+    var main_event = new Swiper('.MS_img-wrap', {
+        loop: is_loop,
+        wrapperClass : 'event-imgs',
+        slideClass: 'MS_img-area',
+        slidesPerView: 1,
+        calculateHeight: true,
+        resizeReInit: true,
+        autoplay: 5000,                      // 롤링되는 시간(이벤트 이미지가 변하는 시간, 1000 = 1초) - 수정 가능
+        speed: 300,                          // 이미지가 슬라이드되는 속도 (숫자가 작을수록 빠름, 1000 = 1초) - 수정 가능
+        pagination: '.pagination',
+        paginationClickable: true,
+        onFirstInit: function(swiper) {
+            $('.MS_img-area').show();
+        },
+        onSlideChangeEnd: function(swiper) {
+            swiper.startAutoplay()
+        },
+        useCSS3Transforms : false
+    });
+
+    // 로고 이미지 없을경우 대체 텍스트로
+    $('#logo img').error(function() {
+        $(this).replaceWith('<span>' + this.alt + '</span>');
+    });
+
+    // 상품리스트 on/off
+    $('.items-wrap .toggle-btn a').click(function(e) {
+        e.preventDefault();
+        var now_type = $(this).parent().prev().attr('data-open');
+
+        if (now_type == 'on') {
+            $(this).parent().prev().attr('data-open', 'off');
+        } else {
+            $(this).parent().prev().attr('data-open', 'on');
+        }
+    });
+
+    // 상품 재배열
+    window.fits = new Object;
+    $('.items-wrap ul.items').each(function(i) {
+        window.fits[i] = new fitToParent($(this));
+    });
+
+    var reDraw = function() {
+        $.each(window.fits, function(i, obj) {
+            obj.init();
+        });
+    };
+
+    // 화면 크기 변경
+    $(window).bind(orientationEvent, function() {
+        setTimeout(function() {
+            reDraw();
+            var img_size = 0;
+            $('.MS_img-wrap').find('img').each(function() {
+                if (img_size < $(this).height()) {
+                    img_size = $(this).height();
+                }
+            });
+            $('.MS_img-wrap').height(img_size);
+        }, ($.browser.webkit && $.browser.version < 534.46) ? 500 : 0);
+    });
+});
+
+// 이벤트 경로 이동
+function move_event_link(href, move_mobile) {
+    if (move_mobile != '1') {
+        var curCookie = 'mobile_use=NO;expires=0;path=/;domain=' + location.host;
+        document.cookie = curCookie;
+    }   
+    document.location.href = href; 
+}
+</script>
+
+<!--/include_footer(1)/-->

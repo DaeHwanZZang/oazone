@@ -1,0 +1,89 @@
+<!--/if_head_banner/-->
+    <!--/head_banner/-->
+<!--/end_if/-->
+<div id="header-container" style="<!--/head_bg_color/--><!--/head_bg_image/-->">
+    <header class="wrapper clearfix">
+        <h1 id="logo"><a href="<!--/link_home/-->">
+        <!--/if_img_shop_logo/-->
+            <img src="<!--/img_shop_logo/-->" width="113.5" height="23.5" />
+        <!--/else/-->
+            <span><!--/shop_name/--></span>
+        <!--/end_if/-->
+        </a></h1>
+        <nav>
+            <ul class="clearfix">
+                <li class="cat"><a href="<!--/link_category/-->">카테고리</a></li>
+                <li class="search"><a href="<!--/link_search/-->">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
+<div id="menu-container">
+    <div class="wrapper clearfix">
+        <nav class="menus">
+           <ul class="clearfix">
+                <!--/if_login/-->
+                <li class="login"><a href="<!--/link_logout/-->">로그아웃</a></li>
+                <!--/else/-->
+                <li class="login"><a href="<!--/link_login/-->">로그인</a></li>
+                <!--/end_if/-->
+                <li class="home"><a href="<!--/link_mypage/-->">마이페이지</a></li>
+                <li class="cart"><a href="<!--/link_basket/-->">장바구니<!--/if_user_basket_count(+1)/--> <span><!--/user_basket_count/--></span><!--/end_if/--></a></li>
+                <li class="wish"><a href="<!--/link_wishlist/-->">관심상품<!--/if_user_wishlist_count(+1)/--> <span><!--/user_wishlist_count/--></span><!--/end_if/--></a></li>
+           </ul>
+        </nav>
+    </div>
+</div>
+
+
+<!-- 다찾다 검색 파인더 -->
+<!--/if_form_smart_finder/-->
+    <div id="allfinder-ctr"><a href="javascript:;" class="all-finder-open">스마트<br/>파인더</a></div>
+    <!--/form_smart_finder/-->
+
+        <div class="all-finder-layer" id="all-finder-layer" style="display:none;">
+            <div class="finder-hd">
+                <a href="javascript:;" class="fa fa-close all-finder-close"></a>
+                <div class="finder-tit">스마트 검색</div>
+            </div>
+            <div class="finder-opt">
+                <dl>
+                <!--/loop_smart_finder/-->
+                    <dt>
+                        <!--/smart_finder@title/--> <!--/if_smart_finder@tooltip/--><a href="javascript:;" class="finder-tooltip-btn finder-layer-open">?</a><!--/end_if/--> <!--/smart_finder@icon/-->
+                        <!-- (레이어) 항목 설명 -->
+                        <div class="finder-comm-layer">
+                            <a href="javascript:;" class="finder-tooltip-btn finder-btn-close fa fa-close finder-layer-close"></a>
+                            <div class="finder-layer-tit"><!--/smart_finder@title/--></div>
+                            <div class="finder-layer-cnt">
+                                <!--/smart_finder@tooltip/-->
+                            </div>
+                        </div>
+                        <!-- //(레이어) 항목 설명 -->
+                    </dt>
+                    <dd style="<!--/smart_finder@style/-->">
+                        <div class="<!--/smart_finder@class_name/-->">
+                            <!--/loop_smart_finder@items(20)/-->
+                                <!--/smart_finder@items@name/-->
+                            <!--/end_loop/-->
+                        </div>
+                    </dd>
+                    <!--/if_smart_finder@is_category/-->
+                    <dd class="finder-child-category">
+                        <div class="mobile-select-category"></div>
+                        <div class="finder-category2"></div>
+                    </dd>
+                    <!--/end_if/-->
+                <!--/end_loop/-->
+                </dl>
+            </div>
+            <div class="finder-btn-c">
+                <a href="#none" class="reset">초기화</a>
+                <button type="submit">
+                    <span class="fa fa-search"></span><span class="finder-count-toggle"><span class="finder-count"></span>개</span> 상품검색
+                </button>
+            </div><!-- .finder-btn-c -->
+        </div>
+    <!--/end_form/-->
+<!--/end_if/--> 
+<!-- 다찾다 검색 파인더 -->

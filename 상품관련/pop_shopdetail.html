@@ -1,0 +1,151 @@
+<script type="text/javascript" src="/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/fitToParent.js"></script>
+
+<div id="container">
+    <div id="product-popup" class="layer-pop">
+        <h3><!--/notag/name/--></h3>
+        <!--/if_photo_gallery/-->
+        <div class="info-wrap">
+            <div class="item-wrap clearfix">
+                <div class="items">
+                    <!--/loop_photo_gallery/-->
+                    <img src="<!--/photo_gallery@image/-->" />
+                    <!--/end_loop/-->
+                </div>
+            </div>
+            <div class="items-now">
+                <span class="now"><strong>1</strong> / 5</span>
+                <div class="items-btn">
+                    <a href="#" class="prev">이전</a>
+                    <a href="#" class="next">다음</a>
+                </div>
+            </div>
+        </div>
+        <!--/end_if/-->
+        <a href="javascript:close_this_popup();" class="close"><span>닫기</span></a>
+
+        <div class="detail-item">
+            <!--/mobile_detail/-->
+        </div>
+
+        <!--/if_product_info_list/-->
+        <div id="productWrap">
+        <!--/loop_product_info_list/-->
+        <h3><!--/if_product_info_list@product_name/--><!--/notag/product_info_list@product_name/--><!--/else/-->상품고시정보<!--/end_if/--></h3>
+		<table>
+			<colgroup>
+			          <col width="140" /><col width="*" />
+		        </colgroup>
+		<!--/loop_product_info_list@product_info/-->
+		<tr>
+		<th><span><!--/product_info_list@product_info@title/--></span></th>
+		<td><span><!--/product_info_list@product_info@content/--></span></td>
+		</tr>
+		<!--/end_loop/-->
+	        </table>
+	<!--/end_loop/-->
+        </div>
+        <!--/end_if/-->
+
+        <div class="fixed-btn fixed">
+             <div>
+                  <a href="javascript:close_this_popup();"><img src="/images/d3/m_01/btn/shopdetail_popup_close.png"/></a>
+             </div>
+             <div class="last-btn">
+                  <a href="#" onclick="setTimeout(function() { window.scrollTo(0, 1); }, 100);"><img src="/images/d3/m_01/btn/shopdetail_popup_top.png"/></a>
+             </div>
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+    // 화면 사이즈 변경시
+    var supportsOrientationChange = 'onorientationchange' in window,
+        orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize';
+
+    var max_height = 0,
+        item_wrap = $('#product-popup .info-wrap .item-wrap');
+
+    $('#product-popup .items img').css({ width: item_wrap.width() }).imagesLoaded(function(img) {
+        if ($(img).height() >= max_height) {
+            max_height = $(img).height();
+            item_wrap.css({ height: max_height });
+        }
+    });
+
+    // 안드로이드
+    if ($.browser.webkit && $.browser.version < 534.46) {
+       var fixed = $('div.fixed');
+       var margin_bottom_val = 40;
+       var basic_target_top = $(window).height() - fixed.outerHeight() - margin_bottom_val;
+       fixed.removeClass('fixed').css({ position: 'absolute', top: basic_target_top, padding: '5px 0', zIndex: 10, width: '100%' });
+
+       function pos_btn_top() {
+           target_top = $(window).height() - fixed.outerHeight() + $(window).scrollTop() - margin_bottom_val;
+           if($(window).scrollTop() <= 0) {
+               target_top = basic_target_top;
+           }
+           fixed.css({ top: target_top });
+       }
+
+       $(window).scroll(function(e) {
+            pos_btn_top();
+       });
+    }
+    
+    $('#product-popup .items').width(function() {
+        return $('img', this).size() * item_wrap.width();
+    });
+
+    $('#product-popup .items-now .now').html('<strong>1</strong> / ' + $('#product-popup .items img').size());
+
+    // 이전
+    $('#product-popup .items-btn a.prev').click(function(e) {
+        e.preventDefault();
+        if (parseInt($('#product-popup .items-now .now strong').text()) > 1) {
+            $('#product-popup .items-now .now strong').text(function() {
+                return parseInt($(this).text(), 10) - 1;
+            });
+            $('.items', item_wrap).stop(false, true).animate({ marginLeft: '+=' + item_wrap.width() }, 250);
+        }
+    });
+    // 다음
+    $('#product-popup .items-btn a.next').click(function(e) {
+        e.preventDefault();
+        if (parseInt($('#product-popup .items-now .now strong').text()) < $('#product-popup .items img').size()) {
+            $('#product-popup .items-now .now strong').text(function() {
+                return parseInt($(this).text(), 10) + 1;
+            });
+            $('.items', item_wrap).stop(false, true).animate({ marginLeft: '-=' + item_wrap.width() }, 250);
+        }
+    });
+
+    // 화면 크기 변경
+    $(window).bind(orientationEvent, function() {
+        max_height = 0
+        item_wrap.css({ height: '' });
+        setTimeout(function() {
+            $('#product-popup .items img').css({ width: item_wrap.width(), height: '' }).each(function(img) {
+                if ($(this).height() >= max_height) {
+                    max_height = $(this).height();
+                    item_wrap.css({ height: max_height });
+                }
+            });
+
+            $('#product-popup .items').width(function() {
+                return $('img', this).size() * item_wrap.width();
+            });
+        }, ($.browser.webkit && $.browser.version < 534.46) ? 500 : 0);
+    });
+
+    
+});
+
+function close_this_popup() {
+    self.close();
+    history.back();
+}
+</script>

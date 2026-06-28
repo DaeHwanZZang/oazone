@@ -1,0 +1,27 @@
+/* =============================================================================
+   상품상세 팝업 product_popup.html
+   ========================================================================== */
+#product-popup { display: block; position: relative; }
+#product-popup .info-wrap { position: relative; width: auto; margin: 15px auto; padding: 0 15px; }
+#product-popup .info-wrap .item-wrap { border: 1px solid #e3e3e3; width: 100%; overflow: hidden; }
+#product-popup .info-wrap .items { }
+#product-popup .info-wrap .items img { max-width: 100%; height: auto; float: left; }
+#product-popup .info-wrap .items-now { margin-top: 15px; position: relative; line-height: 33px; text-align: center; font-size: .865em; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; }
+#product-popup .info-wrap .items-now .now {  }
+#product-popup .info-wrap .items-btn a { display: block; text-indent: -9999px; width: 33px; height: 33px; border: 1px solid #dfdfdf; position: absolute; top: -1px; }
+#product-popup .info-wrap .items-btn a.prev { background: #f3f2f2 url(/images/d3/m_01/btn/item_info_btn_prev@2x.gif) no-repeat center center; background-size: 11px 15.5px; left: -3.125%; }
+#product-popup .info-wrap .items-btn a.next { background: #f3f2f2 url(/images/d3/m_01/btn/item_info_btn_next@2x.gif) no-repeat center center; background-size: 11px 15.5px; right: -3.125%; }
+#product-popup .detail-item { position: relative; width: 90.3125%; margin: 0 auto; padding-bottom: 40px; }
+#product-popup .detail-item img { max-width: 100%; height: auto; }
+#product-popup .detail-item table { width: 100% !important; }
+#product-popup .fixed { position: fixed !important; z-index: 10; width: 100%; padding: 5px 0; bottom:20px; }
+#product-popup .fixed-btn {  text-align:right; margin-left:-5px; }
+#product-popup .fixed-btn .last-btn { margin-top:5px; }
+#product-popup .fixed-btn div a img { width:30px; }
+
+/* 상품 일반정보(상품정보제공 고시) */
+#productWrap { margin: 10px; padding-bottom: 40px; }
+#productWrap h3.tb-tit { text-align: left; padding: 0; background-color: #ffffff; }
+#productWrap table { width: 100%; font-size: 12px; border-collapse: collapse; border-width: 1px 0 1px 0; border-color: #b4b4b4; border-style: solid; table-layout: fixed; margin-bottom:20px; }
+#productWrap table th { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; background-color: #f8f8f8; color: #3b3b3d; text-align: left; padding: 10px 0 10px 15px; }
+#productWrap table td { color: #8b8b8b; border-bottom: 1px solid #e0e0e0; word-break: break-all; text-align: left; padding: 10px 0 10px 17px; }

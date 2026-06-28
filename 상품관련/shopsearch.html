@@ -1,0 +1,240 @@
+<!--/include_header(1)/-->
+
+<div id="container">
+    <div id="search" class="wrapper">
+        <div class="form-wrap">
+            <!--/form_search/-->
+                <!--/input_keyword(search_auto_completion)/-->
+                <a href="<!--/link_search/-->" class="btn-type-06"><span>검색</span></a>
+            <!--/end_form/-->
+        </div>
+
+        <div class="results">
+
+        <!-- 다찾다 검색 파인더 -->
+        <!--/if_form_smart_finder/-->
+            <script src="/js/swiper.min.js"></script>
+            <link rel="stylesheet" href="/css/swiper.min.css" />
+            <div class="all-finder-result">
+                <a href="#none" class="fa fa-rotate-left"></a>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper finder-search-data"></div>
+                </div>
+            </div>
+        <!--/else/-->
+            <div class="tool-wrap wrapper">
+                <!--/select_category/-->
+                <!--/select_sort/-->
+            </div>
+        <!--/end_if/-->
+
+            <div class="search-auto-complete-list"></div>
+            <div class="tool-wrap wrapper">
+                 <div class="type-btn">
+                      <!--/if_now_product_list_viewtype(list)/-->
+                          <a class="list" href="<!--/link_viewtype_list/-->">갤러리/리스트</a>
+                      <!--/else_if_now_product_list_viewtype(gallery)/-->
+                          <a class="gallery" href="<!--/link_viewtype_list/-->">갤러리/리스트</a>
+                      <!--/end_if/-->
+                 </div>
+            </div>
+
+            <div class="wrapper items-wrap">
+                <div class="paging-wrap">
+                    <!--/block_product/-->
+                    <!--/if_product_list/-->
+                    <div class="paging">
+                        <span><!--/list_start_num/--> - <!--/list_end_num/--></span>
+                    </div>
+
+                    <!--/if_product_list_viewtype(list)/-->
+                    <ul class="items clearfix" data-type="vertical" data-open="on">
+                        <!--/loop_product_list/-->
+                        <li>
+                            <dl>
+                                <dt class="hidden">상품 이미지</dt>
+                                <dd class="thumb-img vertical-img">
+                                    <img src="<!--/product_list@mobile_image/-->" alt="" />
+                                    <!--/if_product_list@is_soldout/-->
+                                        <div class="sold-out"></div>
+                                    <!--/end_if/-->
+                                </dd>
+                                <dt class="hidden">상품 이름</dt>
+                                <dd class="pname"><!--/notag/product_list@name/--></dd>
+                                <dd class="price-info">
+                                    <ul>
+                                        <li>
+                                            <span class="tit">상품가 : </span>
+                                            <!--/if_product_list@price_replace/-->
+                                            <span class="txt original"><!--/product_list@price_replace/--></span>
+                                            <!--/else/-->
+                                            <span class="txt original<!--/if_product_list@price_discount/--> strike<!--/end_if/-->"><!--/number/product_list@price_sell/-->원</span>
+                                            <!--/end_if/-->
+                                            <!--/if_product_list@review_count/--><em>( 상품평 : <!--/number/product_list@review_count/--> )</em><!--/end_if/-->
+                                        </li>
+                                        <!--/if_product_list@price_discount/-->
+                                        <li>
+                                            <!--/if_product_list@discount_apply_type(mobile)/-->
+                                            <span class="tit"><img src="/images/d3/m_01/icon/icon_phone_write@2x.gif" />모바일가 : </span>
+                                            <!--/else/-->
+                                            <span class="tit">할인가 : </span>
+                                            <!--/end_if/-->
+                                            <span class="txt discount"><!--/number/product_list@price_discount/-->원</span>
+                                        </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@reserve_price(+1)/-->
+                                            <li>
+                                                <span class="tit">
+                                                      <!--/if_product_list@used_mobile_reserve/-->
+                                                          <img src="/images/d3/m_01/icon/mobile_reserve_icon_s.png" />
+                                                      <!--/end_if/-->
+                                                적립금</span>
+                                                <span class="txt save"><!--/number/product_list@reserve_price/-->원</span>
+                                            </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@point_price(+1)/-->
+                                            <li>
+                                                <span class="tit">포인트 : </span>
+                                                <span class="txt save"><!--/product_list@point_price/--><!--/product_list@point_unit/--></span>
+                                            </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@hashtag/-->
+                                        <li>
+                                            <div class="hashtag">
+                                            <!--/loop_product_list@hashtag/-->
+                                                <div><a href="<!--/product_list@hashtag@link/-->">#<!--/product_list@hashtag@name/--></a></div>
+                                            <!--/end_loop/-->
+                                            </div>
+                                        </li>
+                                        <!--/end_if/-->
+                                    </ul>
+                                </dd>
+                                <dt class="hidden">자세히보기</dt>
+                                <dd class="link-view">
+                                    <a href="<!--/product_list@link/-->">상품 자세히보기</a>
+                                </dd>
+                                <!--/if_not_product_list@is_soldout/-->
+                                    <!--/if_product_list@mobile_icons/-->
+                                        <dd class="icons">
+                                            <!--/product_list@mobile_icons/-->
+                                        </dd>
+                                    <!--/end_if/-->
+                                <!--/end_if/-->
+                            </dl>
+                            <!--/if_product_list@link_wish_toggle/-->
+                            <p class="prd-wish">
+                                <a href="<!--/product_list@link_wish_toggle/-->"><!--/product_list@block_btn_wish/--><i class="fa fa-heart"></i><i class="fa fa-heart-o"></i><!--/end_block/--><!--/product_list@block_wish_count/--><!--/number/product_list@wish_count/--><!--/end_block/--></a>
+                            </p>
+                            <!--/end_if/-->
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                    <!--/end_if/-->
+                    <!--/if_product_list_viewtype(gallery)/-->
+                    <ul class="items clearfix" data-type="gallery" data-open="on">
+                        <!--/loop_product_list(20)/-->
+                        <li>
+                            <dl>
+                                <dt class="hidden">상품 이미지</dt>
+                                <dd class="thumb-img gallery-img">
+                                    <img src="<!--/product_list@mobile_image/-->" />
+                                    <!--/if_product_list@is_soldout/-->
+                                        <div class="sold-out"></div>
+                                    <!--/end_if/-->
+                                    <!--/if_not_product_list@is_soldout/-->
+                                        <!--/if_product_list@mobile_icons/-->
+                                            <div class="icons">
+                                                 <!--/product_list@mobile_icons/-->
+                                            </div>
+                                        <!--/end_if/-->
+                                    <!--/end_if/-->
+                                </dd>
+                                <dt class="hidden">상품 이름</dt>
+                                <dd class="pname"><!--/notag/product_list@name(16,..)/--></dd>
+                                <dd class="price-info">
+                                    <ul>
+                                        <li>
+                                            <span class="tit">상품가</span>
+                                            <!--/if_product_list@price_replace/-->
+                                            <span class="txt original"><!--/product_list@price_replace/--></span>
+                                            <!--/else/-->
+                                            <span class="txt original<!--/if_product_list@price_discount/--> strike<!--/end_if/-->"><!--/number/product_list@price_sell/-->원</span>
+                                            <!--/end_if/-->
+                                            <!--/if_product_list@review_count/--> <span class="review-count"><em>(<!--/number/product_list@review_count/-->)</em></span><!--/end_if/-->
+                                        </li>
+                                        <!--/if_product_list@price_discount/-->
+                                        <li>
+                                            <!--/if_product_list@discount_apply_type(mobile)/-->
+                                            <span class="tit"><img src="/images/d3/m_01/icon/icon_phone_write@2x.gif" /> 모바일가</span>
+                                            <!--/else/-->
+                                            <span class="tit">할인가</span>
+                                            <!--/end_if/-->
+                                            <span class="txt discount"><!--/number/product_list@price_discount/-->원</span>
+                                        </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@reserve_price(+1)/-->
+                                            <li>
+                                                <span class="tit">
+                                                      <!--/if_product_list@used_mobile_reserve/-->
+                                                          <img src="/images/d3/m_01/icon/mobile_reserve_icon_s.png" />
+                                                      <!--/end_if/-->
+                                                적립금</span>
+                                                <span class="txt save"><!--/number/product_list@reserve_price/-->원</span>
+                                            </li>
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@point_price(+1)/-->
+                                            <li>
+                                                <span class="tit">포인트</span>
+                                                <span class="txt save"><!--/product_list@point_price/--><!--/product_list@point_unit/--></span>
+                                            </li>     
+                                        <!--/end_if/-->
+
+                                        <!--/if_product_list@hashtag/-->
+                                        <li>
+                                            <div class="hashtag">
+                                            <!--/loop_product_list@hashtag(3)/-->
+                                                <div><a href="<!--/product_list@hashtag@link/-->">#<!--/product_list@hashtag@name/--></a></div>
+                                            <!--/end_loop/-->
+                                            </div>
+                                        </li>
+                                        <!--/end_if/-->
+
+                                    </ul>
+                                </dd>
+                                <dt class="hidden">자세히보기</dt>
+                                <dd class="link-view">
+                                    <a href="<!--/product_list@link/-->">상품 자세히보기</a>
+                                </dd>
+                                
+                            </dl>
+                        </li>
+                        <!--/end_loop/-->
+                    </ul>
+                    <!--/end_if/-->
+
+                    <!--/else/-->
+                    <div class="none-data">
+                        <img src="/images/d3/m_01/bull/none_data@2x.gif" alt="" width="68.5" height="68.5" />
+                        <p>해당 데이터가 없습니다.</p>
+                    </div>
+                    <!--/end_if/-->
+                    <!--/end_block/-->
+                </div><!-- .paging-wrap -->
+
+                <!--/block_product_more/-->
+                <div class="more">
+                    <a href="<!--/link_more_product_list/-->" class="btn-type-04 box-gradient-03 box-shadow-03"><span>더보기</span></a>
+                </div>
+                <!--/end_block/-->
+            </div><!-- .items-wrap -->
+        </div><!-- .results -->
+    </div><!-- #search -->
+</div>
+
+<!--/include_footer(1)/-->

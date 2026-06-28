@@ -1,0 +1,130 @@
+/* =============================================================================
+   상단영역
+   ========================================================================== */
+#container .sub-title h4.community { background: url(/images/d3/m_01/bull/sub_title_community@2x.gif) no-repeat 10px center; background-size: 17px 10px; }
+
+/* =============================================================================
+   전체리뷰-상품후기모음 all_review.html
+   ========================================================================== */
+#all-review {}
+#all-review .search-wrap { position: relative; padding: 10px 14px; border-top: 2px solid #bababa; background-color: #f4f4f4; }
+#all-review .search-wrap .cate-search {}
+#all-review .search-wrap .cate-search dt { position: absolute; left: 14px; top: 20px; font-size: .75em; font-weight: bold; color: #000; }
+#all-review .search-wrap .cate-search dd { position: relative; padding-left: 70px; line-height: 2em; }
+#all-review .search-wrap .cate-search dd select { width: 100%; font-size: .875em; }
+#all-review .search-wrap .item-search { position: relative; border-top: 1px dotted #aeaeae; margin-top: 10px; padding: 10px 0; }
+#all-review .search-wrap .item-search label { display: block; position: absolute; left: 0; top: 16px; color: #000; font-size: .75em; font-weight: bold; }
+#all-review .search-wrap .item-search .wrap { position: relative; padding-left: 70px; padding-right: 60px; }
+#all-review .search-wrap .item-search .wrap input { width: 100%; height: 25px; }
+#all-review .search-wrap .item-search a.btn-gray-h25 { position: absolute; top: 10px; right: 0; }
+#all-review .notice-bar { position: relative; padding: 10px 14px; border-top: 1px solid #bdc4c6; border-bottom: 1px solid #bdc4c6; background-color: #fffde8; }
+#all-review .notice-bar dt { line-height: 1.5em; font-size: .75em; color: #000; font-weight: bold; word-break: break-all; }
+#all-review .notice-bar dt strong { padding: 2px 4px; color: #fff; font-size: 1em; background-color: #7e8593; -webkit-border-radius: 3px !important; border-radius: 3px !important; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; }
+#all-review .notice-bar dd { margin-top: 5px; font-size: .75em; color: #777; }
+
+
+div.review-style .all-list { position: relative; padding-bottom: 15px; border-bottom: 1px solid #bababa; }
+div.review-style .all-list ul > li { list-style: none; position: relative; padding: 10px 14px 0; border-top: 1px solid #bbbfc0; border-bottom: 1px solid #bbbfc0; background-color: #fbfbfb; }
+div.review-style .all-list ul > li.no-data { background-color: #FFFFFF; }
+div.review-style .all-list ul > li > .no-data-set { padding : 10px 0; text-align:center; font-size: .75em; }
+div.review-style .all-list ul > li > .no-data-set img { margin-bottom: 10px; }
+div.review-style .all-list ul > li > dl { position: relative; padding-bottom: 10px; }
+div.review-style .all-list ul > li > dl:before,
+div.review-style .all-list ul > li > dl:after { content: ""; display: table; }
+div.review-style .all-list ul > li > dl:after { clear: both; }
+div.review-style .all-list ul > li > dl dt { z-index: 1; float: left; position: relative; width: 93px; height: auto; }
+div.review-style .all-list ul > li > dl dt img { width: 93px; height: 93px; }
+div.review-style .all-list ul > li > dl dd { position: relative; padding-left: 110px; }
+div.review-style .all-list ul > li > dl dd h4 { line-height: 2em; margin: 0; font-size: .75em; font-weight: bold; border-bottom: 1px solid #e5e5e5; }
+div.review-style .all-list ul > li > dl dd h4 strong { font-size: 1.25em; }
+div.review-style .all-list ul > li > dl dd.link-view { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+div.review-style .all-list ul > li > dl dd.link-view a { display: block; overflow: hidden; width: 100%; height: 100%; text-indent: -9999px; }
+div.review-style .all-list ul > li > dl dd .sub { position: relative; margin-top: 10px; }
+div.review-style .all-list ul > li > dl dd .sub h5 { font-size: .75em; margin: 0; word-break: break-all; }
+div.review-style .all-list ul > li > dl dd .sub .info { margin-top: 5px; font-size: .75em; color: #777; }
+div.review-style .all-list ul > li > dl dd .sub .rating { margin-top: 5px; font-size: .75em; color: #777; }
+div.review-style .all-list ul > li > dl dd .sub .rating label { display: block; line-height: 1.5em; }
+div.review-style .all-list ul > li > dl dd .sub .rating label span { font-size: 1.25em; }
+div.review-style .all-list ul > li > dl dd .sub .link-view { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+div.review-style .all-list ul > li > dl dd .sub .link-view a { display: block; overflow: hidden; width: 100%; height: 100%; text-indent: -9999px; }
+div.review-style .all-list ul > li .re-wrap { display: none; position: relative; padding: 10px 14px; margin: 0 -14px; border-top: 1px solid #cbcbcb; background-color: #fbfbfb; }
+div.review-style .all-list ul > li .re-wrap > dl { font-size: .75em; font-weight: bold; color: #000; line-height: 1.5em; }
+div.review-style .all-list ul > li .re-wrap > dl > dt { word-break: break-all; }
+div.review-style .all-list ul > li .re-wrap > dl > dt img { width: auto; height: auto; max-width: 95%; }
+
+
+/* =============================================================================
+   상품화면-상품리뷰(쓰기목록내용보기) review_list.html
+   ========================================================================== */
+#review-list {}
+#review-list .item-wrap { position: relative; padding: 10px 14px; }
+#review-list .item-wrap dl:before,
+#review-list .item-wrap dl:after { content: ""; display: table; }
+#review-list .item-wrap dl:after { clear: both; }
+#review-list .item-wrap dt { float: left; position: relative; width: 48px; height: 48px; border: 1px solid #bfc2ca; }
+#review-list .item-wrap dt img { width: 100%; height: 100%; }
+#review-list .item-wrap dd.subject { display: table-cell; vertical-align: middle; position: relative; padding-left: 10px; height: 48px; font-size: .75em; font-weight: bold; color: #000; }
+#review-list .item-wrap dd.link-view { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+#review-list .item-wrap dd.link-view a { display: block; overflow: hidden; width: 100%; height: 100%; text-indent: -9999px; }
+#review-list .title { position: relative; border-top: 1px solid #8b8b8b; border-bottom: 1px solid #8b8b8b; background-color: #bfc2ca; }
+#review-list .title h3 { padding-left: 30px; text-align: left; margin: 0; height: 34px; line-height: 36px; font-size: .75em; font-weight: bold; color: #fff; background: url(/images/d3/m_01/bull/review_title@2x.gif) no-repeat 14px center; background-size: 13px 13px; }
+#review-list .write-wrap { position: relative; padding: 10px 14px; }
+#review-list .write-wrap ul { margin-right: 7px; }
+#review-list .write-wrap li { list-style-type: none; overflow: hidden; }
+#review-list .write-wrap li:first-child { margin-bottom: 5px; }
+#review-list .write-wrap input,
+#review-list .write-wrap textarea { width: 100%; font-size: .75em; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+#review-list .write-wrap textarea { height: 80px; padding: 3px; }
+#review-list .write-wrap input { height: 25px; }
+#review-list .write-wrap .select { text-align: right; margin: 5px 0; font-size: .75em; font-weight: bold; color: #000; }
+#review-list .write-wrap .select select { color: #ffb400; }
+#review-list .write-wrap .file { text-align: right; margin-right: -9px; }
+#review-list .write-wrap .file input { width: 50%; }
+#review-list .write-wrap .util { position: relative; margin: 10px -14px; height: 34px; line-height: 34px; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; }
+#review-list .write-wrap .util span { padding: 0 14px; color: #898989; }
+#review-list .write-wrap .util span a { color: #898989; font-size: .75em; font-weight: bold; }
+#review-list .write-wrap .util a.btn-white-h25 { position: absolute; top: 4px; right: 14px; }
+#review-list .reviews { position: relative; }
+#review-list .reviews > ul > li { position: relative; border-top: 1px solid #979797; border-bottom: 1px solid #979797; }
+#review-list .reviews > ul > li:first-child { border-top: 2px solid #e6e6e6; }
+#review-list .reviews > ul > li:last-child { border-bottom: 2px solid #e6e6e6; }
+#review-list .reviews > ul > li.no-data { background-color: #FFFFFF; }
+#review-list .reviews > ul > li > .no-data-set { padding : 10px 0; text-align:center; font-size: .75em; }
+#review-list .reviews > ul > li > .no-data-set img { margin-bottom: 10px; }
+#review-list .reviews > ul > li > dl { position: relative; padding: 10px 14px; }
+#review-list .reviews > ul > li > dl dt { padding-right: 75px; }
+#review-list .reviews > ul > li > dl dd.up { position: absolute; top: 10px; right: 20px; }
+#review-list .reviews > ul > li > dl h4 { margin: 0; color: #000; font-size: .75em; font-weight: bold; }
+#review-list .reviews > ul > li > dl h4 img { vertical-align: -2px; }
+#review-list .reviews > ul > li > dl .info { margin-top: 5px; font-size: .75em; color: #777; }
+#review-list .reviews > ul > li > dl .info .btns { display: inline-block; margin-left: 10px; }
+#review-list .reviews > ul > li > dl .info a { font-size: 1em; }
+#review-list .reviews > ul > li > dl .rating { position:relative; display: none; margin-top: 5px; font-size: .75em; color: #777; }
+#review-list .reviews > ul > li > dl .rating label { display: block; margin-right: 10px; }
+#review-list .reviews > ul > li > dl .rating label span { font-size: 1.25em; }
+#review-list .reviews > ul > li > .wrap { display: none; }
+#review-list .reviews > ul > li > .wrap .conts { position: relative; padding: 10px 14px; }
+#review-list .reviews > ul > li > .wrap .conts .thumbs { text-align: center; }
+#review-list .reviews > ul > li > .wrap .conts .thumbs img { width: auto; height: auto;  max-width: 95%; }
+#review-list .reviews > ul > li > .wrap .conts .txt { margin-top: 10px; font-size: .75em; font-weight: bold; color: #000; word-break: break-all; }
+#review-list .reviews > ul > li > .wrap .re-wrap { padding-left: 14px; border-top: 1px solid #ececec; }
+#review-list .reviews > ul > li > .wrap .re-wrap { font-size: .75em; font-weight: bold; color: #000; line-height: 1.5em; }
+#review-list .reviews > ul > li > .wrap .re-wrap li { margin: 5px 0; list-style-type: none; }
+#review-list .reviews > ul > li.now > dl { border-bottom: 1px dotted #aeaeae; background-color: #fbfbfb; }
+#review-list .reviews > ul > li.now > dl dd.up { display: none; }
+#review-list .reviews > ul > li.now > dl .rating { display: block; }
+#review-list .reviews > ul > li.now > .wrap { display: block; }
+
+/* 첨부 파일 class */
+input.input-file { -webkit-appearance: none; border: 1px solid #d6d6d6; padding: 0 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.MS_file_button {     
+    display: inline-block; padding-right: 6px; font-size: .75em; color: #777; height: 25px; line-height: 25px; word-spacing: -1px; text-decoration: none !important; white-space: nowrap;
+    border: 1px solid #8c8c8c;
+    -webkit-border-radius: 3px !important; border-radius: 3px !important; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    background-color: #fff; 
+    padding: 1px 6px 0 6px;
+}
+
+.review-style .btn-report { position:absolute; right:0; bottom:0; display:inline-block; color:#9d9d9d; font-size:11px; z-index:1; }
+div.review-style .all-list ul > li > dl dd .sub .link-view { width: 100%; height: 100%; position: relative;}
+div.review-style .all-list ul > li > dl dd .sub .link-view a { display: block; overflow: hidden; width: 100%; height: 100%; text-indent: 0;}

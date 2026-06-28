@@ -1,0 +1,255 @@
+<!--/include_header(1)/-->
+<div id="container">
+
+<!-- 개별 상품의 리뷰 -->
+<!--/if_product/-->  
+    <div id="review-list" class="review-style wrapper">
+        <div class="item-wrap">
+            <dl>
+                <dt><!--/if_product_mobile_image/--><img src="<!--/product_mobile_image/-->" alt="" /><!--/else/--><img src="/images/common/m_no_rep_image.png" alt="" /><!--/end_if/--></dt>
+                <dd class="subject"><!--/notag/product_name/--></dd>
+                <dd class="link-view"><a href="<!--/product_link/-->">자세히 보기</a></dd>
+            </dl>
+        </div>
+        
+        <div class="title">
+            <h3>상품리뷰</h3>
+        </div>
+        
+        <div class="write-wrap">
+            <!--/form_review/-->
+                <ul class="clearfix">
+                    <li><!--/input_review_writer(comm)/--></li>
+                    <li><!--/text_review_content(comm)/--></li>
+                    <!--/loop_review_score/-->
+                    <li class="select">
+                        <label><!--/review_score@title/-->
+                            <!--/review_score@icon/-->
+                        </label>
+                    </li>
+                    <!--/end_loop/-->
+                    <!--/if_file_review_attach/-->
+                    <li class="file">
+                        <!--/file_review_attach(input-file)/-->
+                    </li>
+                    <!--/end_if/-->
+                </ul>
+                <div class="util">
+                    <span><a href="<!--/link_review_more/-->">전체리뷰</a></span>
+                    <a href="<!--/link_review_write/-->" class="btn-white-h25"><strong>리뷰등록</strong></a>
+                </div>
+                <!--/block_prevent_auto_input/-->
+                <!--/end_block/-->
+            <!--/end_form/-->
+        </div>
+        
+        <div class="reviews">
+            <ul class="clearfix">
+                <!--/if_review/-->
+                <!--/loop_review/-->
+                <li id="review<!--/idx/-->">
+                    <dl>
+                        <dt>
+                            <h4><!--/if_review@is_mobile_write/--><img src="/images/d3/m_01/icon/icon_phone_write@2x.gif" /><!--/end_if/-->
+                                <a href="#none"><!--/review@subject(28,...)/--></a> <!--/if_review@attach_image/--><img src="/images/d3/m_01/icon/review_icon_cam@2x.gif" width="17" height="12" alt="" /><!--/end_if/--> <!--/if_review@reply/--><img src="/images/common/replyicon.gif" /><!--/end_if/--></h4>
+                            <div class="info">
+                                <span class="id pr-list-writer"><!--/if_review@group_icon/--><img src="<!--/review@group_icon/-->" /><!--/end_if/--><!--/review@writer/-->
+                                </span> <!--/if_review@date_write/-->| <!--/date(%Y-%M-%D)/review@date_write/--><!--/end_if/-->
+                                <div class="btns">
+                                    <!--/if_review@link_modify/--><a href="<!--/review@link_modify/-->" class="btn-white-h15"><strong>수정</strong></a><!--/end_if/-->
+                                    <!--/if_review@link_delete/--><a href="<!--/review@link_delete/-->" class="btn-white-h15"><strong>삭제</strong></a><!--/end_if/-->
+                                </div>
+                            </div>
+                        </dt>
+                        <dd class="up"><span class="stars-white"><!--/loop_review@score/--><!--/if_idx(1)/--><!--/review@score@icon/--><!--/end_if/--><!--/end_loop/--></span></dd>
+                        <dd class="rating clearfix">
+                            <!--/loop_review@score/-->
+                                <label><!--/review@score@title/--> <!--/review@score@icon/--></label>
+                            <!--/end_loop/-->
+                            <!--/if_review@link_report_popup/-->
+                            <a href="javascript:void(0);" class="btn-report" onclick="<!--/review@link_report_popup/-->">신고/차단</a>
+                            <!--/end_if/-->
+                        </dd>
+                    </dl>
+                    <div class="wrap">
+                        <div class="conts">
+                            <div class="thumbs">
+                                <!--/if_review@attach_image/-->
+                                    <img src="<!--/review@attach_image/-->" alt="" /><br />
+                                <!--/end_if/-->
+                            </div>
+                            <div class="txt">
+                                <!--/review@content/-->
+                            </div>
+                        </div>
+                        <!--/if_review@reply/-->
+                        <div class="re-wrap">
+                            <ul>
+                                <li><img src="/images/common/reviewreply.gif"> <!--/review@reply/--></li>
+                            </ul>
+                        </div>
+                        <!--/end_if/-->
+                    </div>
+                </li>
+                <!--/end_loop/-->
+                <!--/else/-->
+                <li class="center no-data">
+                    <div class="no-data-set">
+                        <img src="/images/d3/m_01/bull/none_data@2x.gif" alt="" width="68.5" height="68.5" />
+                        <p>해당 데이터가 없습니다.</p>
+                    </div>
+                </li>
+                <!--/end_if/-->
+            </ul>
+        </div>
+
+<!-- 전체 상품의 리뷰 -->
+<!--/else/-->
+
+    <div class="wrapper clearfix">
+        <nav class="sub-title">
+            <h4 class="community">전체리뷰</h4>
+        </nav>
+    </div>
+    
+    <div id="all-review" class="review-style wrapper">
+        <div class="search-wrap">
+            <!--/form_search_review/-->
+            <div class="cate-search">
+                 <dl>
+                     <dt>분류별 검색</dt>
+                     <dd>
+                         <!--/select_cate1/--> <!-- 대분류선택 -->
+                         <!--/select_cate2/--> <!-- 중분류선택 -->
+                         <!--/select_cate3/--> <!-- 소분류선택 -->
+                         <!--/select_product/--> <!-- 상품선택 -->                       
+                     </dd>
+                 </dl>
+            </div>
+            <div class="item-search">
+                <label>상품명 검색</label>
+                <div class="wrap">
+                    <!--/input_product_name(comm)/-->
+                </div>
+                <a href="<!--/link_search/-->" class="btn-gray-h25"><strong>검색</strong></a>
+            </div>
+            <!--/end_form/-->
+        </div><!-- .search-wrap -->
+        
+        <!--/if_notice/-->
+        <!--/loop_notice/-->
+        <div class="notice-bar">
+            <dl>
+                <dt>
+                    <strong class="box-round">공지</strong>
+                    <!--/notice@content/-->
+                </dt>
+                <dd>관리자 | <!--/notice@date_write/--></dd>
+            </dl>
+        </div><!-- .notice-bar -->
+        <!--/end_loop/-->
+        <!--/end_if/-->
+
+        <div class="all-list">
+            <ul class="clearfix">
+                <!--/if_review/-->
+                <!--/loop_review/-->
+                <li>
+                    <dl>
+                        <dt>
+                            <a href="<!--/review@link_product/-->">
+                            <!--/if_review@product_mobile_image/-->
+                            <img src="<!--/review@product_mobile_image/-->" alt="상품명" />
+                            <!--/else/-->
+                            <img src="/images/common/m_no_rep_image.png" alt="" />
+                            <!--/end_if/-->
+                            </a>
+                        </dt>
+                        <dd>
+                            <h4><a href="<!--/review@link_product/-->"><!--/notag/review@product_name(100)/--></a> <!--/if_review@link_delete/--><a href="<!--/review@link_delete/-->" class="btn-white-h15"><strong>삭제</strong></a><!--/end_if/--></h4>
+                            <div class="sub">
+                                <h5>
+                                    <!--/if_review@is_mobile_write/--><img src="/images/d3/m_01/icon/icon_phone_write@2x.gif" /><!--/end_if/-->
+                                    <!--/review@subject(28,...)/--> 
+                                    <!--/if_review@attach_image/--><img src="/images/d3/m_01/icon/review_icon_cam@2x.gif" width="17" height="12" alt="" /><!--/end_if/-->
+                                    <!--/if_review@reply/--><img src="/images/common/replyicon.gif" /><!--/end_if/-->
+                                </h5>
+                                <div class="info">
+                                    <span class="id pr-list-writer"><!--/if_review@group_icon/--><img src="<!--/review@group_icon/-->" /><!--/end_if/--><!--/review@writer/-->
+                                    </span> <!--/if_review@date_write/-->| <!--/review@date_write/--><!--/end_if/-->
+                                </div>
+                                <div class="rating">
+                                    <!--/loop_review@score/-->
+                                    <label><!--/review@score@title/--> <!--/review@score@icon/--></label>
+                                    <!--/end_loop/-->
+                                    <!--/if_review@link_report_popup/-->
+                                    <a href="javascript:void(0);" class="btn-report" onclick="<!--/review@link_report_popup/-->">신고/차단</a>
+                                    <!--/end_if/-->
+                                </div>
+                                <div class="link-view"><a href="#none">댓글보기</a></div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="re-wrap" id="review<!--/idx/-->" style="display:none">
+                        <dl>
+                            <dt>
+                                <!--/if_review@attach_image/-->
+                                    <img src="<!--/review@attach_image/-->" alt="" /><br />
+                                <!--/end_if/-->
+                                <!--/review@content/-->
+                            </dt>
+                            <!--/if_review@reply/-->
+                            <dd><img src="/images/common/reviewreply.gif"> <!--/review@reply/--></dd>
+                            <!--/end_if/-->
+                        </dl>
+                    </div>
+                </li>
+                <!--/end_loop/-->
+                <!--/else/-->
+                <li class="center no-data">
+                    <div class="no-data-set">
+                        <img src="/images/d3/m_01/bull/none_data@2x.gif" alt="" width="68.5" height="68.5" />
+                        <p>해당 데이터가 없습니다.</p>
+                    </div>
+                </li>
+                <!--/end_if/-->
+            </ul>
+        </div><!-- .all-list -->
+
+<!-- 개별, 전체 상품의 리뷰 끝 -->
+<!--/end_if/-->
+
+        <div class="paging-new">
+            <!--/if_pager_review::prev@link/-->
+            <a href="<!--/pager_review::prev@link/-->" class="prev">이전</a>
+            <!--/end_if/-->
+
+            <!--/loop_pager_review::page(5)/-->
+                <!--/if_pager_review::page@current/-->
+            <a href="<!--/pager_review::current@link/-->" class="now"><!--/pager_review::current/--></a>
+                <!--/else/-->
+            <a href="<!--/pager_review::page@link/-->"><!--/pager_review::page/--></a>
+                <!--/end_if/-->
+            <!--/end_loop/-->
+
+            <!--/if_pager_review::next@link/-->
+            <a href="<!--/pager_review::next@link/-->" class="next">다음</a>
+            <!--/end_if/-->
+        </div>
+    </div><!-- #all-review -->
+</div>
+
+<script>
+$(function() {
+    // 댓글 보기
+    $('#all-review .all-list .sub .link-view a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parents('li:first').find('.re-wrap').toggle();
+    });
+    $('#review-list .reviews h4 a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parents('li:first').toggleClass('now');
+    });
+});
+</script>
+<!--/include_footer(1)/-->

@@ -1,0 +1,114 @@
+<!--/form_product/-->
+<div class="cnt">
+	<div class="prev-sns">
+        <!--/if_link_scrap_fb/-->
+            <a href="<!--/link_scrap_fb/-->"><img src="/images/d3/m_powerpack/32/btn/btn_facebook.gif" alt="페이스북"/></a>
+        <!--/end_if/-->
+        <!--/if_link_scrap_tw/-->
+            <a href="<!--/link_scrap_tw/-->"><img src="/images/d3/m_powerpack/32/btn/btn_twitter.gif" alt="트위터"/></a>
+        <!--/end_if/-->
+        <!--/if_link_scrap_ka/-->
+            <a href="<!--/link_scrap_ka/-->"><img src="/images/d3/m_powerpack/32/btn/btn_kakatalk.gif" alt="카카오톡"/></a>
+        <!--/end_if/-->
+        <!--/if_link_scrap_ks/-->
+            <a href="<!--/link_scrap_ks/-->"><img src="/images/d3/m_powerpack/32/btn/btn_story.gif" alt="카카오스토리"/></a>
+        <!--/end_if/-->
+	</div>
+    <div class="detail">
+        <div class="thumb-wrap">
+            <div class="thumb">
+                <!--/if_image_l/-->
+                <img src="<!--/image_l/-->" alt="상품 섬네일" />
+                <!--/else/-->
+                <img src="/images/mini.gif" alt="상품 섬네일" />
+                <!--/end_if/-->
+            </div>
+            <div class="btns">
+                <a href="<!--/link_product_detail/-->">상세정보 보기</a>
+            </div>
+        </div><!-- .thumb-wrap -->
+        <div class="txt-wrap">
+            <h3 class="ptit"><!--/mobile_icons/--> <!--/notag/name/--></h3>
+            <div class="table-opt">
+                <ul class="opt">
+                    <!--/if_price_replace/-->
+                        <li class="s-replace"><span><!--/price_replace/--></span></li>
+                    <!--/else/-->
+                        <!--/if_price_consumer(+1)/-->
+                        <li class="s-consumer"><span class="prev-tit">소비자가</span><span class="prev-price"><!--/number/price_consumer/-->원</span></li>
+                        <!--/end_if/-->
+                        <!--/if_dc_price_sell/-->
+                            <li class="s-price"><span class="prev-tit">판매가격</span><span class="prev-price price-line"><!--/number/price_sell/-->원</span></li>
+                            <li class="s-dc-price"><span class="prev-tit">할인가격</span><span class="prev-price"><!--/number/dc_price_sell/-->원</span></li>
+                        <!--/else/-->
+                            <li class="s-price"><span class="prev-tit">판매가격</span><span class="prev-price"><!--/number/price_sell/-->원</span></li>
+                        <!--/end_if/-->
+                        <!--/if_reserve(+1)/-->
+                        <li class="s-reserve"><span class="prev-tit">적립금</span><span class="prev-price"><!--/number/reserve/--><!--/reserve_unit/--></span></li>
+                        <!--/end_if/-->
+                    <!--/end_if/-->
+                    <li>
+                        <div class="opt-wrap">
+                        <!--/if_option/-->
+                            <!--/loop_option/-->
+                            <dl>
+                                <dt><!--/option@title/--></dt>
+                                <dd><!--/option@select/--></dd>
+                            </dl>
+                            <!--/end_loop/-->
+                        <!--/end_if/-->
+                            <dl>
+                                <dt>수량</dt>
+                                <dd class="opt-btns">
+                                    <!--/input_quantity/-->
+                                    <a href="<!--/link_quantity_up/-->"><span class="btn-up">+1</span></a>
+                                    <a href="<!--/link_quantity_down/-->"><span class="btn-dw">-1</span></a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <!--/if_option_price_sell/-->
+                        <li class="p-total"><span class="prev-tit">총 상품 금액</span><span class="total-price"><!--/number/option_price_sell/--></span>원</li>
+                    <!--/end_if/-->
+                </ul>
+            </div><!-- .table-opt -->
+            <div class="f-btns">
+                <ul>
+                <!--/if_soldout/-->
+                    <li>
+                    <!--/if_is_short_soldout/-->
+                      <!--/btn_soldout/-->
+                    <!--/else/-->
+                        <span class="soldout-msg">상품이 품절 되었습니다.</span>
+                    <!--/end_if/-->
+                    </li>
+                <!--/else/-->
+                    <!--/if_cart_free/-->
+                    <li class="cart_free_basket">
+                        <a href="<!--/link_basket/-->" class="btn_cartfree">장바구니 담기</a>
+                    </li>
+                    <!--/else/-->
+                    <li class="p_buy">
+                        <a href="<!--/link_immediate/-->">바로구매</a>
+                    </li>
+                    <li class="p_cart">
+                        <a href="<!--/link_basket/-->">장바구니</a>
+                    </li>
+                    <li class="p_wish">
+                        <a href="<!--/link_wishlist/-->">관심상품</a>
+                    </li>
+                    <!--/end_if/-->
+                <!--/end_if/-->
+                </ul>
+            </div>
+        </div><!-- .txt-wrap -->
+    </div><!-- .detail -->
+    <a class="close-layer" href="<!--/link_close/-->">
+        <div class="pop-close-btn">
+            <p class="x1"></p>
+            <p class="x2"></p>
+        </div>
+    </a>
+</div><!-- .cnt -->
+<div class="p-bg"></div>
+<!--/end_form/-->
