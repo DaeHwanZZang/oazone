@@ -206,11 +206,20 @@ MakeShop injects payment buttons by ID — do not rename: `#nhn_btn`, `#payco_or
 ### Header / GNB
 
 - Sticky white header (`position: sticky; top: 0; z-index: 100`)
-- Blue GNB bar (`background: #2563eb`) with CSS-only hover dropdowns
+- GNB bar (`background: #2563eb`) uses static HTML menu items grouped into 6 main categories (`잉크/충전기`, `프린터/복합기`, `토너/카트리지`, `공급기/부품`, `용지/PC소모품`, `중고/기타`) to improve readability and prevent SEO link breakage from backend URL changes.
+- Large GNB dropdowns support multi-column layouts (`.oaz-dropdown-wide`, `.oaz-dropdown-group`, `.oaz-group-title`).
+- Rightmost 2 dropdowns are right-aligned (`.oaz-nav-item:nth-last-child(-n+2) .oaz-dropdown { left: auto; right: 0; }`) to prevent horizontal screen overflow.
 - Search input uses `.MS_search_word` class (platform-injected)
+- Cart count and parentheses are wrapped in `.oaz-cart-text` with `display: inline-flex; align-items: center; vertical-align: middle;` to fix baseline vertical alignment.
 
 ### Footer
 
 - Dark background (`background: #1e293b`)
 - Top link bar (`background: #0f172a`)
 - Uses MakeShop scalar variables: `<!--/company_name/-->`, `<!--/company_owner/-->`, `<!--/company_addr/-->`, `<!--/shop_tel/-->`, `<!--/company_number/-->`, `<!--/online_sale_number/-->`, `<!--/privacy_charge/-->`, `<!--/shop_email/-->`
+- **Crucial**: Footer CSS (`footer.1.css`) is merged into `desktop/common.css` because MakeShop does not reliably load the standalone footer CSS file on inner subpages (e.g. `shopdetail`, `shopbrand`). Always maintain footer styling in `common.css`.
+
+### VS Code Integration
+
+- Autocomplete snippets for 620+ MakeShop tags are configured in `.vscode/makeshop.code-snippets` with Korean descriptions, loop/if/block auto-closing templates, and `[CODE]` placeholders.
+
