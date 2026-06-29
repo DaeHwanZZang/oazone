@@ -1,10 +1,141 @@
-#review .tit-sch { margin-top: 35px; font-size: 0; line-height: 0; }
-#review .table-sch { margin-top: 10px; }
-#review .table-review-info .tb-thumb img { border: 2px solid #f3f4ef; }
-#review .table-review-info { margin-top: 50px; }
-#review .foot-msg { margin-top: 35px; padding-left: 10px; background: url(/images/d3/modern_simple/common/bull_h4_circle_gray.gif) no-repeat 0 5px; }
-#review .notice-list { width: 400px; }
-#review .notice-list li { word-wrap: break-word; }
+/* review_list.css — 상품 후기 리스트 */
 
+.oaz-page-hd { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid #1e293b; }
+.oaz-page-title { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0; }
 
-.src { height: 22px; line-height: 22px; padding: 2px; }
+/* 검색 폼 */
+.oaz-review-search {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+.oaz-rv-search-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 0;
+}
+.oaz-rv-search-row + .oaz-rv-search-row { border-top: 1px solid #f1f5f9; }
+.oaz-rv-search-row label { font-size: 13px; color: #64748b; min-width: 80px; font-weight: 500; }
+.oaz-rv-selects { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.oaz-rv-selects select {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: #334155;
+}
+.oaz-rv-input {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 13px;
+    color: #334155;
+    width: 240px;
+}
+.oaz-rv-input:focus { border-color: #2563eb; outline: none; }
+.oaz-rv-search-btn {
+    display: inline-block;
+    padding: 7px 16px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .15s;
+}
+.oaz-rv-search-btn:hover { background: #1d4ed8; }
+
+/* 리뷰 테이블 */
+.oaz-review-table { border-top: 2px solid #1e293b; }
+.oaz-rv-thead {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+.oaz-rv-col-img { width: 80px; flex-shrink: 0; text-align: center; }
+.oaz-rv-col-main { flex: 1; padding: 0 16px; }
+.oaz-rv-col-writer { width: 120px; flex-shrink: 0; text-align: center; }
+.oaz-rv-col-date { width: 90px; flex-shrink: 0; text-align: center; }
+
+.oaz-rv-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    transition: background .12s;
+}
+.oaz-rv-row:hover { background: #f8fafc; }
+.oaz-rv-notice { background: #fffbeb; }
+.oaz-rv-notice:hover { background: #fef9c3; }
+.oaz-rv-notice-badge {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #f59e0b;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+.oaz-rv-col-img img { border-radius: 8px; object-fit: cover; display: block; margin: 0 auto; }
+.oaz-rv-prd-name { font-size: 12px; color: #94a3b8; margin-bottom: 4px; }
+.oaz-rv-prd-name a { color: inherit; text-decoration: none; }
+.oaz-rv-prd-name a:hover { color: #2563eb; }
+.oaz-rv-subject { font-size: 13px; color: #1e293b; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.oaz-rv-subject a { color: inherit; text-decoration: none; }
+.oaz-rv-subject a:hover { color: #2563eb; }
+.oaz-rv-reply-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.oaz-rv-actions { display: flex; gap: 6px; }
+.oaz-rv-btn {
+    font-size: 11px;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 2px 8px;
+    text-decoration: none;
+    transition: all .12s;
+}
+.oaz-rv-btn:hover { border-color: #2563eb; color: #2563eb; }
+.oaz-rv-writer { display: block; font-size: 13px; color: #334155; margin-bottom: 4px; }
+.oaz-rv-score { display: block; font-size: 12px; }
+
+/* 펼쳐지는 내용 */
+.oaz-rv-content {
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px;
+    padding-left: 112px;
+}
+.oaz-rv-attach { max-width: 300px; border-radius: 8px; margin-bottom: 12px; }
+.oaz-rv-body { font-size: 13px; color: #334155; line-height: 1.7; }
+.oaz-rv-reply {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #eff6ff;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #1e293b;
+    display: flex;
+    gap: 8px;
+}
+.oaz-rv-reply-icon { color: #2563eb; font-size: 16px; }
+
+.oaz-rv-foot-msg { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 20px; }

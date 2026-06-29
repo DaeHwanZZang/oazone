@@ -131,6 +131,19 @@
 .oaz-btn-icon:hover { background: #eff6ff; color: #2563eb; }
 .oaz-btn-icon svg { width: 22px; height: 22px; display: block; }
 .oaz-btn-icon strong { font-weight: 600; }
+.oaz-cart-text {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: 1px;
+}
+.oaz-cart-text strong,
+.oaz-cart-text .user_basket_quantity {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
 
 /* ────────────────────────────────────────
    GNB 네비게이션
@@ -145,13 +158,14 @@
     padding: 0 24px;
     display: flex;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 .oaz-nav-item { position: relative; }
 .oaz-nav-item > a {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 0 18px;
+    padding: 0 20px;
     height: 48px;
     color: rgba(255,255,255,.9);
     font-size: 14px;
@@ -202,3 +216,46 @@
     white-space: nowrap;
 }
 .oaz-dropdown a:hover { color: #2563eb; background: #eff6ff; padding-left: 24px; }
+
+/* 와이드 드롭다운 (그룹 분할용) */
+.oaz-dropdown-wide {
+    min-width: auto;
+    padding: 20px 24px;
+    gap: 32px;
+    box-sizing: border-box;
+}
+.oaz-nav-item:hover .oaz-dropdown-wide {
+    display: flex;
+}
+.oaz-dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 140px;
+}
+.oaz-group-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1e293b;
+    padding: 0 12px 8px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+.oaz-dropdown-group a {
+    padding: 7px 12px;
+    border-radius: 6px;
+    transition: color .15s, background .15s, padding .15s;
+}
+.oaz-dropdown-group a:hover {
+    color: #2563eb;
+    background: #eff6ff;
+    padding-left: 16px;
+}
+
+/* 오른쪽 끝 영역에 위치한 메뉴들의 드롭다운이 화면 밖으로 벗어나지 않도록 우측 정렬 (마지막 2개 메뉴 대상) */
+.oaz-nav-item:nth-last-child(-n+2) .oaz-dropdown {
+    left: auto;
+    right: 0;
+}

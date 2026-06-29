@@ -3,140 +3,152 @@
     <!--/include_header(1)/-->
     <div id="contentWrapper">
         <div id="contentWrap">
+            <!--/include_menu(1)/-->
             <div id="content">
                 <div id="productClass">
-                    <dl class="loc-navi">
-                        <dt class="blind">현재 위치</dt>
-                        <dd>
-                            <a href="/">+ HOME</a>
-                            <!--/if_cate1_name/--> &gt; <a href="<!--/link_cate1/-->"><!--/cate1_name/--></a><!--/end_if/-->
-                            <!--/if_cate2_name/--> &gt; <a href="<!--/link_cate2/-->"><!--/cate2_name/--></a><!--/end_if/-->
-                            <!--/if_cate3_name/--> &gt; <a href="<!--/link_cate3/-->"><!--/cate3_name/--></a><!--/end_if/-->
-                        </dd>
-                    </dl>
-                    <div class="page-body">
-                        <!--/if_best_product/-->
-                        <div class="best-item">
-                            <ul>
-                                <!--/loop_best_product(5)/-->
-                                <li>
-                                    <span class="ranking">BEST<em><!--/idx/--></em></span>
-                                    <a class="img" href="<!--/best_product@link/-->"><img src="<!--/best_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
-                                    <div class="dsc">
-                                        <p><!--/best_product@name/--></p>
-                                        <del><!--/number/best_product@price_consumer/-->원</del><br />
-                                        <strong><!--/number/best_product@price_sell/-->원</strong>
-                                    </div>
-                                </li>
-                                <!--/end_loop/-->
-                            </ul>
-                        </div><!-- .best-item -->
+
+                    <!-- 브레드크럼 -->
+                    <nav class="oaz-breadcrumb">
+                        <a href="/">홈</a>
+                        <!--/if_cate1_name/-->
+                        <span>&rsaquo;</span><a href="<!--/link_cate1/-->"><!--/cate1_name/--></a>
                         <!--/end_if/-->
-                        <dl class="class-list">
-                            <dt><span><!--/now_cate_name/--></span></dt>
-                            <dd>
-                                <!--/loop_category/-->
-                                <a href="<!--/category@link/-->"><!--/category@name/--><!--/if_category@brand_cnt/-->(<!--/category@brand_cnt/-->)<!--/end_if/--></a>
-                                <!--/end_loop/-->
-                            </dd>
-                        </dl><!-- .class-list -->
-                        <h3 class="blind">상품 정보, 정렬</h3>
-                        <div class="total-sort">
-                            <p class="total">총 <strong><!--/pager_product::count/--></strong>개의 상품이 있습니다.</p>
-                            <dl class="sort">
-                                <dt class="blind">검색결과 정렬</dt>
-                                <dd>
-                                    <ul>
-                                        <li <!--/if_now_sort_type(order)/--> class="now"<!--/end_if/-->><a href="<!--/link_sort_date/-->">신상품</a></li>
-                                        <li <!--/if_now_sort_type(price2)/--> class="now"<!--/end_if/-->><a href="<!--/link_sort_price_down/-->">높은금액</a></li>
-                                        <li <!--/if_now_sort_type(price)/--> class="now"<!--/end_if/-->><a href="<!--/link_sort_price_up/-->">낮은금액</a></li>
-                                        <li <!--/if_now_sort_type(brandname)/--> class="now"<!--/end_if/-->><a href="<!--/link_sort_product_name/-->">상품명</a></li>
-                                        <li <!--/if_now_sort_type(sellcnt)/--> class="now"<!--/end_if/-->><a href="<!--/link_sort_sell_count/-->">판매순위</a></li>
-                                    </ul>
-                                </dd>
-                            </dl>
-                        </div><!-- .total-sort -->
-                        <!--/if_product/-->
-                        <div class="prd-list">
-                            <table summary="상품이미지, 상품 설명, 가격">
-                                <caption>상품 리스트</caption>
-                                <colgroup>
-                                    <col width="25%" />
-                                    <col width="25%" />
-                                    <col width="25%" />
-                                    <col width="25%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <!--/loop_product(16)/-->
-                                        <td>
-                                            <div class="tb-center">
-                                                <ul class="info">
-                                                    <li><div class="thumb"><a href="<!--/product@link/-->"><img src="<!--/product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a></div></li>
-                                                    <!--/if_product@color/-->
-                                                    <li><!--/loop_product@color/--><font color="<!--/product@color@code/-->">■</font><!--/end_loop/--></li>
-                                                    <!--/end_if/-->
-                                                    <li class="dsc"><!--/product@icons/--> <!--/product@name(30)/--> <!--/product@btn_option_preview/--></li>
-                                                    <li class="price">
-                                                    <!--/if_product@price_replace/-->
-                                                           <!--/product@price_replace/-->
-                                                        <!--/else_if_product@is_soldout/-->
-                                                           Sold Out
-                                                    <!--/else/-->
-                                                        <!--/if_product@price_discount/-->
-                                                          <span><s><!--/number/product@price_sell/--></s>원</span>
-                                                          <!--/number/product@price_discount/-->원</dd>
-                                                        <!--/else/-->
-                                                          <!--/if_product@price_consumer(+1)/-->
-                                                             <span><s><!--/number/product@price_consumer/--></s>원</span>
-                                                             <!--/number/product@price_sell/-->원
-                                                          <!--/else/-->
-                                                             <!--/number/product@price_sell/-->원
-                                                          <!--/end_if/-->
-                                                        <!--/end_if/-->
-                                                    <!--/end_if/-->
-                                                    </li>
-                                                    <!--/if_product@link_preview/-->
-                                                    <li class="preview"><a href="<!--/product@link_preview/-->"><img src="<!--/product@preview_icon/-->" alt="미리보기" title="미리보기" /></a></li>
-                                                    <!--/end_if/-->
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <!--/if_step(4)/-->
-                                    </tr><tr>
-                                        <!--/end_if/-->
-                                        <!--/end_loop/-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <ol class="paging">
-                                <!--/if_pager_product::first@link/-->
-                                <li class="first"><a href="<!--/pager_product::first@link/-->">&lt;&lt;</a></li>
+                        <!--/if_cate2_name/-->
+                        <span>&rsaquo;</span><a href="<!--/link_cate2/-->"><!--/cate2_name/--></a>
+                        <!--/end_if/-->
+                        <!--/if_cate3_name/-->
+                        <span>&rsaquo;</span><a href="<!--/link_cate3/-->"><!--/cate3_name/--></a>
+                        <!--/end_if/-->
+                    </nav>
+
+                    <!-- 베스트 상품 -->
+                    <!--/if_best_product/-->
+                    <div class="oaz-brand-best">
+                        <div class="oaz-brand-best-grid">
+                            <!--/loop_best_product(5)/-->
+                            <a href="<!--/best_product@link/-->" class="oaz-brand-best-item">
+                                <span class="oaz-best-rank"><!--/idx/--></span>
+                                <div class="oaz-brand-best-img">
+                                    <img src="<!--/best_product@image_m/-->" alt="<!--/best_product@name/-->" />
+                                </div>
+                                <div class="oaz-brand-best-info">
+                                    <p class="oaz-best-nm"><!--/best_product@name/--></p>
+                                    <p><del><!--/number/best_product@price_consumer/-->원</del></p>
+                                    <p class="oaz-best-pr"><!--/number/best_product@price_sell/-->원</p>
+                                </div>
+                            </a>
+                            <!--/end_loop/-->
+                        </div>
+                    </div>
+                    <!--/end_if/-->
+
+                    <!-- 하위 카테고리 -->
+                    <div class="oaz-cate-section">
+                        <h2 class="oaz-cate-title"><!--/now_cate_name/--></h2>
+                        <div class="oaz-sub-cate">
+                            <!--/loop_category/-->
+                            <a href="<!--/category@link/-->">
+                                <!--/category@name/-->
+                                <!--/if_category@brand_cnt/-->
+                                <em>(<!--/category@brand_cnt/-->)</em>
                                 <!--/end_if/-->
-                                <!--/if_pager_product::prev@link/-->
-                                <li class="prev"><a href="<!--/pager_product::prev@link/-->">&lt;</a></li>
+                            </a>
+                            <!--/end_loop/-->
+                        </div>
+                    </div>
+
+                    <!-- 정렬/합계 바 -->
+                    <div class="oaz-sort-bar">
+                        <p class="oaz-sort-total">총 <strong><!--/pager_product::count/--></strong>개 상품</p>
+                        <ul class="oaz-sort-links">
+                            <li <!--/if_now_sort_type(order)/--> class="oaz-sort-now"<!--/end_if/-->>
+                                <a href="<!--/link_sort_date/-->">신상품</a>
+                            </li>
+                            <li <!--/if_now_sort_type(price2)/--> class="oaz-sort-now"<!--/end_if/-->>
+                                <a href="<!--/link_sort_price_down/-->">높은금액</a>
+                            </li>
+                            <li <!--/if_now_sort_type(price)/--> class="oaz-sort-now"<!--/end_if/-->>
+                                <a href="<!--/link_sort_price_up/-->">낮은금액</a>
+                            </li>
+                            <li <!--/if_now_sort_type(brandname)/--> class="oaz-sort-now"<!--/end_if/-->>
+                                <a href="<!--/link_sort_product_name/-->">상품명</a>
+                            </li>
+                            <li <!--/if_now_sort_type(sellcnt)/--> class="oaz-sort-now"<!--/end_if/-->>
+                                <a href="<!--/link_sort_sell_count/-->">판매순위</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 상품 그리드 -->
+                    <!--/if_product/-->
+                    <div class="oaz-prd-grid">
+                        <!--/loop_product(16)/-->
+                        <div class="oaz-prd-card">
+                            <a href="<!--/product@link/-->" class="oaz-prd-img-wrap">
+                                <img src="<!--/product@image_m/-->" alt="<!--/product@name(30)/-->" />
+                            </a>
+                            <div class="oaz-prd-info">
+                                <!--/if_product@color/-->
+                                <p class="oaz-prd-colors"><!--/loop_product@color/--><span style="color:<!--/product@color@code/-->">■</span><!--/end_loop/--></p>
                                 <!--/end_if/-->
-                                <!--/loop_pager_product::page/-->
-                                    <!--/if_pager_product::page@current/-->
-                                <li class="now"><a href="<!--/pager_product::current@link/-->"><!--/pager_product::current/--></a></li>
+                                <p class="oaz-prd-icons"><!--/product@icons/--></p>
+                                <p class="oaz-prd-name">
+                                    <a href="<!--/product@link/-->"><!--/product@name(30)/--></a>
+                                    <!--/product@btn_option_preview/-->
+                                </p>
+                                <p class="oaz-prd-price">
+                                    <!--/if_product@price_replace/-->
+                                        <span class="oaz-price-replace"><!--/product@price_replace/--></span>
+                                    <!--/else_if_product@is_soldout/-->
+                                        <span class="oaz-soldout">품절</span>
                                     <!--/else/-->
-                                <li><a href="<!--/pager_product::page@link/-->"><!--/pager_product::page/--></a></li>
+                                        <!--/if_product@price_discount/-->
+                                            <del class="oaz-price-org"><!--/number/product@price_sell/-->원</del>
+                                            <strong class="oaz-price-sell"><!--/number/product@price_discount/-->원</strong>
+                                        <!--/else/-->
+                                            <!--/if_product@price_consumer(+1)/-->
+                                                <del class="oaz-price-org"><!--/number/product@price_consumer/-->원</del>
+                                            <!--/end_if/-->
+                                            <strong class="oaz-price-sell"><!--/number/product@price_sell/-->원</strong>
+                                        <!--/end_if/-->
                                     <!--/end_if/-->
-                                <!--/end_loop/-->
-                                <!--/if_pager_product::next@link/-->
-                                <li class="next"><a href="<!--/pager_product::next@link/-->">&gt;</a></li>
+                                </p>
+                                <!--/if_product@link_preview/-->
+                                <a href="<!--/product@link_preview/-->" class="oaz-prd-preview btn-overlay-show">미리보기</a>
                                 <!--/end_if/-->
-                                <!--/if_pager_product::last@link/-->
-                                <li class="last"><a href="<!--/pager_product::last@link/-->">&gt;&gt;</a></li>
-                                <!--/end_if/-->
-                            </ol>
-                        </div><!-- .prd-list -->
+                            </div>
+                        </div>
+                        <!--/end_loop/-->
+                    </div>
+
+                    <!-- 페이징 -->
+                    <ol class="paging">
+                        <!--/if_pager_product::first@link/-->
+                        <li class="first"><a href="<!--/pager_product::first@link/-->">&laquo;</a></li>
                         <!--/end_if/-->
-                    </div><!-- .page-body -->
+                        <!--/if_pager_product::prev@link/-->
+                        <li class="prev"><a href="<!--/pager_product::prev@link/-->">&lsaquo;</a></li>
+                        <!--/end_if/-->
+                        <!--/loop_pager_product::page/-->
+                            <!--/if_pager_product::page@current/-->
+                        <li class="now"><a href="<!--/pager_product::current@link/-->"><!--/pager_product::current/--></a></li>
+                            <!--/else/-->
+                        <li><a href="<!--/pager_product::page@link/-->"><!--/pager_product::page/--></a></li>
+                            <!--/end_if/-->
+                        <!--/end_loop/-->
+                        <!--/if_pager_product::next@link/-->
+                        <li class="next"><a href="<!--/pager_product::next@link/-->">&rsaquo;</a></li>
+                        <!--/end_if/-->
+                        <!--/if_pager_product::last@link/-->
+                        <li class="last"><a href="<!--/pager_product::last@link/-->">&raquo;</a></li>
+                        <!--/end_if/-->
+                    </ol>
+                    <!--/end_if/-->
+
                 </div><!-- #productClass -->
             </div><!-- #content -->
         </div><!-- #contentWrap -->
-    </div><!-- #contentWrapper-->
+    </div><!-- #contentWrapper -->
     <hr />
     <!--/include_footer(1)/-->
 </div><!-- #wrap -->

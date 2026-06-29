@@ -25,7 +25,7 @@
 <div id="oaz-header">
     <div class="oaz-header-inner">
         <h1 class="oaz-logo">
-            <a href="/"><img src="/design/dpcomputer/9607/makeshop/common/tmp_logo.gif" alt="오에이존" /></a>
+            <a href="http://www.ipctm.com"><img src="http://www.ipctm.com/design/dpcomputer/img/logo.gif" alt="오에이존" /></a>
         </h1>
         <div class="oaz-search">
             <!--/form_search/-->
@@ -41,7 +41,7 @@
         <div class="oaz-header-right">
             <a href="<!--/link_basket/-->" class="oaz-btn-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                장바구니(<strong><!--/user_basket_quantity/--></strong>)
+                <span class="oaz-cart-text">장바구니(<strong><!--/user_basket_quantity/--></strong>)</span>
             </a>
             <a href="<!--/link_order/-->" class="oaz-btn-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="m9 12 2 2 4-4"/></svg>
@@ -54,23 +54,132 @@
 <!-- GNB 네비게이션 -->
 <nav id="oaz-gnb">
     <div class="oaz-nav-inner">
-        <!--/loop_category1/-->
+        <!-- 1. 잉크/충전기 -->
         <div class="oaz-nav-item">
-            <a href="<!--/category1@link/-->">
-                <!--/category1@name/-->
-                <!--/if_category1@category2/-->
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=008">
+                잉크/충전기
                 <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
-                <!--/end_if/-->
             </a>
-            <!--/if_category1@category2/-->
-            <div class="oaz-dropdown">
-                <!--/loop_category1@category2/-->
-                <a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a>
-                <!--/end_loop/-->
+            <div class="oaz-dropdown oaz-dropdown-wide">
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">무한잉크/충전</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=008">무한잉크 100ML</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=009">무한잉크 1L</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=033">리필잉크충전기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=037">자동무한잉크충전기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=027">세정액</a>
+                </div>
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">정품/재생/번들잉크</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=013">정품잉크</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=029">재생잉크</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=034">번들정품잉크</a>
+                </div>
             </div>
-            <!--/end_if/-->
         </div>
-        <!--/end_loop/-->
+
+        <!-- 2. 프린터/복합기 -->
+        <div class="oaz-nav-item">
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=006">
+                프린터/복합기
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="oaz-dropdown oaz-dropdown-wide">
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">잉크젯/포토/도트</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=006">잉크젯프린터</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=001">잉크젯복합기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=031">포토전용프린터</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=030">도트프린터</a>
+                </div>
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">레이저/팩스</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=004">모노레이저프린터</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=002">모노레이저복합기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=005">컬러레이저프린터</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=003">컬러레이저복합기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=039">팩스전용</a>
+                </div>
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">기타 기기</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=007">스캐너</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 토너/카트리지 -->
+        <div class="oaz-nav-item">
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=015">
+                토너/카트리지
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="oaz-dropdown">
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=015">정품토너</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=028">재생토너</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=038">무한토너</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=035">번들정품토너</a>
+            </div>
+        </div>
+
+        <!-- 4. 공급기/부품 -->
+        <div class="oaz-nav-item">
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=010">
+                공급기/부품
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="oaz-dropdown oaz-dropdown-wide">
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">무한공급기</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=010">유선무한공급기</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=036">무선무한공급기</a>
+                </div>
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">부품/소모품</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=032">무한칩</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=014">잉크젯 헤드</a>
+                    <a href="/shop/shopbrand.html?type=O&amp;xcode=012">석션홀더, 클립</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 용지/PC소모품 -->
+        <div class="oaz-nav-item">
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=017">
+                용지/PC소모품
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="oaz-dropdown oaz-dropdown-wide">
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">용지류</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=017">A4용지</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=016">A3용지</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=018">포토용지</a>
+                </div>
+                <div class="oaz-dropdown-group">
+                    <span class="oaz-group-title">PC소모품</span>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=019">USB메모리</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=021">마우스</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=020">마우스패드</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=022">공CD</a>
+                    <a href="/shop/shopbrand.html?type=X&amp;xcode=040">공유기</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 중고/기타 -->
+        <div class="oaz-nav-item">
+            <a href="/shop/shopbrand.html?type=X&amp;xcode=024">
+                중고/기타
+                <svg class="oaz-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
+            <div class="oaz-dropdown">
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=024">중고상품</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=023">기타제품</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=025">sns 상품</a>
+                <a href="/shop/shopbrand.html?type=Y&amp;xcode=026">가상상품</a>
+                <a href="/shop/shopbrand.html?type=X&amp;xcode=011">카드결제전용</a>
+            </div>
+        </div>
     </div>
 </nav>
 

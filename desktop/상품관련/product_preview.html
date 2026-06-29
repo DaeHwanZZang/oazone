@@ -1,90 +1,94 @@
 <!--/form_product/-->
-<div class="cnt">
-    <p class="loc">
-        <span>
+<div class="oaz-preview">
+    <div class="oaz-preview-hd">
+        <nav class="oaz-preview-loc">
             <!--/if_cate1_name/--><!--/cate1_name/--><!--/end_if/-->
-            <!--/if_cate2_name/--> &gt; <!--/cate2_name/--><!--/end_if/-->
-            <!--/if_cate3_name/--> &gt; <!--/cate3_name/--><!--/end_if/-->
-        </span>
-    </p>
-    <div class="hd">
-        <h2><!--/cate1_name/--></h2>
-    </div><!-- .hd -->
-    <div class="detail">
-        <div class="thumb-wrap">
-            <div class="thumb">
+            <!--/if_cate2_name/--> › <!--/cate2_name/--><!--/end_if/-->
+            <!--/if_cate3_name/--> › <!--/cate3_name/--><!--/end_if/-->
+        </nav>
+        <h2 class="oaz-preview-cate"><!--/cate1_name/--></h2>
+    </div>
+
+    <div class="oaz-preview-body">
+        <div class="oaz-preview-left">
+            <div class="oaz-preview-thumb">
                 <!--/if_image_m/-->
-                <img src="<!--/image_m/-->" alt="상품 섬네일" />
+                <img src="<!--/image_m/-->" alt="<!--/name/-->" />
                 <!--/else/-->
-                <img src="/images/mini.gif" alt="상품 섬네일" />
+                <div class="oaz-preview-no-img">이미지 없음</div>
                 <!--/end_if/-->
             </div>
-            <div class="btns">
-                <a href="<!--/link_view_image/-->"><img src="/images/d3/modern_simple/btn/btn_h20_bimg_view.gif" alt="큰이미지 보기" /></a>
-                <a href="<!--/link_product_detail/-->"><img src="/images/d3/modern_simple/btn/btn_h20_prdimg_view.gif" alt="상품 자세히보기" /></a>
+            <div class="oaz-preview-img-btns">
+                <a href="<!--/link_view_image/-->" class="oaz-preview-img-btn">큰 이미지</a>
+                <a href="<!--/link_product_detail/-->" class="oaz-preview-img-btn">상품 상세</a>
             </div>
-        </div><!-- .thumb-wrap -->
-        <div class="txt-wrap">
-            <div class="prd-wish"><p><!--/block_wish_cnt/--><!--/wish_cnt/--><!--/end_block/--></p></div>
-            <h3 class="ptit"><!--/name/--> <!--/icons/--></h3>
-            <div class="table-opt">
-                <ul class="opt">
-                    <!--/if_price_consumer(+1)/-->
-                    <li>소비자가격 : <!--/number/price_consumer/-->원</li>
-                    <!--/end_if/-->
-                    <!--/if_reserve(+1)/-->
-                    <li>적립금 : <!--/reserve/--><!--/reserve_unit/--></li>
-                    <!--/end_if/-->
-                    <li class="s-price">판매가격 : <!--/if_price_replace/--><!--/price_replace/--><!--/else/--><!--/number/price_sell/-->원<!--/end_if/--></li>
-                    <!--/if_option_price_sell/-->
-                        <li>옵션적용가격 : <!--/number/option_price_sell/-->원</li>
-                    <!--/end_if/-->
-                    <!--/if_option/-->
-                        <!--/loop_option/-->
-                    <li><!--/option@title/--> : <!--/option@select/--></li>
-                        <!--/end_loop/-->
-                    <!--/end_if/-->
-                    <li class="opt-wrap">
-                        <div class="opt-ment">수량 :</div>
-                        <div class="opt-btns">
-                            <!--/input_quantity/-->
-                            <a href="<!--/link_quantity_up/-->"><img class="btn-up" src="/images/common/basket_up.gif" alt="수량증가" title="수량증가" /></a>
-                            <a href="<!--/link_quantity_down/-->"><img class="btn-dw" src="/images/common/basket_down.gif" alt="수량감소" title="수량감소" /></a>
-                        </div>
-                    </li>
-                    <!--/if_addcode/-->
-                    <li>특이사항 : <!--/addcode/--></li>
-                    <!--/end_if/-->
-                    <!--/if_nhn_mileage/-->
-                    <li>네이버 마일리지 : <!--/nhn_mileage/--><!--/btn_nhn_mileage_help/--></li>
-                    <!--/end_if/-->
-                    <li>
-                        <!--/if_btn_scrap_fb/--><!--/btn_scrap_fb/--><!--/end_if/-->
-                        <!--/if_btn_scrap_m2/--><!--/btn_scrap_m2/--><!--/end_if/-->
-                        <!--/if_btn_scrap_tw/--><!--/btn_scrap_tw/--><!--/end_if/-->
-                    </li>
-                    <li>재고 수량 : <!--/stock/--></li>
-                </ul>
-            </div><!-- .table-opt -->
-            <div class="f-btns">
+        </div>
+
+        <div class="oaz-preview-right">
+            <div class="oaz-preview-wish"><!--/block_wish_cnt/--><!--/wish_cnt/--><!--/end_block/--></div>
+            <h3 class="oaz-preview-name"><!--/name/--> <span class="oaz-preview-icons"><!--/icons/--></span></h3>
+
+            <ul class="oaz-preview-opts">
+                <!--/if_price_consumer(+1)/-->
+                <li><span class="oaz-opt-label">소비자가격</span> <!--/number/price_consumer/-->원</li>
+                <!--/end_if/-->
+                <!--/if_reserve(+1)/-->
+                <li><span class="oaz-opt-label">적립금</span> <!--/reserve/--><!--/reserve_unit/--></li>
+                <!--/end_if/-->
+                <li class="oaz-opt-price">
+                    <span class="oaz-opt-label">판매가격</span>
+                    <strong class="oaz-price-sell"><!--/if_price_replace/--><!--/price_replace/--><!--/else/--><!--/number/price_sell/-->원<!--/end_if/--></strong>
+                </li>
+                <!--/if_option_price_sell/-->
+                <li><span class="oaz-opt-label">옵션적용가</span> <!--/number/option_price_sell/-->원</li>
+                <!--/end_if/-->
+                <!--/if_option/-->
+                <!--/loop_option/-->
+                <li><span class="oaz-opt-label"><!--/option@title/--></span> <!--/option@select/--></li>
+                <!--/end_loop/-->
+                <!--/end_if/-->
+                <li class="oaz-opt-qty">
+                    <span class="oaz-opt-label">수량</span>
+                    <div class="oaz-qty-wrap">
+                        <!--/input_quantity/-->
+                        <a href="<!--/link_quantity_up/-->" class="oaz-qty-btn">▲</a>
+                        <a href="<!--/link_quantity_down/-->" class="oaz-qty-btn">▼</a>
+                    </div>
+                </li>
+                <!--/if_addcode/-->
+                <li><span class="oaz-opt-label">특이사항</span> <!--/addcode/--></li>
+                <!--/end_if/-->
+                <!--/if_nhn_mileage/-->
+                <li><span class="oaz-opt-label">네이버 마일리지</span> <!--/nhn_mileage/--><!--/btn_nhn_mileage_help/--></li>
+                <!--/end_if/-->
+                <li class="oaz-opt-sns">
+                    <!--/if_btn_scrap_fb/--><!--/btn_scrap_fb/--><!--/end_if/-->
+                    <!--/if_btn_scrap_m2/--><!--/btn_scrap_m2/--><!--/end_if/-->
+                    <!--/if_btn_scrap_tw/--><!--/btn_scrap_tw/--><!--/end_if/-->
+                </li>
+                <li><span class="oaz-opt-label">재고 수량</span> <!--/stock/--></li>
+            </ul>
+
+            <div class="oaz-preview-btns">
                 <!--/if_soldout/-->
-                <a><img src="/images/d3/modern_simple/btn/btn_h22_soldout.gif" alt="품절" /></a>
+                <span class="oaz-btn-soldout">품절</span>
                 <!--/else/-->
-                    <!--/if_cart_free/-->
-                        <a href="<!--/link_basket/-->" class="btn_cartfree">장바구니담기</a>
-                    <!--/else/-->
-                        <a href="<!--/link_immediate/-->"><img src="/images/d3/modern_simple/btn/btn_h22_now_buy.gif" alt="즉시구매" /></a>
-                        <a href="<!--/link_basket/-->"><img src="/images/d3/modern_simple/btn/btn_h22_cart_add.gif" alt="장바구니담기" /></a>
-                    <!--/end_if/-->
+                <!--/if_cart_free/-->
+                <a href="<!--/link_basket/-->" class="oaz-btn-cart oaz-btn-cart-free">장바구니담기</a>
+                <!--/else/-->
+                <a href="<!--/link_immediate/-->" class="oaz-btn-buy">즉시구매</a>
+                <a href="<!--/link_basket/-->" class="oaz-btn-cart">장바구니담기</a>
+                <!--/end_if/-->
                 <!--/end_if/-->
                 <!--/if_not_cart_free/-->
-                    <!--/if_link_wish_toggle/-->
-                        <a href="<!--/link_wish_toggle/-->" class="btn_cart"><!--/block_btn_wish/--><em class="ico-wish"></em> 관심상픔 등록<!--/end_block/--></a>
-                    <!--/end_if/-->
+                <!--/if_link_wish_toggle/-->
+                <a href="<!--/link_wish_toggle/-->" class="oaz-btn-wish"><!--/block_btn_wish/-->관심상품 등록<!--/end_block/--></a>
+                <!--/end_if/-->
                 <!--/end_if/-->
             </div>
-        </div><!-- .txt-wrap -->
-    </div><!-- .detail -->
-</div><!-- .cnt -->
-<a class="close-layer" href="<!--/link_close/-->"><img src="/images/d3/modern_simple/btn/btn_prd_thumb_view_close.gif" alt="닫기" /></a>
+        </div>
+    </div>
+
+    <a class="oaz-preview-close" href="<!--/link_close/-->">✕ 닫기</a>
+</div>
 <!--/end_form/-->

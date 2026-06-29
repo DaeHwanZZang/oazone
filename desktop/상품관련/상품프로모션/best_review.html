@@ -1,108 +1,87 @@
 <!--/script_scroll(1)/-->
-    <div id="wrap">
-        <!--/include_header(1)/-->
-        <div id="contentWrapper">
-            <div id="contentWrap">
-                <!--/include_menu(1)/-->
-                <div id="content">
-                    <div id="productClass">
-                        <div class="prd-class-hd">
-                            <dl class="loc-navi">
-                                <dt class="blind">현재 위치</dt>
-                                <dd>
-                                    <a href="/">home</a> > 베스트50
-                                </dd>
-                            </dl>
-                        </div><!-- .prd-class-hd -->
-                        <div class="page-body">
-                        <!--/if_best_product/-->
-                            <table summary="상품이미지, 상품 설명, 가격">
-                                <caption>상품 리스트</caption>
-                                <colgroup>
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                    <!--/loop_best_product/-->
-                                        <!--/if_idx(-3)/-->
-                                        <td>
-                                            <div class="tb-center">
-                                                <ul class="info">
-                                                    <li>
-                                                        <div class="thumb"><a href="<!--/best_product@link/-->"><img src="<!--/best_product@image_s/-->" alt="상품 섬네일" /></a></div>
-                                                    </li>
-                                                    <!--/if_best_product@color/-->
-                                                    <li>
-                                                        <!--/loop_best_product@color/-->
-                                                        <font color="<!--/best_product@color@code/-->">■</font>
-                                                        <!--/end_loop/-->
-                                                    </li>
-                                                    <!--/end_if/-->
-                                                    <li class="dsc">
-                                                        <!--/best_product@icons/--> <!--/best_product@name(30)/--> <!--/best_product@btn_option_preview/-->
-                                                    </li>
-                                                    <li class="price">
-                                                        <!--/number/best_product@price_sell/-->원
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <!--/end_if/-->
-                                    <!--/end_loop/-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <br><br>
-                            <table summary="상품이미지, 상품 설명, 가격">
-                                <caption>상품 리스트</caption>
-                                <colgroup>
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                    <!--/loop_best_product/-->
-                                        <!--/if_idx(+4)/-->
-                                        <td>
-                                            <div class="tb-center">
-                                                <ul class="info">
-                                                    <li>
-                                                        <div class="thumb"><a href="<!--/best_product@link/-->"><img src="<!--/best_product@image_s/-->" alt="상품 섬네일" /></a></div>
-                                                    </li>
-                                                    <!--/if_best_product@color/-->
-                                                    <li>
-                                                        <!--/loop_best_product@color/-->
-                                                        <font color="<!--/best_product@color@code/-->">■</font>
-                                                        <!--/end_loop/-->
-                                                    </li>
-                                                    <!--/end_if/-->
-                                                    <li class="dsc">
-                                                        <!--/best_product@icons/--> <!--/best_product@name(30)/--> <!--/best_product@btn_option_preview/-->
-                                                    </li>
-                                                    <li class="price">
-                                                        <!--/number/best_product@price_sell/-->원
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                        <!--/if_step(3)/-->
-				    </tr>
-				    <tr>
-				  <!--/end_if/-->
-                                        <!--/end_if/-->
-                                    <!--/end_loop/-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                        <!--/end_if/-->
-                        </div><!-- .page-body -->
-                    </div><!-- #productClass -->
-                </div><!-- #content -->
-            </div><!-- #contentWrap -->
-        </div><!-- #contentWrapper-->
-        <hr />
-        <!--/include_footer(1)/-->
-    </div><!-- #wrap -->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="contentWrap">
+            <!--/include_menu(1)/-->
+            <div id="content">
+                <div id="productClass">
+
+                    <div class="oaz-page-hd">
+                        <div class="oaz-breadcrumb">
+                            <a href="/">home</a>
+                            <span class="oaz-bc-sep">›</span>
+                            <span>베스트50</span>
+                        </div>
+                        <h2 class="oaz-page-title"><strong>베스트</strong> 50</h2>
+                    </div>
+
+                    <!--/if_best_product/-->
+                    <div class="oaz-main-section">
+                        <div class="oaz-section-hd">
+                            <h3 class="oaz-section-title">TOP 1 ~ 3</h3>
+                        </div>
+                        <div class="oaz-prd-grid oaz-prd-grid-3">
+                            <!--/loop_best_product/-->
+                            <!--/if_idx(-3)/-->
+                            <div class="oaz-prd-card">
+                                <a href="<!--/best_product@link/-->" class="oaz-prd-img-wrap">
+                                    <img src="<!--/best_product@image_s/-->" alt="<!--/best_product@name(30)/-->" />
+                                </a>
+                                <div class="oaz-prd-info">
+                                    <!--/if_best_product@color/-->
+                                    <p class="oaz-prd-colors"><!--/loop_best_product@color/--><span style="color:<!--/best_product@color@code/-->">■</span><!--/end_loop/--></p>
+                                    <!--/end_if/-->
+                                    <p class="oaz-prd-icons"><!--/best_product@icons/--></p>
+                                    <p class="oaz-prd-name">
+                                        <a href="<!--/best_product@link/-->"><!--/best_product@name(30)/--></a>
+                                        <!--/best_product@btn_option_preview/-->
+                                    </p>
+                                    <p class="oaz-prd-price">
+                                        <strong class="oaz-price-sell"><!--/number/best_product@price_sell/-->원</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/end_if/-->
+                            <!--/end_loop/-->
+                        </div>
+                    </div>
+
+                    <div class="oaz-main-section">
+                        <div class="oaz-section-hd">
+                            <h3 class="oaz-section-title">TOP 4 이후</h3>
+                        </div>
+                        <div class="oaz-prd-grid oaz-prd-grid-3">
+                            <!--/loop_best_product/-->
+                            <!--/if_idx(+4)/-->
+                            <div class="oaz-prd-card">
+                                <a href="<!--/best_product@link/-->" class="oaz-prd-img-wrap">
+                                    <img src="<!--/best_product@image_s/-->" alt="<!--/best_product@name(30)/-->" />
+                                </a>
+                                <div class="oaz-prd-info">
+                                    <!--/if_best_product@color/-->
+                                    <p class="oaz-prd-colors"><!--/loop_best_product@color/--><span style="color:<!--/best_product@color@code/-->">■</span><!--/end_loop/--></p>
+                                    <!--/end_if/-->
+                                    <p class="oaz-prd-icons"><!--/best_product@icons/--></p>
+                                    <p class="oaz-prd-name">
+                                        <a href="<!--/best_product@link/-->"><!--/best_product@name(30)/--></a>
+                                        <!--/best_product@btn_option_preview/-->
+                                    </p>
+                                    <p class="oaz-prd-price">
+                                        <strong class="oaz-price-sell"><!--/number/best_product@price_sell/-->원</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/end_if/-->
+                            <!--/end_loop/-->
+                        </div>
+                    </div>
+                    <!--/end_if/-->
+
+                </div><!-- #productClass -->
+            </div><!-- #content -->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper -->
+    <hr />
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

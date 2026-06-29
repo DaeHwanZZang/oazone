@@ -1,0 +1,708 @@
+
+=== 추가 상품 ===
+추가 상품 > 브랜드 (길이 제한) : <!--/add[CODE]_product@brand/-->
+추가 상품 > 옵션미리보기 : <!--/add[CODE]_product@btn_option_preview/-->
+추가 상품 > 영문 상품명 (길이 제한) : <!--/add[CODE]_product@engname/-->
+추가 상품 > 특이사항 (길이 제한) : <!--/add[CODE]_product@etc/-->
+추가 상품 > 무료배송 아이콘 : <!--/add[CODE]_product@free_delivery_icon/-->
+추가 상품 > 상품 조회수 : <!--/add[CODE]_product@hits/-->
+추가 상품 > 상품 아이콘들 : <!--/add[CODE]_product@icons/-->
+추가 상품 > 큰 이미지 경로 : <!--/add[CODE]_product@image_l/-->
+추가 상품 > 중간 이미지 경로 : <!--/add[CODE]_product@image_m/-->
+추가 상품 > 작은 이미지 경로 : <!--/add[CODE]_product@image_s/-->
+추가 상품 > 일시품절 사용여부 : <!--/add[CODE]_product@is_short_soldout/-->
+추가 상품 > 품절여부 : <!--/add[CODE]_product@is_soldout/-->
+추가 상품 > 상품 상세 링크 : <!--/add[CODE]_product@link/-->
+추가 상품 > 미리 보기 버튼 링크 : <!--/add[CODE]_product@link_preview/-->
+추가 상품 > 상품명 (길이 제한) : <!--/add[CODE]_product@name/-->
+추가 상품 > 전체 판매 수량 : <!--/add[CODE]_product@order_stock/-->
+추가 상품 > 포토 리뷰 개수 : <!--/add[CODE]_product@photo_review_count/-->
+추가상품 파워리뷰 개수 : <!--/add[CODE]_product@power_review_count/-->
+추가상품 파워리뷰 스코어 별점형 : <!--/add[CODE]_product@power_review_score/-->
+추가상품 파워리뷰 스코어 숫자형 : <!--/add[CODE]_product@power_review_score_number/-->
+추가 상품 > 미리보기 아이콘 : <!--/add[CODE]_product@preview_icon/-->
+추가 상품 > 소비자 가격 : <!--/add[CODE]_product@price_consumer/-->
+추가 상품 > 소비자 가격(USD) : <!--/add[CODE]_product@price_consumer_usd/-->
+추가 상품 > 가격 대체문구 : <!--/add[CODE]_product@price_replace/-->
+추가 상품 > 판매 가격 : <!--/add[CODE]_product@price_sell/-->
+추가 상품 > 판매 가격(USD) : <!--/add[CODE]_product@price_sell_usd/-->
+추가 상품 > 당일배송 아이콘 : <!--/add[CODE]_product@quick_delivery_icon/-->
+추가 상품 > 적립율 : <!--/add[CODE]_product@reserve_percent/-->
+추가 상품 > 적립금 : <!--/add[CODE]_product@reserve_price/-->
+추가 상품 > 리뷰 개수 : <!--/add[CODE]_product@review_count/-->
+추가 상품 > 재고 수량 : <!--/add[CODE]_product@stock/-->
+추가 상품 > 추가 상품명 (길이 제한) : <!--/add[CODE]_product@subname/-->
+추가 상품 > 상품아이디 : <!--/add[CODE]_product@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/add[CODE]_product@usergroup_price/-->
+추가 상품 목록 : <!--/loop_add[CODE]_product/-->
+
+=== 추가 상품 기간할인 ===
+추가 상품 > 기간할인 종료일 : <!--/add[CODE]_product@discount_date_end/-->
+추가 상품 > 기간할인 시작일 : <!--/add[CODE]_product@discount_date_start/-->
+추가 상품 > 기간할인 아이콘 : <!--/add[CODE]_product@discount_icon/-->
+추가 상품 > 기간할인 아이콘 : <!--/add[CODE]_product@discount_icon_mobile/-->
+추가 상품 > 할인 정보 or 할인율 : <!--/add[CODE]_product@discount_info/-->
+추가 상품 > 기간할인 메시지 : <!--/add[CODE]_product@discount_message/-->
+추가 상품 > 소비자 가격 대비 할인율 : <!--/add[CODE]_product@discount_percent/-->
+추가 상품 > 할인 금액 : <!--/add[CODE]_product@discount_price_difference/-->
+추가 상품 > 기간할인 남은 기간(일 + 시분초) : <!--/add[CODE]_product@discount_remain_daytime/-->
+추가 상품 > 기간할인 남은 시간(초 단위) : <!--/add[CODE]_product@discount_remain_sec_time/-->
+추가 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/add[CODE]_product@discount_remain_term/-->
+추가 상품 > 기간할인 사용여부 : <!--/add[CODE]_product@is_term_discount/-->
+추가 상품 > 할인 가격 : <!--/add[CODE]_product@price_discount/-->
+추가 상품 > 할인 가격(USD) : <!--/add[CODE]_product@price_discount_usd/-->
+
+=== 추가 상품 모바일 기간할인 ===
+추가 상품 > 모바일 기간할인 종료일 : <!--/add[CODE]_product@discount_date_end_mobile/-->
+추가 상품 > 모바일 기간할인 시작일 : <!--/add[CODE]_product@discount_date_start_mobile/-->
+추가 상품 > 모바일 할인 정보 or 할인율 : <!--/add[CODE]_product@discount_info_mobile/-->
+추가 상품 > 모바일 기간할인 메시지 : <!--/add[CODE]_product@discount_message_mobile/-->
+추가 상품 > 모바일 할인 금액 : <!--/add[CODE]_product@discount_price_difference_mobile/-->
+추가 상품 > 모바일 기간할인 남은 기간(일 + 시분초) : <!--/add[CODE]_product@discount_remain_daytime_mobile/-->
+추가 상품 > 모바일 기간할인 남은 시간(초 단위) : <!--/add[CODE]_product@discount_remain_sec_time_mobile/-->
+추가 상품 > 모바일 기간할인 남은 기간(년, 월, 일) : <!--/add[CODE]_product@discount_remain_term_mobile/-->
+추가 상품 > 모바일 기간할인 사용여부 : <!--/add[CODE]_product@is_term_discount_mobile/-->
+추가 상품 > 모바일 할인 가격 : <!--/add[CODE]_product@price_discount_mobile/-->
+
+=== 추가 상품 색상 표시 ===
+추가 상품 > 색상 > 색상코드 : <!--/add[CODE]_product@color@code/-->
+추가 상품 > 색상 > 색상명 : <!--/add[CODE]_product@color@name/-->
+추가 상품 > 색상 목록 반복문(LOOP) : <!--/loop_add[CODE]_product@color/-->
+
+=== 베스트 상품 ===
+베스트 상품 > 위시리스트 버튼 영역 (BLOCK) : <!--/best_product@block_btn_wish/-->
+베스트 상품 > 위시리스트 버튼 영역 (BLOCK) : <!--/best_product@block_wish_count/-->
+베스트 상품 > 브랜드 (길이 제한) : <!--/best_product@brand/-->
+베스트 상품 > 옵션미리보기 : <!--/best_product@btn_option_preview/-->
+베스트 상품 > 영문 상품명 (길이 제한) : <!--/best_product@engname/-->
+베스트 상품 > 특이사항 (길이 제한) : <!--/best_product@etc/-->
+베스트 상품 > 무료배송 아이콘 : <!--/best_product@free_delivery_icon/-->
+베스트상품 > 상품 조회수 : <!--/best_product@hits/-->
+베스트 상품 > 상품 아이콘들 : <!--/best_product@icons/-->
+베스트 상품 > 큰 이미지 경로 : <!--/best_product@image_l/-->
+베스트 상품 > 중간 이미지 경로 : <!--/best_product@image_m/-->
+베스트 상품 > 작은 이미지 경로 : <!--/best_product@image_s/-->
+베스트 상품 > 상품 상세 링크 : <!--/best_product@link/-->
+베스트 상품 > 미리 보기 버튼 링크 : <!--/best_product@link_preview/-->
+베스트 상품 > 위시리스트 추가/삭제 (LINK) : <!--/best_product@link_wish_toggle/-->
+베스트 상품 > 제조사 : <!--/best_product@manufacture/-->
+베스트 상품 > 모델명 (길이 제한) : <!--/best_product@model/-->
+베스트 상품 > 상품명 (길이 제한) : <!--/best_product@name/-->
+베스트 상품 > 전체 판매 수량 : <!--/best_product@order_stock/-->
+베스트 상품 > 포토 리뷰 개수 : <!--/best_product@photo_review_count/-->
+베스트상품 파워리뷰 개수 : <!--/best_product@power_review_count/-->
+베스트 상품 파워리뷰 스코어 별점형 : <!--/best_product@power_review_score/-->
+베스트 상품 파워리뷰 스코어 숫자형 : <!--/best_product@power_review_score_number/-->
+베스트 상품 > 미리보기 아이콘 : <!--/best_product@preview_icon/-->
+베스트 상품 > 소비자 가격 : <!--/best_product@price_consumer/-->
+베스트 상품 > 소비자 가격(USD) : <!--/best_product@price_consumer_usd/-->
+베스트 상품 > 가격 대체문구 : <!--/best_product@price_replace/-->
+베스트 상품 > 판매 가격 : <!--/best_product@price_sell/-->
+베스트 상품 > 판매 가격(USD) : <!--/best_product@price_sell_usd/-->
+베스트 상품 > 당일배송 아이콘 : <!--/best_product@quick_delivery_icon/-->
+베스트 상품 > 적립율 : <!--/best_product@reserve_percent/-->
+베스트 상품 > 적립금 : <!--/best_product@reserve_price/-->
+베스트 상품 > 리뷰 개수 : <!--/best_product@review_count/-->
+베스트 상품 > 이미지 롤오버 : <!--/best_product@rollover/-->
+베스트 상품 > 재고 수량 : <!--/best_product@stock/-->
+베스트 상품 > 추가 상품명 (길이 제한) : <!--/best_product@subname/-->
+베스트 상품 > 상품아이디 : <!--/best_product@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/best_product@usergroup_price/-->
+베스트 상품 > 위시리스트 count : <!--/best_product@wish_count/-->
+베스트 상품 목록 반복문(LOOP) : <!--/loop_best_product/-->
+
+=== 베스트 상품 기간할인 ===
+베스트 상품 > 기간할인 종료일 : <!--/best_product@discount_date_end/-->
+베스트 상품 > 기간할인 시작일 : <!--/best_product@discount_date_start/-->
+베스트 상품 > 기간할인 아이콘 : <!--/best_product@discount_icon/-->
+베스트 상품 > 할인 정보 or 할인율 : <!--/best_product@discount_info/-->
+베스트 상품 > 기간할인 메시지 : <!--/best_product@discount_message/-->
+베스트 상품 > 소비자 가격 대비 할인율 : <!--/best_product@discount_percent/-->
+베스트 상품 > 할인 금액 : <!--/best_product@discount_price_difference/-->
+베스트 상품 > 기간할인 남은 기간(일 + 시분초) : <!--/best_product@discount_remain_daytime/-->
+베스트 상품 > 기간할인 남은 시간(초 단위) : <!--/best_product@discount_remain_sec_time/-->
+베스트 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/best_product@discount_remain_term/-->
+베스트 상품 > 기간할인 사용여부 : <!--/best_product@is_term_discount/-->
+베스트 상품 > 할인 가격 : <!--/best_product@price_discount/-->
+베스트 상품 > 할인 가격(USD) : <!--/best_product@price_discount_usd/-->
+
+=== 베스트 상품 모바일 기간할인 ===
+베스트 상품 > 모바일 할인 종료일 : <!--/best_product@discount_date_end_mobile/-->
+베스트 상품 > 모바일 할인 시작일 : <!--/best_product@discount_date_start_mobile/-->
+베스트 상품 > 모바일 기간할인 아이콘 : <!--/best_product@discount_icon_mobile/-->
+베스트 상품 > 모바일 기간할인 메시지 : <!--/best_product@discount_message_mobile/-->
+베스트 상품 > 모바일 차감되는 금액 : <!--/best_product@discount_price_difference_mobile/-->
+베스트 상품 > 모바일 기간할인 남은 기간(일 + 시분초) : <!--/best_product@discount_remain_daytime_mobile/-->
+베스트 상품 > 모바일 기간할인 남은 시간(초 단위) : <!--/best_product@discount_remain_sec_time_mobile/-->
+베스트 상품 > 모바일 할인 기간 : <!--/best_product@discount_remain_term_mobile/-->
+베스트 상품 > 모바일 기간할인 사용여부 : <!--/best_product@is_term_discount_mobile/-->
+베스트 상품 > 모바일 할인적용된 금액 : <!--/best_product@price_discount_mobile/-->
+
+=== 베스트  상품 색상 표시 ===
+베스트 상품 > 색상 > 색상코드 : <!--/best_product@color@code/-->
+베스트 상품 > 색상 > 색상명 : <!--/best_product@color@name/-->
+베스트 상품 > 색상 목록 반복문(LOOP) : <!--/loop_best_product@color/-->
+
+=== 분류별 신상품 ===
+분류별  신상품 > 브랜드 (길이 제한) : <!--/category_product_[CATE1_CODE]@brand/-->
+분류별  신상품 > 옵션미리보기 : <!--/category_product_[CATE1_CODE]@btn_option_preview/-->
+분류별  신상품 > 영문 상품명 (길이 제한) : <!--/category_product_[CATE1_CODE]@engname/-->
+분류별  신상품 > 특이사항 (길이 제한) : <!--/category_product_[CATE1_CODE]@etc/-->
+분류별  신상품 > 무료배송 아이콘 : <!--/category_product_[CATE1_CODE]@free_delivery_icon/-->
+분류별 신상품 > 상품 조회수 : <!--/category_product_[CATE1_CODE]@hits/-->
+분류별  신상품 > 상품 아이콘들 : <!--/category_product_[CATE1_CODE]@icons/-->
+분류별  신상품 > 큰 이미지 경로 : <!--/category_product_[CATE1_CODE]@image_l/-->
+분류별  신상품 > 중간 이미지 경로 : <!--/category_product_[CATE1_CODE]@image_m/-->
+분류별  신상품 > 작은 이미지 경로 : <!--/category_product_[CATE1_CODE]@image_s/-->
+분류별  신상품 > 일시품절 사용여부 : <!--/category_product_[CATE1_CODE]@is_short_soldout/-->
+분류별  신상품 > 품절여부 : <!--/category_product_[CATE1_CODE]@is_soldout/-->
+분류별  신상품 > 상품 상세 링크 : <!--/category_product_[CATE1_CODE]@link/-->
+분류별  신상품 > 미리 보기 버튼 링크 : <!--/category_product_[CATE1_CODE]@link_preview/-->
+분류별  신상품 > 상품명 (길이 제한) : <!--/category_product_[CATE1_CODE]@name/-->
+분류별 신상품 > 전체 판매 수량 : <!--/category_product_[CATE1_CODE]@order_stock/-->
+분류별  신상품 > 미리보기 아이콘 : <!--/category_product_[CATE1_CODE]@preview_icon/-->
+분류별  신상품 > 소비자 가격 : <!--/category_product_[CATE1_CODE]@price_consumer/-->
+분류별 신상품 > 소비자 가격(USD) : <!--/category_product_[CATE1_CODE]@price_consumer_usd/-->
+분류별  신상품 > 가격 대체문구 : <!--/category_product_[CATE1_CODE]@price_replace/-->
+분류별  신상품 > 판매 가격 : <!--/category_product_[CATE1_CODE]@price_sell/-->
+분류별 신상품 > 판매 가격(USD) : <!--/category_product_[CATE1_CODE]@price_sell_usd/-->
+분류별  신상품 > 당일배송 아이콘 : <!--/category_product_[CATE1_CODE]@quick_delivery_icon/-->
+분류별  신상품 > 적립율 : <!--/category_product_[CATE1_CODE]@reserve_percent/-->
+분류별  신상품 > 적립금 : <!--/category_product_[CATE1_CODE]@reserve_price/-->
+분류별  신상품 > 리뷰 개수 : <!--/category_product_[CATE1_CODE]@review_count/-->
+분류별  신상품 > 이미지 롤오버 : <!--/category_product_[CATE1_CODE]@rollover/-->
+분류별 신상품 > 재고 수량 : <!--/category_product_[CATE1_CODE]@stock/-->
+분류별  신상품 > 추가 상품명 (길이 제한) : <!--/category_product_[CATE1_CODE]@subname/-->
+분류별  신상품 > 상품아이디 : <!--/category_product_[CATE1_CODE]@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/category_product_[CATE1_CODE]@usergroup_price/-->
+분류별 신상품 목록 : <!--/loop_category_product_[CATE1_CODE]/-->
+
+=== 분류별 신상품 기간할인 ===
+분류별  신상품 > 기간할인 종료일 : <!--/category_product_[CATE1_CODE]@discount_date_end/-->
+분류별  신상품 > 기간할인 시작일 : <!--/category_product_[CATE1_CODE]@discount_date_start/-->
+분류별 신상품 > 기간할인 아이콘 : <!--/category_product_[CATE1_CODE]@discount_icon/-->
+분류별  신상품 > 할인 정보 or 할인율 : <!--/category_product_[CATE1_CODE]@discount_info/-->
+분류별 신상품 > 기간할인 메시지 : <!--/category_product_[CATE1_CODE]@discount_message/-->
+분류별 신상품 > 기간할인 남은 기간(일 + 시분초) : <!--/category_product_[CATE1_CODE]@discount_remain_daytime/-->
+분류별  신상품 > 기간할인 남은 기간(년, 월, 일) : <!--/category_product_[CATE1_CODE]@discount_remain_term/-->
+분류별  신상품 > 기간할인 사용여부 : <!--/category_product_[CATE1_CODE]@is_term_discount/-->
+분류별  신상품 > 할인 가격 : <!--/category_product_[CATE1_CODE]@price_discount/-->
+분류별 신상품 > 할인 가격(USD) : <!--/category_product_[CATE1_CODE]@price_discount_usd/-->
+
+=== 분류별 신상품 색상 표시 ===
+분류별  신상품 > 색상 > 색상코드 : <!--/category_product_[CATE1_CODE]@color@code/-->
+분류별  신상품 > 색상 > 색상명 : <!--/category_product_[CATE1_CODE]@color@name/-->
+분류별  신상품 > 색상 목록 반복문(LOOP) : <!--/loop_category_product_[CATE1_CODE]@color/-->
+
+=== 신규 상품 ===
+신규 상품 목록 반복문(LOOP) : <!--/loop_new_product/-->
+신규 상품 > 위시리스트 count 영역(BLOCK) : <!--/new_product@block_btn_wish/-->
+신규 상품 > 위시리스트 count 영역(BLOCK) : <!--/new_product@block_wish_count/-->
+신규 상품 > 브랜드 (길이 제한) : <!--/new_product@brand/-->
+신규 상품 > 옵션미리보기 : <!--/new_product@btn_option_preview/-->
+신규 상품 > 지역별 배송비 정보 : <!--/new_product@delivery_country_info/-->
+신규 상품 > 배송비 안내 상세 : <!--/new_product@delivery_detail/-->
+신규 상품 > 배송비 안내 문구 : <!--/new_product@delivery_title/-->
+신규 상품 > 영문 상품명 (길이 제한) : <!--/new_product@engname/-->
+신규 상품 > 특이사항 (길이 제한) : <!--/new_product@etc/-->
+신규 상품 > 무료배송 아이콘 : <!--/new_product@free_delivery_icon/-->
+신규 상품 > 상품 아이콘들 : <!--/new_product@icons/-->
+신규 상품 > 큰 이미지 경로 : <!--/new_product@image_l/-->
+신규 상품 > 중간 이미지 경로 : <!--/new_product@image_m/-->
+신규 상품 > 작은 이미지 경로 : <!--/new_product@image_s/-->
+신규 상품 > 일시품절 사용여부 : <!--/new_product@is_short_soldout/-->
+신규 상품 > 품절여부 : <!--/new_product@is_soldout/-->
+신규 상품 > 상품 상세 링크 : <!--/new_product@link/-->
+신규 상품 > 미리 보기 버튼 링크 : <!--/new_product@link_preview/-->
+신규 상품 > 위시리스트 추가/삭제 (LINK) : <!--/new_product@link_wish_toggle/-->
+신규 상품 > 제조사 : <!--/new_product@manufacture/-->
+신규 상품 > 모델명 (길이 제한) : <!--/new_product@model/-->
+신규 상품 > 상품명 (길이 제한) : <!--/new_product@name/-->
+신규 상품 > 전체 판매 수량 : <!--/new_product@order_stock/-->
+신규 상품 > 원산지 : <!--/new_product@origin/-->
+신규 상품 > 포토 리뷰 개수 : <!--/new_product@photo_review_count/-->
+신규상품 파워리뷰 개수 : <!--/new_product@power_review_count/-->
+신규상품 파워리뷰 스코어 별점형 : <!--/new_product@power_review_score/-->
+신규상품 파워리뷰 스코어 숫자형 : <!--/new_product@power_review_score_number/-->
+신규 상품 > 미리보기 아이콘 : <!--/new_product@preview_icon/-->
+신규 상품 > 소비자 가격 : <!--/new_product@price_consumer/-->
+신규 상품 > 소비자 가격(USD) : <!--/new_product@price_consumer_usd/-->
+신규 상품 > 가격 대체문구 : <!--/new_product@price_replace/-->
+신규 상품 > 판매 가격 : <!--/new_product@price_sell/-->
+신규 상품 > 판매 가격(USD) : <!--/new_product@price_sell_usd/-->
+신규 상품 > 당일배송 아이콘 : <!--/new_product@quick_delivery_icon/-->
+신규 상품 > 적립율 : <!--/new_product@reserve_percent/-->
+신규 상품 > 적립금 : <!--/new_product@reserve_price/-->
+신규 상품 > 리뷰 개수 : <!--/new_product@review_count/-->
+신규 상품 > 이미지 롤오버 : <!--/new_product@rollover/-->
+신규 상품 > 재고 수량 : <!--/new_product@stock/-->
+신규 상품 > 추가 상품명 (길이 제한) : <!--/new_product@subname/-->
+신규 상품 > 상품아이디 : <!--/new_product@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/new_product@usergroup_price/-->
+신규 상품 > 위시리스트 count : <!--/new_product@wish_count/-->
+신상품 더보기 버튼 : <!--/new_product_more/-->
+
+=== 신규 상품 기간할인 ===
+신규 상품 > 기간할인 종료일 : <!--/new_product@discount_date_end/-->
+신규 상품 > 기간할인 시작일 : <!--/new_product@discount_date_start/-->
+신규 상품 > 기간할인 아이콘 : <!--/new_product@discount_icon/-->
+신규 상품 > 기간할인 아이콘 : <!--/new_product@discount_icon_mobile/-->
+신규 상품 > 할인 정보 or 할인율 : <!--/new_product@discount_info/-->
+신규 상품 > 기간할인 메시지 : <!--/new_product@discount_message/-->
+신규 상품 > 소비자 가격 대비 할인율 : <!--/new_product@discount_percent/-->
+신규 상품 > 할인 금액 : <!--/new_product@discount_price_difference/-->
+신규 상품 > 기간할인 남은 기간(일 + 시분초) : <!--/new_product@discount_remain_daytime/-->
+신규 상품 > 기간할인 남은 시간(초 단위) : <!--/new_product@discount_remain_sec_time/-->
+신규 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/new_product@discount_remain_term/-->
+신규 상품 > 상품 조회수 : <!--/new_product@hits/-->
+신규 상품 > 기간할인 사용여부 : <!--/new_product@is_term_discount/-->
+신규 상품 > 할인 가격 : <!--/new_product@price_discount/-->
+신규 상품 > 할인 가격(USD) : <!--/new_product@price_discount_usd/-->
+
+=== 신규 상품 모바일 기간할인 ===
+신규 상품 > 모바일 기간할인 종료일 : <!--/new_product@discount_date_end_mobile/-->
+신규 상품 > 모바일 기간할인 시작일 : <!--/new_product@discount_date_start_mobile/-->
+신규 상품 > 모바일 할인 정보 or 할인율 : <!--/new_product@discount_info_mobile/-->
+신규 상품 > 모바일 기간할인 메시지 : <!--/new_product@discount_message_mobile/-->
+신규 상품 > 모바일 할인 금액 : <!--/new_product@discount_price_difference_mobile/-->
+신규 상품 > 모바일 기간할인 남은 기간(일 + 시분초) : <!--/new_product@discount_remain_daytime_mobile/-->
+신규 상품 > 모바일 기간할인 남은 시간(초 단위) : <!--/new_product@discount_remain_sec_time_mobile/-->
+신규 상품 > 모바일 기간할인 남은 기간(년, 월, 일) : <!--/new_product@discount_remain_term_mobile/-->
+신규 상품 > 모바일 기간할인 사용여부 : <!--/new_product@is_term_discount_mobile/-->
+신규 상품 > 모바일 할인 가격 : <!--/new_product@price_discount_mobile/-->
+
+=== 신규 상품 색상 표시 ===
+신규 상품 > 색상 목록 반복문(LOOP) : <!--/loop_new_product@color/-->
+신규 상품 > 색상 > 색상코드 : <!--/new_product@color@code/-->
+신규 상품 > 색상 > 색상명 : <!--/new_product@color@name/-->
+
+=== 추천 상품 ===
+추천 상품 목록 반복문(LOOP) : <!--/loop_recmd_product/-->
+추천 상품 > 위시리스트 버튼 영역 (BLOCK) : <!--/recmd_product@block_btn_wish/-->
+추천 상품 > 위시리스트 count 영역(BLOCK) : <!--/recmd_product@block_wish_count/-->
+추천 상품 > 브랜드 (길이 제한) : <!--/recmd_product@brand/-->
+추천 상품 > 옵션미리보기 : <!--/recmd_product@btn_option_preview/-->
+추천 상품 > 지역별 배송비 정보 : <!--/recmd_product@delivery_country_info/-->
+추천 상품 > 배송비 안내 상세 : <!--/recmd_product@delivery_detail/-->
+추천 상품 > 배송비 안내 문구 : <!--/recmd_product@delivery_title/-->
+추천 상품 > 영문 상품명 (길이 제한) : <!--/recmd_product@engname/-->
+추천 상품 > 특이사항 (길이 제한) : <!--/recmd_product@etc/-->
+추천 상품 > 무료배송 아이콘 : <!--/recmd_product@free_delivery_icon/-->
+추천 상품 > 상품 조회수 : <!--/recmd_product@hits/-->
+추천 상품 > 상품 아이콘들 : <!--/recmd_product@icons/-->
+추천 상품 > 큰 이미지 경로 : <!--/recmd_product@image_l/-->
+추천 상품 > 중간 이미지 경로 : <!--/recmd_product@image_m/-->
+추천 상품 > 작은 이미지 경로 : <!--/recmd_product@image_s/-->
+추천 상품 > 일시품절 사용여부 : <!--/recmd_product@is_short_soldout/-->
+추천 상품 > 품절여부 : <!--/recmd_product@is_soldout/-->
+추천 상품 > 상품 상세 링크 : <!--/recmd_product@link/-->
+추천 상품 > 미리 보기 버튼 링크 : <!--/recmd_product@link_preview/-->
+추천 상품 > 위시리스트 추가/삭제 (LINK) : <!--/recmd_product@link_wish_toggle/-->
+추천 상품 > 제조사 : <!--/recmd_product@manufacture/-->
+추천 상품 > 상품명 (길이 제한) : <!--/recmd_product@name/-->
+추천 상품 > 전체 판매 수량 : <!--/recmd_product@order_stock/-->
+추천 상품 > 원산지 : <!--/recmd_product@origin/-->
+추천 상품 > 포토 리뷰 개수 : <!--/recmd_product@photo_review_count/-->
+추천상품 파워리뷰 개수 : <!--/recmd_product@power_review_count/-->
+추천상품 파워리뷰 스코어 별점형 : <!--/recmd_product@power_review_score/-->
+추천상품 파워리뷰 스코어 숫자형 : <!--/recmd_product@power_review_score_number/-->
+추천 상품 > 미리보기 아이콘 : <!--/recmd_product@preview_icon/-->
+추천 상품 > 소비자 가격 : <!--/recmd_product@price_consumer/-->
+추천 상품 > 소비자 가격(USD) : <!--/recmd_product@price_consumer_usd/-->
+추천 상품 > 가격 대체문구 : <!--/recmd_product@price_replace/-->
+추천 상품 > 판매 가격 : <!--/recmd_product@price_sell/-->
+추천 상품 > 판매 가격(USD) : <!--/recmd_product@price_sell_usd/-->
+추천 상품 > 당일배송 아이콘 : <!--/recmd_product@quick_delivery_icon/-->
+추천 상품 > 적립율 : <!--/recmd_product@reserve_percent/-->
+추천 상품 > 적립금 : <!--/recmd_product@reserve_price/-->
+추천 상품 > 리뷰 개수 : <!--/recmd_product@review_count/-->
+추천 상품 > 이미지 롤오버 : <!--/recmd_product@rollover/-->
+추천 상품 > 재고 수량 : <!--/recmd_product@stock/-->
+추천 상품 > 추가 상품명 (길이 제한) : <!--/recmd_product@subname/-->
+추천 상품 > 상품아이디 : <!--/recmd_product@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/recmd_product@usergroup_price/-->
+추천 상품 > 위시리스트 count : <!--/recmd_product@wish_count/-->
+추천 상품 더보기 버튼 : <!--/recmd_product_more/-->
+
+=== 추천 상품 기간할인 ===
+추천 상품 > 기간할인 종료일 : <!--/recmd_product@discount_date_end/-->
+추천 상품 > 기간할인 시작일 : <!--/recmd_product@discount_date_start/-->
+추천 상품 > 기간할인 아이콘 : <!--/recmd_product@discount_icon/-->
+추천 상품 > 할인 정보 or 할인율 : <!--/recmd_product@discount_info/-->
+추천 상품 > 기간할인 메시지 : <!--/recmd_product@discount_message/-->
+추천 상품 > 소비자 가격 대비 할인율 : <!--/recmd_product@discount_percent/-->
+추천 상품 > 할인 금액 : <!--/recmd_product@discount_price_difference/-->
+추천 상품 > 모바일 할인 금액 : <!--/recmd_product@discount_price_difference_mobile/-->
+추천 상품 > 기간할인 남은 기간(일 + 시분초) : <!--/recmd_product@discount_remain_daytime/-->
+추천 상품 > 기간할인 남은 시간(초 단위) : <!--/recmd_product@discount_remain_sec_time/-->
+추천 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/recmd_product@discount_remain_term/-->
+추천 상품 > 기간할인 사용여부 : <!--/recmd_product@is_term_discount/-->
+추천 상품 > 할인 가격 : <!--/recmd_product@price_discount/-->
+추천 상품 > 할인 가격(USD) : <!--/recmd_product@price_discount_usd/-->
+
+=== 추천 상품 모바일 기간할인 ===
+추천 상품 > 모바일 기간할인 종료일 : <!--/recmd_product@discount_date_end_mobile/-->
+추천 상품 > 모바일 기간할인 시작일 : <!--/recmd_product@discount_date_start_mobile/-->
+추천 상품 > 모바일 기간할인 아이콘 : <!--/recmd_product@discount_icon_mobile/-->
+추천 상품 > 모바일 할인 정보 or 할인율 : <!--/recmd_product@discount_info_mobile/-->
+추천 상품 > 모바일 기간할인 메시지 : <!--/recmd_product@discount_message_mobile/-->
+추천 상품 > 모바일 기간할인 남은 기간(일 + 시분초) : <!--/recmd_product@discount_remain_daytime_mobile/-->
+추천 상품 > 모바일 기간할인 남은 시간(초 단위) : <!--/recmd_product@discount_remain_sec_time_mobile/-->
+추천 상품 > 모바일 기간할인 남은 기간(년, 월, 일) : <!--/recmd_product@discount_remain_term_mobile/-->
+추천 상품 > 모바일 기간할인 사용여부 : <!--/recmd_product@is_term_discount_mobile/-->
+추천 상품 > 모바일 할인 가격 : <!--/recmd_product@price_discount_mobile/-->
+
+=== 추천 상품 색상 표시 ===
+추천 상품 > 색상 목록 반복문(LOOP) : <!--/loop_recmd_product@color/-->
+추천 상품 > 색상 > 색상코드 : <!--/recmd_product@color@code/-->
+추천 상품 > 색상 > 색상명 : <!--/recmd_product@color@name/-->
+
+=== 특별 상품 ===
+특별 상품 목록 반복문(LOOP) : <!--/loop_special_product/-->
+특별 상품 > 브랜드 (길이 제한) : <!--/special_product@brand/-->
+특별 상품 > 옵션미리보기 : <!--/special_product@btn_option_preview/-->
+특별 상품 > 영문 상품명 (길이 제한) : <!--/special_product@engname/-->
+특별 상품 > 특이사항 (길이 제한) : <!--/special_product@etc/-->
+특별 상품 > 무료배송 아이콘 : <!--/special_product@free_delivery_icon/-->
+특별 상품 > 상품 아이콘들 : <!--/special_product@icons/-->
+특별 상품 > 큰 이미지 경로 : <!--/special_product@image_l/-->
+특별 상품 > 중간 이미지 경로 : <!--/special_product@image_m/-->
+특별 상품 > 작은 이미지 경로 : <!--/special_product@image_s/-->
+특별 상품 > 일시품절 사용여부 : <!--/special_product@is_short_soldout/-->
+특별 상품 > 품절여부 : <!--/special_product@is_soldout/-->
+특별 상품 > 상품 상세 링크 : <!--/special_product@link/-->
+특별 상품 > 미리 보기 버튼 링크 : <!--/special_product@link_preview/-->
+특별 상품 > 상품명 (길이 제한) : <!--/special_product@name/-->
+특별 상품 > 전체 판매 수량 : <!--/special_product@order_stock/-->
+특별 상품 > 포토 리뷰 개수 : <!--/special_product@photo_review_count/-->
+특별상품 파워리뷰 개수 : <!--/special_product@power_review_count/-->
+특별상품 파워리뷰 스코어 별점형 : <!--/special_product@power_review_score/-->
+특별상품 파워리뷰 스코어 숫자형 : <!--/special_product@power_review_score_number/-->
+특별 상품 > 미리보기 아이콘 : <!--/special_product@preview_icon/-->
+특별 상품 > 소비자 가격 : <!--/special_product@price_consumer/-->
+특별 상품 > 소비자 가격(USD) : <!--/special_product@price_consumer_usd/-->
+특별 상품 > 가격 대체문구 : <!--/special_product@price_replace/-->
+특별 상품 > 판매 가격 : <!--/special_product@price_sell/-->
+특별 상품 > 판매 가격(USD) : <!--/special_product@price_sell_usd/-->
+특별 상품 > 당일배송 아이콘 : <!--/special_product@quick_delivery_icon/-->
+특별 상품 > 적립율 : <!--/special_product@reserve_percent/-->
+특별 상품 > 적립금 : <!--/special_product@reserve_price/-->
+특별 상품 > 리뷰 개수 : <!--/special_product@review_count/-->
+특별 상품 > 재고 수량 : <!--/special_product@stock/-->
+특별 상품 > 추가 상품명 (길이 제한) : <!--/special_product@subname/-->
+특별 상품 > 상품아이디 : <!--/special_product@uid/-->
+로그인한 회원의 그룹에 따른 가격(상품 기본가에 대하여 계산되어 출력) : <!--/special_product@usergroup_price/-->
+
+=== 특별 상품 기간할인 ===
+특별 상품 > 기간할인 종료일 : <!--/special_product@discount_date_end/-->
+특별 상품 > 기간할인 시작일 : <!--/special_product@discount_date_start/-->
+특별 상품 > 기간할인 아이콘 : <!--/special_product@discount_icon/-->
+특별 상품 > 기간할인 아이콘 : <!--/special_product@discount_icon_mobile/-->
+특별 상품 > 할인 정보 or 할인율 : <!--/special_product@discount_info/-->
+특별 상품 > 기간할인 메시지 : <!--/special_product@discount_message/-->
+특별 상품 > 소비자 가격 대비 할인율 : <!--/special_product@discount_percent/-->
+특별 상품 > 할인 금액 : <!--/special_product@discount_price_difference/-->
+특별 상품 > 기간할인 남은 기간(일 + 시분초) : <!--/special_product@discount_remain_daytime/-->
+특별 상품 > 기간할인 남은 시간(초 단위) : <!--/special_product@discount_remain_sec_time/-->
+특별 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/special_product@discount_remain_term/-->
+특별 상품 > 상품 조회수 : <!--/special_product@hits/-->
+특별 상품 > 기간할인 사용여부 : <!--/special_product@is_term_discount/-->
+특별 상품 > 할인 가격 : <!--/special_product@price_discount/-->
+특별 상품 > 할인 가격(USD) : <!--/special_product@price_discount_usd/-->
+
+=== 특별 상품 모바일 기간할인 ===
+특별 상품 > 모바일 기간할인 종료일 : <!--/special_product@discount_date_end_mobile/-->
+특별 상품 > 모바일 기간할인 시작일 : <!--/special_product@discount_date_start_mobile/-->
+특별 상품  >모바일 할인 정보 or 할인율 : <!--/special_product@discount_info_mobile/-->
+특별 상품 > 모바일 기간할인 메시지 : <!--/special_product@discount_message_mobile/-->
+특별 상품 > 모바일 할인 금액 : <!--/special_product@discount_price_difference_mobile/-->
+특별 상품 > 모바일 기간할인 남은 기간(일 + 시분초) : <!--/special_product@discount_remain_daytime_mobile/-->
+특별 상품 > 모바일 기간할인 남은 시간(초 단위) : <!--/special_product@discount_remain_sec_time_mobile/-->
+특별 상품 > 모바일 기간할인 남은 기간(년, 월, 일) : <!--/special_product@discount_remain_term_mobile/-->
+특별 상품 > 모바일 기간할인 사용여부 : <!--/special_product@is_term_discount_mobile/-->
+특별 상품 > 모바일 할인 가격 : <!--/special_product@price_discount_mobile/-->
+
+=== 특별 상품 색상 표시 ===
+특별 상품 > 색상 목록 반복문(LOOP) : <!--/loop_special_product@color/-->
+특별 상품 > 색상 > 색상코드 : <!--/special_product@color@code/-->
+특별 상품 > 색상 > 색상명 : <!--/special_product@color@name/-->
+
+=== 빅매치 이벤트 ===
+빅매치 배너 > 이미지경로 : <!--/bigmatch@banner/-->
+빅매치 배너 > 빅매치 링크 링크 : <!--/bigmatch@link/-->
+빅매치 배너 > 이벤트명 : <!--/bigmatch@subject/-->
+빅매치 배너 반복문(LOOP) : <!--/loop_bigmatch/-->
+
+=== 게시판 최근 게시글 ===
+페이징 타입 게시판 영역(1회 사용가능) : <!--/block_board/-->
+게시판 목록 존재 유무 : <!--/board_[BOARD_CODE]/-->
+게시판 > 조회수 : <!--/board_[BOARD_CODE]@cnt_read/-->
+게시판 > 내용 (길이 제한) : <!--/board_[BOARD_CODE]@content/-->
+게시판 > 작성일 : <!--/board_[BOARD_CODE]@date_write/-->
+게시판 > 그룹 아이콘 : <!--/board_[BOARD_CODE]@group_icon/-->
+게시판 > HIT 아이콘 : <!--/board_[BOARD_CODE]@hit_icon/-->
+게시판 > 읽기 링크 : <!--/board_[BOARD_CODE]@link/-->
+게시판 > 신규 아이콘 : <!--/board_[BOARD_CODE]@new_icon/-->
+게시판 > 글번호 : <!--/board_[BOARD_CODE]@number/-->
+게시판 > 리뷰 상품 이미지 : <!--/board_[BOARD_CODE]@product_image_s/-->
+게시판 > 제목 (길이 제한) : <!--/board_[BOARD_CODE]@subject/-->
+게시판 > 썸네일 이미지 경로 : <!--/board_[BOARD_CODE]@thumbnail/-->
+게시판 > 작성자 (길이 제한) : <!--/board_[BOARD_CODE]@writer/-->
+게시판 > 회원(작성자) 아이디 (길이 제한) : <!--/board_[BOARD_CODE]@writer_id/-->
+페이징 타입 게시판 이후 링크 : <!--/board_[BOARD_CODE]_next/-->
+페이징 타입 게시판 이전 링크 : <!--/board_[BOARD_CODE]_prev/-->
+게시판 게시판 이름 : <!--/board_[BOARD_CODE]_title/-->
+게시판 목록 : <!--/loop_board_[BOARD_CODE]/-->
+메인 화면 흐르는 최근게시물 표시 : <!--/rolling_text/-->
+
+=== 회원 로그인 ===
+아이디 저장 체크 (CHECKBOX) : <!--/checkbox_save_id/-->
+보안 로그인 체크 (CHECKBOX) : <!--/checkbox_security/-->
+로그인 폼(FORM) : <!--/form_login/-->
+로그인 조건문(IF) : <!--/if_login/-->
+로그인 아이디 (INPUT) : <!--/input_login_id/-->
+로그인 버튼 링크 : <!--/link_login_button/-->
+로그아웃 버튼 링크 : <!--/link_logout_button/-->
+패스워드 분실 링크 : <!--/link_password_lost/-->
+보안 로그인 설명 링크 : <!--/link_security/-->
+
+=== 쇼핑몰 컨텐츠 ===
+쇼핑몰 컨텐츠 > 작성일 : <!--/content@date/-->
+쇼핑몰 컨텐츠 > 조회수 : <!--/content@hits/-->
+쇼핑몰 컨텐츠 > 읽기 링크 : <!--/content@link_view/-->
+쇼핑몰 컨텐츠 > 제목 (길이 제한) : <!--/content@subject/-->
+쇼핑몰 컨텐츠 목록 링크 : <!--/link_content/-->
+쇼핑몰 컨텐츠 목록 반복문(LOOP) : <!--/loop_content/-->
+
+=== 스크립트 기능 ===
+메인롤링배너 스크립트(1번탭) : <!--/script_banner1/-->
+메인롤링배너 스크립트(2번탭) : <!--/script_banner2/-->
+메인롤링배너 스크립트(3번탭) : <!--/script_banner3/-->
+
+=== 플래시 템플릿 ===
+플래시 헤드라인 출력 : <!--/flash_headline/-->
+플래시 메인 배너 : <!--/flash_main_banner/-->
+플래시 메인 배너2 : <!--/flash_main_banner2/-->
+플래시 메인 배너3 : <!--/flash_main_banner3/-->
+흐르는 메인 상품 : <!--/flash_move_product/-->
+쇼핑몰 스텝 배너 : <!--/flash_step_banner/-->
+태그 클라우드 : <!--/flash_tag_cloud/-->
+
+=== 인클루드 태그 ===
+하단 (디자인 번호) INCLUDE : <!--/include_footer/-->
+상단 (디자인 번호) INCLUDE : <!--/include_header/-->
+측면 (디자인 번호) INCLUDE : <!--/include_menu/-->
+로그인 패스워드 (INPUT) : <!--/input_login_pw/-->
+스크롤(디자인 번호) 스크립트 : <!--/script_scroll/-->
+고정 쇼핑탭(디자인 번호) 스크립트 : <!--/script_shopping_tab/-->
+
+=== 상품 검색 ===
+사이트 검색 폼(FORM) : <!--/form_search/-->
+검색어 (INPUT) : <!--/input_search_word/-->
+자동완성 키워드 (INPUT) : <!--/input_search_word_best/-->
+검색 버튼 링크 : <!--/link_search_button/-->
+검색어 순위 TOP 10 표시 : <!--/ranking_keyword/-->
+자동완성 키워드 (LAYER) : <!--/search_word_layer/-->
+
+=== 출석 체크 ===
+출석체크 사용 여부 : <!--/is_attendance/-->
+출석표 링크 : <!--/link_attendance/-->
+
+=== 메뉴 링크 ===
+FAQ 링크 : <!--/link_faq/-->
+회원 가입/정보 수정 링크 : <!--/link_join/-->
+회원 탈퇴 링크 : <!--/link_withdraw/-->
+
+=== 공지사항 ===
+공지 사항 목록 링크 : <!--/link_notice/-->
+공지 사항 목록 반복문(LOOP) : <!--/loop_notice/-->
+공지 사항 > 작성일 : <!--/notice@date/-->
+공지 사항 > 조회수 : <!--/notice@hits/-->
+공지 사항 > 읽기 링크 : <!--/notice@link_view/-->
+공지 사항 > 제목 (길이 제한) : <!--/notice@subject/-->
+
+=== 설문조사 ===
+투표 하기 링크 : <!--/link_poll/-->
+결과 보기 링크 : <!--/link_poll_result/-->
+설문조사 선택 반복문(LOOP) : <!--/loop_poll/-->
+설문조사 선택 > 항목명 : <!--/poll@item/-->
+설문조사 선택 > 항목선택 (RADIO) : <!--/poll@radio_choice/-->
+설문조사 제목 (길이 제한) : <!--/poll_title/-->
+
+=== 평점 타입 리뷰 노출 ===
+리뷰 > 답변 여부 조건문(IF) : <!--/if_review@reply/-->
+리뷰 목록 반복문(LOOP) : <!--/loop_review/-->
+리뷰 > 평점 반복문(LOOP) : <!--/loop_review@score/-->
+리뷰 > 내용 (길이 제한) : <!--/review@content/-->
+리뷰 > 작성일 : <!--/review@date_write/-->
+리뷰 > 그룹 아이콘 : <!--/review@group_icon/-->
+리뷰 > 리뷰 보기 링크 : <!--/review@link/-->
+리뷰 > 상품 상세 링크 : <!--/review@link_product/-->
+리뷰 > 번호 : <!--/review@number/-->
+리뷰 > 영문 상품명 : <!--/review@product_engname/-->
+리뷰 > 상품 작은 이미지 경로 : <!--/review@product_image_s/-->
+리뷰 > 상품명 (길이 제한) : <!--/review@product_name/-->
+리뷰 > 추가 상품명 (길이 제한) : <!--/review@product_subname/-->
+리뷰 > 답변 내용 : <!--/review@reply/-->
+리뷰 > 평점 아이콘 : <!--/review@score@icon/-->
+리뷰 > 평점 제목 : <!--/review@score@title/-->
+리뷰 > 평점 : <!--/review@score_text/-->
+리뷰 > 제목 (길이 제한) : <!--/review@subject/-->
+리뷰 > 작성자 : <!--/review@writer/-->
+
+=== 잉글리쉬 HTML ===
+상점 언어 : <!--/shop_language/-->
+
+=== 회원 정보 ===
+회원 그룹 아이콘 : <!--/group_icon/-->
+회원 그룹 이미지 : <!--/group_image/-->
+회원 그룹 등급 : <!--/group_level/-->
+회원 그룹 : <!--/group_name/-->
+회원 이미지 : <!--/img_user/-->
+미사용 쿠폰 수량 링크 : <!--/link_coupon_count/-->
+미사용 쿠폰 수량 : <!--/remain_coupon_count/-->
+회원 장바구니 담긴 수량 : <!--/user_basket_quantity/-->
+회원 예치금 : <!--/user_deposit/-->
+회원 이메일 : <!--/user_email/-->
+회원 인사말 : <!--/user_greeting/-->
+회원 아이디 : <!--/user_id/-->
+회원 이름 : <!--/user_name/-->
+회원 닉네임 : <!--/user_nickname/-->
+회원 적립금 : <!--/user_reserve/-->
+
+=== 블링블링 ===
+블링블링 > 추가 상품 : <!--/bling_add[CODE]_product/-->
+블링블링 > 신규 상품 : <!--/bling_new_product/-->
+블링블링 > 추천 상품 : <!--/bling_recmd_product/-->
+블링블링 > 특별 상품 : <!--/bling_special_product/-->
+
+=== 상점 정보 ===
+쇼핑몰 사업장 주소 : <!--/shop_addr/-->
+상점 아이디 : <!--/shop_id/-->
+쇼핑몰 인사말 : <!--/shop_intro/-->
+
+=== 기타 ===
+추가 상품 진열 코너명 : <!--/add[CODE]_corner_name/-->
+추가상품 > 성인 상품 접근 가능 여부 : <!--/add[CODE]_product@is_adult_access/-->
+추가 상품 > 제조사 : <!--/add[CODE]_product@manufacture/-->
+추가 상품 > 모델명 (길이 제한) : <!--/add[CODE]_product@model/-->
+추가 상품 > 원산지 : <!--/add[CODE]_product@origin/-->
+추가 상품 > 포인트(%) : <!--/add[CODE]_product@point_percent/-->
+추가 상품 > 포인트 : <!--/add[CODE]_product@point_price/-->
+추가 상품 > 포인트 단위 : <!--/add[CODE]_product@point_unit/-->
+추가 상품 더보기 버튼 : <!--/add[CODE]_product_more/-->
+기획전 배너(배너번호) : <!--/banner_plan/-->
+베스트 상품(판매금액순) > 포인트(%) : <!--/best_pricesum_product@point_percent/-->
+베스트 상품(판매금액순) > 포인트 : <!--/best_pricesum_product@point_price/-->
+베스트 상품(판매금액순) > 포인트 : <!--/best_pricesum_product@point_unit/-->
+베스트 상품 > 원산지 : <!--/best_product@origin/-->
+베스트 상품 > 포인트(%) : <!--/best_product@point_percent/-->
+베스트 상품 > 포인트 : <!--/best_product@point_price/-->
+베스트 상품 > 포인트 단위 : <!--/best_product@point_unit/-->
+추가 상품 리스트 출력 Ajax 영역 : <!--/block_add[CODE]_product/-->
+신규 상품 리스트 출력 Ajax 영역 : <!--/block_new_product/-->
+추천 상품 리스트 출력 Ajax 영역 : <!--/block_recmd_product/-->
+특별 상품 리스트 출력 Ajax 영역 : <!--/block_special_product/-->
+게시판 > 상품 연동게시판 > 상품명 : <!--/board_[BOARD_CODE]@product_name/-->
+분류 베스트 상품 > 브랜드 : <!--/category_best_product_[CODE]@brand/-->
+분류 베스트 상품 > 색상 > 색상코드 : <!--/category_best_product_[CODE]@color@code/-->
+분류 베스트 상품 > 색상 > 색상명 : <!--/category_best_product_[CODE]@color@name/-->
+분류 베스트 상품 > 기간할인 종료일 : <!--/category_best_product_[CODE]@discount_date_end/-->
+분류 베스트 상품 >기간할인 시작일 : <!--/category_best_product_[CODE]@discount_date_start/-->
+분류 베스트 상품 > 기간할인 아이콘 : <!--/category_best_product_[CODE]@discount_icon/-->
+분류 베스트 상품 > 할인 정보 or 할인율 : <!--/category_best_product_[CODE]@discount_info/-->
+분류 베스트 상품 > 기간할인 메세지 : <!--/category_best_product_[CODE]@discount_message/-->
+분류 베스트 상품 > 소비자 가격 대비 할인율 : <!--/category_best_product_[CODE]@discount_percent/-->
+분류 베스트 상품 > 기간할인 남은 기간(년, 월, 일) : <!--/category_best_product_[CODE]@discount_remain_term/-->
+분류 베스트 상품 > 큰 이미지 경로 : <!--/category_best_product_[CODE]@image_l/-->
+분류 베스트 상품 > 중간 이미지 경로 : <!--/category_best_product_[CODE]@image_m/-->
+분류 베스트 상품 > 작은 이미지 경로 : <!--/category_best_product_[CODE]@image_s/-->
+분류 베스트 상품 > 일시품절 사용여부 : <!--/category_best_product_[CODE]@is_short_soldout/-->
+분류 베스트 상품 > 품절여부 : <!--/category_best_product_[CODE]@is_soldout/-->
+분류 베스트 상품 > 기간할인 사용여부 : <!--/category_best_product_[CODE]@is_term_discount/-->
+분류 베스트 상품 > 상품 상세 링크 : <!--/category_best_product_[CODE]@link/-->
+분류 베스트 상품 > 미리보기 버튼 링크 : <!--/category_best_product_[CODE]@link_preview/-->
+분류 베스트 상품 > 제조사 : <!--/category_best_product_[CODE]@manufacture/-->
+분류 베스트 상품 > 모바일 이미지 경로 : <!--/category_best_product_[CODE]@mobile_image/-->
+분류 베스트 상품 > 모바일 상품명(길이 제한) : <!--/category_best_product_[CODE]@mobile_name/-->
+분류 베스트 상품 > 모델명(길이 제한) : <!--/category_best_product_[CODE]@model/-->
+분류 베스트 상품 > 상품명(길이 제한) : <!--/category_best_product_[CODE]@name/-->
+분류 베스트 상품 > 원산지 : <!--/category_best_product_[CODE]@origin/-->
+분류 베스트 상품 > 소비자가격 : <!--/category_best_product_[CODE]@price_consumer/-->
+분류 베스트 상품 > 할인 가격 : <!--/category_best_product_[CODE]@price_discount/-->
+분류 베스트 상품 >가격 대체문구 : <!--/category_best_product_[CODE]@price_replace/-->
+분류 베스트 상품 > 판매가격 : <!--/category_best_product_[CODE]@price_sell/-->
+분류 베스트 상품 > 적립율 : <!--/category_best_product_[CODE]@reserve_percent/-->
+분류 베스트 상품 >  적립금 : <!--/category_best_product_[CODE]@reserve_price/-->
+분류 베스트 상품 > 재고 수량 : <!--/category_best_product_[CODE]@stock/-->
+분류 베스트 상품 > 추가 상품명(길이제한) : <!--/category_best_product_[CODE]@subname/-->
+분류 베스트 상품 > 상품아이디 : <!--/category_best_product_[CODE]@uid/-->
+분류별 신상품 > 제조사 : <!--/category_product_[CATE1_CODE]@manufacture/-->
+분류별 신상품 > 모델명 (길이 제한) : <!--/category_product_[CATE1_CODE]@model/-->
+분류별 신상품 > 원산지 : <!--/category_product_[CATE1_CODE]@origin/-->
+분류별 신상품 > 포인트(%) : <!--/category_product_[CATE1_CODE]@point_percent/-->
+분류별 신상품 > 포인트 : <!--/category_product_[CATE1_CODE]@point_price/-->
+분류별 신상품 > 포인트 단위 : <!--/category_product_[CATE1_CODE]@point_unit/-->
+사용가능 쿠폰 개수 : <!--/coupon_count/-->
+플래시 메인탭배너 출력 : <!--/flash_main_tab_banner/-->
+INDEX : <!--/idx/-->
+기업회원 여부 조건문(IF) : <!--/if_company_user/-->
+분류 베스트상품 : <!--/loop_category_best_product_[CODE]/-->
+분류 베스트상품 > 색상 목록 반복문(LOOP) : <!--/loop_category_best_product_[CODE]@color/-->
+신규 상품 목록(더보기) : <!--/loop_new_product_list/-->
+베스트 파워리뷰 : <!--/loop_power_review_best/-->
+파워리뷰 메인 노출 : <!--/loop_power_review_photo/-->
+추천 상품 목록(더보기) : <!--/loop_recmd_product_list/-->
+특별 상품 목록(더보기) : <!--/loop_special_product_list/-->
+신규 상품 진열 코너명 : <!--/new_corner_name/-->
+신상품 > 성인상품 접근 가능여부 : <!--/new_product@is_adult_access/-->
+신규 상품 > 포인트(%) : <!--/new_product@point_percent/-->
+신규 상품 > 포인트 : <!--/new_product@point_price/-->
+신규 상품 > 포인트 단위 : <!--/new_product@point_unit/-->
+신규 상품 >할인 프로모션 아이콘 : <!--/new_product@promotion_icon/-->
+베스트 파워리뷰 > 썸네일(직사각형) : <!--/power_review_best@attach_rectangle/-->
+베스트 파워리뷰 > 썸네일(정사각형) : <!--/power_review_best@attach_square/-->
+베스트 파워리뷰 > 썸네일 : <!--/power_review_best@attach_thumbnail/-->
+베스트 파워리뷰 > 조회수(게시판형) : <!--/power_review_best@cnt_read/-->
+베스트 파워리뷰 > 내용(길이 제한) : <!--/power_review_best@content/-->
+베스트 파워리뷰 > 작성일 : <!--/power_review_best@date_write/-->
+베스트 파워리뷰 > 상품 중간 이미지 경로 : <!--/power_review_best@image_m/-->
+베스트 파워리뷰 > 상품 작은 이미지 경로 : <!--/power_review_best@image_s/-->
+베스트 파워리뷰 > 상품 상세 링크 : <!--/power_review_best@link_product/-->
+베스트 파워리뷰 > 상세 보기 팝업 : <!--/power_review_best@link_view_popup/-->
+베스트 파워리뷰 > 상품명(길이 제한) : <!--/power_review_best@product_name/-->
+베스트 파워리뷰 > 상품 리뷰 개수 : <!--/power_review_best@product_review_count/-->
+베스트 파워리뷰 > 상품 평균 평점 : <!--/power_review_best@product_score_avg/-->
+베스트 파워리뷰 > 평점(별점) : <!--/power_review_best@score/-->
+베스트 파워리뷰 > 평점(숫자) : <!--/power_review_best@score_number/-->
+베스트 파워리뷰 > 작성자 : <!--/power_review_best@writer/-->
+파워리뷰 메인노출 > 썸네일 이미지 (정사각형) : <!--/power_review_photo@attach_square/-->
+파워리뷰 메인노출 > 리뷰 상세 팝업 링크 : <!--/power_review_photo@link_view_popup/-->
+성인상품 접근 가능여부 : <!--/product@is_adult_access/-->
+상품 > 포토 리뷰 개수 : <!--/product@photo_review_count/-->
+상품 파워리뷰 개수 : <!--/product@power_review_count/-->
+추천 상품 진열 코너명 : <!--/recmd_corner_name/-->
+추천 상품 > 모델명 (길이 제한) : <!--/recmd_product@model/-->
+추천 상품 > 포인트(%) : <!--/recmd_product@point_percent/-->
+추천 상품 > 포인트 : <!--/recmd_product@point_price/-->
+추천 상품 > 포인트 단위 : <!--/recmd_product@point_unit/-->
+스크립트 하이라이트 : <!--/script_highlight/-->
+앱바이 SMS발송 : <!--/sms_app/-->
+특별 상품 진열 코너명 : <!--/special_corner_name/-->
+특별상품 > 대분류 링크 : <!--/special_product@cate1_link/-->
+특별상품 > 대분류 명 : <!--/special_product@cate1_name/-->
+특별상품 > 중분류 링크 : <!--/special_product@cate2_link/-->
+특별상품 > 중분류 명 : <!--/special_product@cate2_name/-->
+특별상품 > 소분류 링크 : <!--/special_product@cate3_link/-->
+특별상품 > 소분류 명 : <!--/special_product@cate3_name/-->
+특별 상품 > 지역별 배송비 정보 : <!--/special_product@delivery_country_info/-->
+특별상품> 배송비 안내상세 : <!--/special_product@delivery_detail/-->
+특별 상품 > 배송비 안내문구 : <!--/special_product@delivery_title/-->
+특별 상품 > 제조사 : <!--/special_product@manufacture/-->
+특별 상품 > 모델명 (길이 제한) : <!--/special_product@model/-->
+특별 상품 > 원산지 : <!--/special_product@origin/-->
+특별 상품 > 포인트(%) : <!--/special_product@point_percent/-->
+특별 상품 > 포인트 : <!--/special_product@point_price/-->
+특별 상품 > 포인트 단위 : <!--/special_product@point_unit/-->
+특별 상품 > 이미지 롤오버 : <!--/special_product@rollover/-->
+특별 상품 더보기 버튼 : <!--/special_product_more/-->

@@ -1,12 +1,98 @@
-#prdSearch .search-wrap { height: 141px; margin-bottom: 35px; border: 4px solid #ededed; background-color:#fcfcfc; }
+/* shopsearch.css — 상품검색 */
 
-#prdSearch .search-wrap .search-hd { padding: 28px 0 10px; }
-#prdSearch .search-wrap .search-cont { width: 700px; margin: 0 auto; }
-#prdSearch .search-wrap .search-cont th { font-weight: normal; text-align: left; padding:10px 0; }
+.oaz-page-hd { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid #1e293b; }
+.oaz-page-title { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0 0 4px; }
+.oaz-search-kw { font-size: 13px; color: #64748b; margin: 0; }
+.oaz-search-kw strong { color: #2563eb; }
 
-#prdSearch .search-wrap .search-cont .input-keyword,
-#prdSearch .search-wrap .search-cont .input-price { padding: 1px; border: 1px solid #d1d1d1; margin-right: 0; }
-#prdSearch .search-wrap .search-cont .input-keyword { width: 200px; }
-#prdSearch .search-wrap .search-cont .input-price { width: 93px; }
+.oaz-search-form {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.oaz-search-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.oaz-search-row { display: flex; align-items: center; gap: 12px; }
+.oaz-search-row label { font-size: 13px; color: #64748b; min-width: 90px; flex-shrink: 0; }
+.oaz-search-inputs { display: flex; align-items: center; gap: 6px; flex: 1; }
+.oaz-search-inputs span { color: #94a3b8; font-size: 12px; }
+.oaz-input-price,
+.oaz-input-kw {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 10px;
+    font-size: 13px;
+    color: #334155;
+    background: #fff;
+    transition: border-color .15s;
+}
+.oaz-input-price { width: 90px; }
+.oaz-input-kw { width: 100%; }
+.oaz-input-price:focus,
+.oaz-input-kw:focus { border-color: #2563eb; outline: none; }
+.oaz-search-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 28px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .15s;
+}
+.oaz-search-btn:hover { background: #1d4ed8; }
 
+/* 정렬 바 */
+.oaz-sort-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.oaz-sort-total { font-size: 13px; color: #64748b; }
+.oaz-sort-total strong { color: #2563eb; font-weight: 700; }
+.oaz-sort-links { display: flex; gap: 0; list-style: none; margin: 0; padding: 0; }
+.oaz-sort-links li a {
+    display: block;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: none;
+    border-left: 1px solid #e2e8f0;
+    transition: color .15s;
+}
+.oaz-sort-links li:first-child a { border-left: none; }
+.oaz-sort-links li a:hover { color: #2563eb; }
 
+/* 상품 카드 */
+.oaz-prd-img-wrap { display: block; background: #f8fafc; border-bottom: 1px solid #e2e8f0; line-height: 0; overflow: hidden; }
+.oaz-prd-img-wrap img { width: 100%; height: 180px; object-fit: cover; display: block; transition: transform .3s; }
+.oaz-prd-card:hover .oaz-prd-img-wrap img { transform: scale(1.04); }
+.oaz-prd-info { padding: 12px; }
+.oaz-prd-icons { font-size: 11px; color: #2563eb; min-height: 16px; margin-bottom: 4px; }
+.oaz-prd-name { font-size: 13px; color: #1e293b; line-height: 1.4; margin-bottom: 8px; }
+.oaz-prd-name a { color: inherit; text-decoration: none; }
+.oaz-prd-name a:hover { color: #2563eb; }
+.oaz-price-org { font-size: 12px; color: #94a3b8; display: block; }
+.oaz-price-sell { font-size: 15px; color: #2563eb; font-weight: 700; display: block; }
+.oaz-price-replace { font-size: 13px; color: #64748b; }
+.oaz-soldout { font-size: 13px; color: #94a3b8; font-weight: 600; }
+.oaz-prd-colors { font-size: 0; margin-bottom: 4px; }
+.oaz-prd-colors span { font-size: 14px; }
+.oaz-prd-preview {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+.oaz-prd-preview:hover { background: #f8fafc; color: #2563eb; }

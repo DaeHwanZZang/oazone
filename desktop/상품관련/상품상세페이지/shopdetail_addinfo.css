@@ -1,0 +1,56 @@
+/* shopdetail_addinfo.css */
+
+.oaz-addinfo-wrap {
+    font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.oaz-addinfo-section {
+    margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.oaz-addinfo-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #1e293b;
+    margin: 0;
+    padding: 12px 18px;
+}
+
+.oaz-addinfo-body {
+    padding: 16px 18px;
+}
+
+/* MakeShop product_info_list 테이블 */
+.oaz-addinfo-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.oaz-addinfo-body table th,
+.oaz-addinfo-body table td {
+    padding: 9px 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 13px;
+    text-align: left;
+    vertical-align: top;
+}
+.oaz-addinfo-body table th {
+    background: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    width: 180px;
+    white-space: nowrap;
+}
+.oaz-addinfo-body table td {
+    color: #334155;
+}
+
+/* 쿠폰 */
+.oaz-addinfo-body .coupon_wrap,
+.oaz-addinfo-body .MS_coupon { font-size: 13px; color: #334155; }

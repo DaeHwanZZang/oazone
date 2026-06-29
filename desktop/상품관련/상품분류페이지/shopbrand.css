@@ -1,18 +1,100 @@
-#productClass .loc-navi { text-align: left; }
-#productClass .best-item { margin-top: 20px; padding: 50px 20px 30px; background: #fbfbfb; }
-#productClass .best-item ul { zoom: 1; margin-left: -10px; }
-#productClass .best-item ul:after { content: ''; display: block; clear: both; }
-#productClass .best-item ul li { float: left; position: relative; width: 204px; margin-left: 10px; }
-#productClass .best-item ul li .ranking { position: absolute; top: -22px; left: 50%; margin-left: -22px; width: 45px; height: 35px; padding-top: 10px; background: url('/images/d3/psdesign/makeshop/makeshop/bg/bg_circle.png') no-repeat 0 0; color: #fff; font-size: 11px; line-height: 1; text-align: center; }
-#productClass .best-item ul li .ranking em { display: block; font-size: 14px; font-weight: bold; margin:2px 0 0; }
-#productClass .best-item ul li .dsc { margin-top: 5px; text-align: center; }
-#productClass .best-item ul li .dsc p { width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 2; color:#535353; }
-#productClass .best-item ul li .dsc del { color: #919191; }
-#productClass .best-item ul li .dsc strong { color:#535353;}
-#productClass .best-item ul li .img img { width: 100%; height: 204px; }
-#productClass .class-list { margin-top: 50px; }
-#productClass .class-list dt { color: #444; font-size: 22px; font-weight: bold; letter-spacing: -1px; text-align: center; }
-#productClass .class-list dd { margin-top: 20px; text-align: center; }
-#productClass .class-list dd a { display: inline-block; padding: 0 15px; background: url(/images/d3/modern_simple/common/bull_ftlink.gif) no-repeat 100% 45%; }
-#productClass .class-list dd a:last-child { background: 0 none; }
+/* shopbrand.css — 상품분류페이지 */
 
+/* 베스트 상품 */
+.oaz-brand-best {
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 28px;
+}
+.oaz-brand-best-grid { display: flex; gap: 16px; }
+.oaz-brand-best-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: box-shadow .2s, transform .2s;
+    position: relative;
+}
+.oaz-brand-best-item:hover { box-shadow: 0 6px 20px rgba(0,0,0,.1); transform: translateY(-2px); }
+.oaz-best-rank {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #2563eb;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.oaz-brand-best-img { line-height: 0; }
+.oaz-brand-best-img img { width: 100%; height: 140px; object-fit: cover; display: block; }
+.oaz-brand-best-info { padding: 10px; }
+.oaz-best-nm {
+    font-size: 12px;
+    color: #334155;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+.oaz-brand-best-info del { font-size: 11px; color: #94a3b8; }
+.oaz-best-pr { font-size: 13px; font-weight: 700; color: #2563eb; }
+
+/* 카테고리 섹션 */
+.oaz-cate-section { margin-bottom: 20px; }
+.oaz-cate-title { font-size: 22px; font-weight: 700; color: #1e293b; margin-bottom: 14px; }
+.oaz-sub-cate { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.oaz-sub-cate a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #334155;
+    text-decoration: none;
+    background: #fff;
+    transition: all .15s;
+}
+.oaz-sub-cate a:hover { background: #2563eb; border-color: #2563eb; color: #fff; }
+.oaz-sub-cate a em { color: #94a3b8; font-size: 12px; font-style: normal; }
+
+/* 정렬 바 */
+.oaz-sort-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.oaz-sort-total { font-size: 13px; color: #64748b; }
+.oaz-sort-total strong { color: #2563eb; font-weight: 700; }
+.oaz-sort-links { display: flex; gap: 0; list-style: none; margin: 0; padding: 0; }
+.oaz-sort-links li a {
+    display: block;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #64748b;
+    text-decoration: none;
+    border-left: 1px solid #e2e8f0;
+    transition: color .15s;
+}
+.oaz-sort-links li:first-child a { border-left: none; }
+.oaz-sort-links li a:hover { color: #2563eb; }
+.oaz-sort-links li.oaz-sort-now a { color: #2563eb; font-weight: 600; }
+
+/* 컬러 */
+.oaz-prd-colors { font-size: 0; margin-bottom: 4px; }
+.oaz-prd-colors span { font-size: 14px; }

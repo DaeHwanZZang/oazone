@@ -6,145 +6,89 @@
             <!--/include_menu(1)/-->
             <div id="content">
                 <div id="gifSelect">
-                    <h2 class="tit-page">사은품 선택</h2>
+
+                    <div class="oaz-page-hd">
+                        <h2 class="oaz-page-title"><strong>사은품</strong> 선택</h2>
+                    </div>
+
                     <!--/if_multiple/-->
-<!-- 다중 사은품 선택 설정 시 디자인 구간 시작 -->
-                    <div class="page-body">
-                        <p class="msg-point">
-                            선택 가능한 사은 포인트
-                            <!--/user_point(basic_price_style)/-->
-                            점 입니다.
-                        </p>
-                        <!--/if_gift/-->
-                        <div class="table-gift-list">
-                            <table summary="사은품, 옵션, 조건">
-                                <caption>사은품</caption>
-                                <colgroup>
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                    <!--/loop_gift/-->
-                                        <!--/gift@form/-->
-                                        <td>
-                                            <div class="box-wrap">
-                                                <div class="box">
-                                                    <h3 class="tit"><!--/gift@name/--><em>(<!--/number/gift@point/-->점)</em></h3>
-                                                    <!--/if_gift@image/-->
-                                                    <div class="thumb"><img src="<!--/gift@image/-->" width="84" height="84" alt="" /></div>
-                                                    <!--/else/-->
-                                                    <div class="thumb"><img src="/images/d3/modern_simple/img_prd_ready.gif" width="84" height="84" alt="" /></div>
-                                                    <!--/end_if/-->
-                                                    <ul class="opt">
-                                                    <!--/loop_gift@option/-->
-                                                        <!--/if_gift@option@title/-->
-                                                        <li>
-                                                            <!--/gift@option@title/--> : <!--/gift@option@select/-->
-                                                        </li>
-                                                        <!--/end_if/-->
-                                                    <!--/end_loop/-->
-                                                    </ul>
-                                                    <!--/if_gift@price_end/-->
-                                                    <p class="cond">
-                                                        <!--/number/gift@price_start/-->이상 
-                                                        <!--/number/gift@price_end/-->원이하 구매시
-                                                    </p>
-                                                    <!--/end_if/-->
-                                                    <p class="quantity">
-                                                        <label>
-                                                            <!--/gift@checkbox_choice/--> 선택
-                                                        </label>
-                                                        <label>
-                                                            수량 : <!--/gift@select_count/-->
-                                                        </label>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <!--/if_step(3)/-->
-                                    </tr>
-                                    <tr>
-                                        <!--/end_if/-->
-                                        <!--/end_form/-->
-                                    <!--/end_loop/-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div><!-- .table-gift-list --> 
-                        <div>
-                             <p class="btns">
-                                 <a href="<!--/link_choice/-->"><img src="/images/d3/modern_simple/btn/btn_h28_select.gif" alt="선택하기" /></a>
-                             </p>
+                    <!-- 다중 사은품 선택 -->
+                    <div class="oaz-gift-point-bar">
+                        선택 가능한 사은 포인트 <strong><!--/user_point(basic_price_style)/-->점</strong>
+                    </div>
+                    <!--/if_gift/-->
+                    <div class="oaz-gift-grid">
+                        <!--/loop_gift/-->
+                        <!--/gift@form/-->
+                        <div class="oaz-gift-card">
+                            <div class="oaz-gift-thumb">
+                                <!--/if_gift@image/-->
+                                <img src="<!--/gift@image/-->" alt="<!--/gift@name/-->" />
+                                <!--/else/-->
+                                <div class="oaz-gift-no-img">사진 없음</div>
+                                <!--/end_if/-->
+                            </div>
+                            <div class="oaz-gift-info">
+                                <h3 class="oaz-gift-name"><!--/gift@name/--><em class="oaz-gift-pts">(<!--/number/gift@point/-->점)</em></h3>
+                                <!--/loop_gift@option/-->
+                                <!--/if_gift@option@title/-->
+                                <p class="oaz-gift-opt"><!--/gift@option@title/--> : <!--/gift@option@select/--></p>
+                                <!--/end_if/-->
+                                <!--/end_loop/-->
+                                <!--/if_gift@price_end/-->
+                                <p class="oaz-gift-cond"><!--/number/gift@price_start/-->원 이상 <!--/number/gift@price_end/-->원 이하 구매 시</p>
+                                <!--/end_if/-->
+                                <div class="oaz-gift-choose">
+                                    <label class="oaz-gift-chk"><!--/gift@checkbox_choice/--> 선택</label>
+                                    <label class="oaz-gift-cnt">수량 : <!--/gift@select_count/--></label>
+                                </div>
+                            </div>
                         </div>
-                        <!--/end_if/-->
-                    </div><!-- .page-body -->
-<!-- 다중 사은품 선택 설정 시 디자인 구간 끝 -->
-                    <!--/else/-->
-<!-- 단일 사은품 선택 설정 시 디자인 구간 시작 -->
-                    <div class="page-body">
-                        <!--/if_gift/-->
-                        <div class="table-gift-list">
-                            <table summary="사은품, 옵션, 조건">
-                                <caption>사은품</caption>
-                                <colgroup>
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                    <col width="33.33%" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                    <!--/loop_gift/-->
-                                        <!--/gift@form/-->
-                                        <td>
-                                            <div class="box-wrap">
-                                                <div class="box">
-                                                    <h3 class="tit"><!--/gift@name/--></h3>
-                                                    <!--/if_gift@image/-->
-                                                    <div class="thumb"><img src="<!--/gift@image/-->" width="84" height="84" alt="" /></div>
-                                                    <!--/else/-->
-                                                    <div class="thumb"><img src="/images/d3/modern_simple/img_prd_ready.gif" width="84" height="84" alt="" /></div>
-                                                    <!--/end_if/-->
-                                                    <ul class="opt">
-                                                    <!--/loop_gift@option/-->
-                                                        <!--/if_gift@option@title/-->
-                                                        <li>
-                                                            <!--/gift@option@title/--> : <!--/gift@option@select/-->
-                                                        </li>
-                                                        <!--/end_if/-->
-                                                    <!--/end_loop/-->
-                                                    </ul>
-                                                    <!--/if_gift@price_end/-->
-                                                    <p class="cond">
-                                                        <!--/number/gift@price_start/-->이상 
-                                                        <!--/number/gift@price_end/-->원이하 구매시
-                                                    </p>
-                                                    <!--/end_if/-->
-                                                    <p class="btns">
-                                                        <a href="<!--/gift@link_choice/-->"><img src="/images/d3/modern_simple/btn/btn_h28_select.gif" alt="선택하기" /></a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <!--/if_step(3)/-->
-                                    </tr>
-                                    <tr>
-                                        <!--/end_if/-->
-                                        <!--/end_form/-->
-                                    <!--/end_loop/-->
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div><!-- .table-gift-list --> 
-                        <!--/end_if/-->
-                    </div><!-- .page-body -->
-<!-- 단일 사은품 선택 설정 시 디자인 구간 끝 -->
+                        <!--/end_form/-->
+                        <!--/end_loop/-->
+                    </div>
+                    <div class="oaz-gift-submit">
+                        <a href="<!--/link_choice/-->" class="oaz-gift-submit-btn">선택하기</a>
+                    </div>
                     <!--/end_if/-->
+                    <!--/else/-->
+                    <!-- 단일 사은품 선택 -->
+                    <!--/if_gift/-->
+                    <div class="oaz-gift-grid">
+                        <!--/loop_gift/-->
+                        <!--/gift@form/-->
+                        <div class="oaz-gift-card">
+                            <div class="oaz-gift-thumb">
+                                <!--/if_gift@image/-->
+                                <img src="<!--/gift@image/-->" alt="<!--/gift@name/-->" />
+                                <!--/else/-->
+                                <div class="oaz-gift-no-img">사진 없음</div>
+                                <!--/end_if/-->
+                            </div>
+                            <div class="oaz-gift-info">
+                                <h3 class="oaz-gift-name"><!--/gift@name/--></h3>
+                                <!--/loop_gift@option/-->
+                                <!--/if_gift@option@title/-->
+                                <p class="oaz-gift-opt"><!--/gift@option@title/--> : <!--/gift@option@select/--></p>
+                                <!--/end_if/-->
+                                <!--/end_loop/-->
+                                <!--/if_gift@price_end/-->
+                                <p class="oaz-gift-cond"><!--/number/gift@price_start/-->원 이상 <!--/number/gift@price_end/-->원 이하 구매 시</p>
+                                <!--/end_if/-->
+                                <div class="oaz-gift-submit">
+                                    <a href="<!--/gift@link_choice/-->" class="oaz-gift-submit-btn">선택하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/end_form/-->
+                        <!--/end_loop/-->
+                    </div>
+                    <!--/end_if/-->
+                    <!--/end_if/-->
+
                 </div><!-- #gifSelect -->
-           <!--/include_footer(1)/-->
+                <!--/include_footer(1)/-->
             </div><!-- #content -->
         </div><!-- #contentWrap -->
     </div><!-- #contentWrapper -->
-
 </div><!-- #wrap -->

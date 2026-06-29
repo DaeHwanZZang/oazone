@@ -5,140 +5,159 @@
             <!--/include_menu(1)/-->
             <div id="content">
                 <div id="bigMatch">
-                    <h2 class="tit-match"><img src="/images/d3/modern_simple/bmatch_tit.gif" alt="big match event" /></h2>
-                    <div class="page-body">
+
+                    <div class="oaz-page-hd">
+                        <h2 class="oaz-page-title"><strong>빅매치</strong> 이벤트</h2>
+                    </div>
+
                     <!--/form_bigmatch/-->
-                        <div class="select-evt-list">
-                            <!--/select_bigmatch_list/-->
-                        </div><!-- .select-evt-list -->
-                        <div class="evt-wrap">
-                            <!--/if_bigmatch_main_image/--><div class="visual"><img src="<!--/bigmatch_main_image/-->" alt="" /></div><!--/end_if/-->
-                            <div class="t-dsc">
-                                <h3><!--/bigmatch_subject/--></h3>
-                                <p><!--/bigmatch_content/--></p>
-                            </div><!-- .t-dsc -->
-                            <div class="img-vs">
-                                <div class="vs-l">
-                                    <div class="thumb"><img src="<!--/bigmatch_prod_image_1/-->" width="214" height="214" alt="" /></div>
-                                    <h4 class="tit"><!--/bigmatch_prod_name_1/--></h4>
-                                    <p class="dsc"><!--/bigmatch_prod_desc_1/--></p>
-                                    <div class="btns"><a href="<!--/link_bigmatch_prod_detail_1/-->"><img src="/images/d3/modern_simple/btn/btn_h28_quick_link.gif" alt="바로가기" /></a></div>
+                    <!-- 이벤트 선택 -->
+                    <div class="oaz-bm-sel"><!--/select_bigmatch_list/--></div>
+
+                    <div class="oaz-bm-wrap">
+                        <!-- 메인 비주얼 -->
+                        <!--/if_bigmatch_main_image/-->
+                        <div class="oaz-bm-visual"><img src="<!--/bigmatch_main_image/-->" alt="" /></div>
+                        <!--/end_if/-->
+
+                        <!-- 설명 -->
+                        <div class="oaz-bm-desc">
+                            <h3 class="oaz-bm-subject"><!--/bigmatch_subject/--></h3>
+                            <p class="oaz-bm-content"><!--/bigmatch_content/--></p>
+                        </div>
+
+                        <!-- VS 상품 -->
+                        <div class="oaz-bm-vs">
+                            <div class="oaz-bm-vs-item">
+                                <div class="oaz-bm-vs-thumb">
+                                    <img src="<!--/bigmatch_prod_image_1/-->" alt="상품 1" />
                                 </div>
-                                <div class="vs-r">
-                                    <div class="thumb"><img src="<!--/bigmatch_prod_image_2/-->" width="214" height="214" alt="" /></div>
-                                    <h4 class="tit"><!--/bigmatch_prod_name_2/--></h4>
-                                    <p class="dsc"><!--/bigmatch_prod_desc_2/--></p>
-                                    <div class="btns"><a href="<!--/link_bigmatch_prod_detail_2/-->"><img src="/images/d3/modern_simple/btn/btn_h28_quick_link.gif" alt="바로가기" /></a></div>
+                                <h4 class="oaz-bm-vs-name"><!--/bigmatch_prod_name_1/--></h4>
+                                <p class="oaz-bm-vs-desc"><!--/bigmatch_prod_desc_1/--></p>
+                                <a href="<!--/link_bigmatch_prod_detail_1/-->" class="oaz-bm-vs-link">바로가기 →</a>
+                            </div>
+                            <div class="oaz-bm-vs-divider">VS</div>
+                            <div class="oaz-bm-vs-item">
+                                <div class="oaz-bm-vs-thumb">
+                                    <img src="<!--/bigmatch_prod_image_2/-->" alt="상품 2" />
                                 </div>
-                            </div><!-- .img-vs -->
-                            <div class="gh-wrap">
-                                <div class="gh-l" style="width: <!--/bigmatch_recmd_percent_1/-->%"></div>
-                                <div class="gh-c">
-                                    <span class="bull-t"><img src="/images/d3/modern_simple/img_bmatch_gp_top.gif" alt="" /></span>
-                                    <span class="bull-b"><img src="/images/d3/modern_simple/img_bmatch_gp_btm.gif" alt="" /></span>
-                                </div>
-                                <div class="gh-r" style="width: <!--/bigmatch_recmd_percent_2/-->%"></div>
-                            </div><!-- .gh-wrap -->
-                            <div class="percent">
-                                <div class="p-l">
-                                    <!--/bigmatch_recmd_1/--><img src="/images/d3/modern_simple/img_bmatch_percent.gif" alt="" />
-                                    <label><!--/radio_bigmatch_prod_1/-->1번 상품</label>
-                                </div>
-                                <div class="p-c">
-                                    현재 <strong><!--/bigmatch_total_count/-->명</strong> 참여
-                                </div>
-                                <div class="p-r">
-                                    <!--/bigmatch_recmd_2/--><img src="/images/d3/modern_simple/img_bmatch_percent.gif" alt="" />
-                                    <label><!--/radio_bigmatch_prod_2/-->2번 상품</label>
-                                </div>
-                            </div><!-- .percent-->
-                            <div class="txt-reg-section">
-                                <!--/if_not_login/-->이름: <!--/input_bigmatch_writer/--><!--/end_if/-->
-                                <!--/if_not_login/-->비밀번호: <!--/input_bigmatch_password/--><!--/end_if/-->
-                                <!--/text_bigmatch_content/-->
-                            </div><!-- .txt-reg-section -->
+                                <h4 class="oaz-bm-vs-name"><!--/bigmatch_prod_name_2/--></h4>
+                                <p class="oaz-bm-vs-desc"><!--/bigmatch_prod_desc_2/--></p>
+                                <a href="<!--/link_bigmatch_prod_detail_2/-->" class="oaz-bm-vs-link">바로가기 →</a>
+                            </div>
+                        </div>
+
+                        <!-- 그래프 -->
+                        <div class="oaz-bm-graph">
+                            <div class="oaz-bm-graph-l" style="width:<!--/bigmatch_recmd_percent_1/-->%"></div>
+                            <div class="oaz-bm-graph-r" style="width:<!--/bigmatch_recmd_percent_2/-->%"></div>
+                        </div>
+
+                        <!-- 퍼센트 + 선택 -->
+                        <div class="oaz-bm-percent">
+                            <div class="oaz-bm-pct-l">
+                                <span class="oaz-bm-pct-num"><!--/bigmatch_recmd_1/-->%</span>
+                                <label class="oaz-bm-pct-lbl"><!--/radio_bigmatch_prod_1/-->1번 상품</label>
+                            </div>
+                            <div class="oaz-bm-pct-c">
+                                현재 <strong><!--/bigmatch_total_count/-->명</strong> 참여
+                            </div>
+                            <div class="oaz-bm-pct-r">
+                                <span class="oaz-bm-pct-num"><!--/bigmatch_recmd_2/-->%</span>
+                                <label class="oaz-bm-pct-lbl"><!--/radio_bigmatch_prod_2/-->2번 상품</label>
+                            </div>
+                        </div>
+
+                        <!-- 댓글 작성 -->
+                        <div class="oaz-bm-write">
+                            <!--/if_not_login/-->
+                            <div class="oaz-bm-write-row">
+                                <label>이름</label><!--/input_bigmatch_writer/-->
+                            </div>
+                            <div class="oaz-bm-write-row">
+                                <label>비밀번호</label><!--/input_bigmatch_password/-->
+                            </div>
+                            <!--/end_if/-->
+                            <!--/text_bigmatch_content/-->
+                        </div>
                     <!--/end_form/-->
-                            <div class="btn-foot">
-                                <a href="<!--/link_bigmatch_recmd/-->"><img src="/images/d3/modern_simple/btn/btn_h46_bmatch.gif" alt="추천하기" /></a>
-                            </div><!-- .btn-foot -->
-                            <div class="foot-list">
-                                <div class="list-l">
-                                    <div class="cnt">
-<!--/if_bigmatch_comment_1/-->
-    <!--/loop_bigmatch_comment_1/-->
-                                        <dl>
-                                            <dt>
-                                                <strong><!--/bigmatch_comment_1@writer/--></strong><!--/bigmatch_comment_1@date/--> 
-                                                <a href="<!--/bigmatch_comment_1@link_delete/-->"><span>삭제</span></a>
-                                            </dt>
-                                            <dd><!--/bigmatch_comment_1@content/--></dd>
-                                        </dl>
-    <!--/end_loop/-->
-<!--/else/-->
-                                        <center>추천 목록이 없습니다.</center>
-<!--/end_if/-->
-                                    </div>
-                                    <ol class="page">
-<!--/if_pager_bigmatch_comment_1::prev/-->
-                                        <li class="prev"><a href="<!--/pager_bigmatch_comment_1::prev@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_prev.gif" alt="이전" /></a></li>
-<!--/end_if/-->
-<!--/if_bigmatch_comment_1/-->
-    <!--/loop_pager_bigmatch_comment_1::page/-->
-        <!--/if_pager_bigmatch_comment_1::page@current/-->
-                                        <li><strong><!--/pager_bigmatch_comment_1::page/--></strong></li>
-        <!--/else/-->
-                                        <li><a href="<!--/pager_bigmatch_comment_1::page@link/-->"><!--/pager_bigmatch_comment_1::page/--></a></li>
-        <!--/end_if/-->
-    <!--/end_loop/-->
-<!--/end_if/-->
-<!--/if_pager_bigmatch_comment_1::next/-->
-                                        <li class="next"><a href="<!--/pager_bigmatch_comment_1::next@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_next.gif" alt="다음" /></a></li>
-<!--/end_if/-->
-                                    </ol>
-                                    <span class="bull-t"><img src="/images/d3/modern_simple/img_bmatch_flist.gif" alt="" /></span>
-                                </div><!-- .list-l -->
-                                <div class="list-r">
-                                    <div class="cnt">
-<!--/if_bigmatch_comment_2/-->
-    <!--/loop_bigmatch_comment_2/-->
-                                        <dl>
-                                            <dt>
-                                                <strong><!--/bigmatch_comment_2@writer/--></strong><!--/bigmatch_comment_2@date/--> 
-                                                <a href="<!--/bigmatch_comment_2@link_delete/-->"><span>삭제</span></a>
-                                            </dt>
-                                            <dd><!--/bigmatch_comment_2@content/--></dd>
-                                        </dl>
-    <!--/end_loop/-->
-<!--/else/-->
-                                        <center>추천 목록이 없습니다.</center>
-<!--/end_if/-->
-                                    </div>
-                                    <ol class="page">
-<!--/if_pager_bigmatch_comment_2::prev/-->
-                                        <li class="prev"><a href="<!--/pager_bigmatch_comment_2::prev@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_prev.gif" alt="이전" /></a></li>
-<!--/end_if/-->
-<!--/if_bigmatch_comment_2/-->
-    <!--/loop_pager_bigmatch_comment_2::page/-->
-        <!--/if_pager_bigmatch_comment_2::page@current/-->
-                                        <li><strong><!--/pager_bigmatch_comment_2::page/--></strong></li>
-        <!--/else/-->
-                                        <li><a href="<!--/pager_bigmatch_comment_2::page@link/-->"><!--/pager_bigmatch_comment_2::page/--></a></li>
-        <!--/end_if/-->
-    <!--/end_loop/-->
-<!--/end_if/-->
-<!--/if_pager_bigmatch_comment_2::next/-->
-                                        <li class="next"><a href="<!--/pager_bigmatch_comment_2::next@link/-->"><img src="/images/d3/modern_simple/btn/btn_bmatch_paging_next.gif" alt="다음" /></a></li>
-<!--/end_if/-->
-                                    </ol>
-                                    <span class="bull-t"><img src="/images/d3/modern_simple/img_bmatch_flist.gif" alt="" /></span>
-                                </div><!-- .list-r -->
-                            </div><!-- .foot-list -->
-                        </div><!-- .evt-wrap -->
-                    </div><!-- .page-body -->
+                        <div class="oaz-bm-submit">
+                            <a href="<!--/link_bigmatch_recmd/-->" class="oaz-bm-submit-btn">추천하기</a>
+                        </div>
+
+                        <!-- 댓글 목록 -->
+                        <div class="oaz-bm-comments">
+                            <div class="oaz-bm-comment-col">
+                                <h4 class="oaz-bm-comment-hd">1번 상품 추천</h4>
+                                <div class="oaz-bm-comment-list">
+                                    <!--/if_bigmatch_comment_1/-->
+                                    <!--/loop_bigmatch_comment_1/-->
+                                    <dl class="oaz-bm-comment">
+                                        <dt><strong><!--/bigmatch_comment_1@writer/--></strong><span><!--/bigmatch_comment_1@date/--></span><a href="<!--/bigmatch_comment_1@link_delete/-->">삭제</a></dt>
+                                        <dd><!--/bigmatch_comment_1@content/--></dd>
+                                    </dl>
+                                    <!--/end_loop/-->
+                                    <!--/else/-->
+                                    <p class="oaz-bm-no-comment">추천 목록이 없습니다.</p>
+                                    <!--/end_if/-->
+                                </div>
+                                <ol class="paging">
+                                    <!--/if_pager_bigmatch_comment_1::prev/-->
+                                    <li class="prev"><a href="<!--/pager_bigmatch_comment_1::prev@link/-->">&lsaquo;</a></li>
+                                    <!--/end_if/-->
+                                    <!--/if_bigmatch_comment_1/-->
+                                    <!--/loop_pager_bigmatch_comment_1::page/-->
+                                        <!--/if_pager_bigmatch_comment_1::page@current/-->
+                                    <li class="now"><strong><!--/pager_bigmatch_comment_1::page/--></strong></li>
+                                        <!--/else/-->
+                                    <li><a href="<!--/pager_bigmatch_comment_1::page@link/-->"><!--/pager_bigmatch_comment_1::page/--></a></li>
+                                        <!--/end_if/-->
+                                    <!--/end_loop/-->
+                                    <!--/end_if/-->
+                                    <!--/if_pager_bigmatch_comment_1::next/-->
+                                    <li class="next"><a href="<!--/pager_bigmatch_comment_1::next@link/-->">&rsaquo;</a></li>
+                                    <!--/end_if/-->
+                                </ol>
+                            </div>
+                            <div class="oaz-bm-comment-col">
+                                <h4 class="oaz-bm-comment-hd">2번 상품 추천</h4>
+                                <div class="oaz-bm-comment-list">
+                                    <!--/if_bigmatch_comment_2/-->
+                                    <!--/loop_bigmatch_comment_2/-->
+                                    <dl class="oaz-bm-comment">
+                                        <dt><strong><!--/bigmatch_comment_2@writer/--></strong><span><!--/bigmatch_comment_2@date/--></span><a href="<!--/bigmatch_comment_2@link_delete/-->">삭제</a></dt>
+                                        <dd><!--/bigmatch_comment_2@content/--></dd>
+                                    </dl>
+                                    <!--/end_loop/-->
+                                    <!--/else/-->
+                                    <p class="oaz-bm-no-comment">추천 목록이 없습니다.</p>
+                                    <!--/end_if/-->
+                                </div>
+                                <ol class="paging">
+                                    <!--/if_pager_bigmatch_comment_2::prev/-->
+                                    <li class="prev"><a href="<!--/pager_bigmatch_comment_2::prev@link/-->">&lsaquo;</a></li>
+                                    <!--/end_if/-->
+                                    <!--/if_bigmatch_comment_2/-->
+                                    <!--/loop_pager_bigmatch_comment_2::page/-->
+                                        <!--/if_pager_bigmatch_comment_2::page@current/-->
+                                    <li class="now"><strong><!--/pager_bigmatch_comment_2::page/--></strong></li>
+                                        <!--/else/-->
+                                    <li><a href="<!--/pager_bigmatch_comment_2::page@link/-->"><!--/pager_bigmatch_comment_2::page/--></a></li>
+                                        <!--/end_if/-->
+                                    <!--/end_loop/-->
+                                    <!--/end_if/-->
+                                    <!--/if_pager_bigmatch_comment_2::next/-->
+                                    <li class="next"><a href="<!--/pager_bigmatch_comment_2::next@link/-->">&rsaquo;</a></li>
+                                    <!--/end_if/-->
+                                </ol>
+                            </div>
+                        </div>
+                    </div><!-- .oaz-bm-wrap -->
+
                 </div><!-- #bigMatch -->
             </div><!-- #content -->
         </div><!-- #contentWrap -->
-    </div><!-- #contentWrapper-->
+    </div><!-- #contentWrapper -->
     <hr />
     <!--/include_footer(1)/-->
 </div><!-- #wrap -->

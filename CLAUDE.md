@@ -9,20 +9,30 @@ Static HTML/template files for **오에이존 (OA Zone)**, a Korean printer/copi
 ## Repository structure
 
 ```
-desktop/          # Active MakeShop template files (desktop only — ignore mobile/)
-  common.css      # Shared CSS reset and utility classes (Nanum Gothic, 12px base)
-  상단/           # Site header (header.1.html + header.1.css)
-  하단/           # Site footer (footer.1.html + footer.1.css)
-  메인/           # Main page (main.html + main.css)
-  측면/           # Side menus (menu.1, menu.2)
-  부가기능/       # Platform widgets (scroll, shopping_tab.1)
-  상품관련/       # Product pages — brand, shopsearch, reviews, popups, promotions
-    상품분류페이지/   # shopbrand — product category listing
-    상품상세페이지/   # shopdetail — product detail page
-    기획전관련/       # plan_list, plan.1 — special promotion pages
-    상품프로모션/     # best_cate, best_product, best_review, bigmatch
-    사은품관련/       # gift_list, gift_choice, pop_gift_choice
-    도매사입업체별화면/ # supply — wholesale vendor page
+desktop/                  # Active MakeShop template files (desktop only — ignore mobile/)
+  common.css              # Global base CSS: reset, design tokens, product grid, paging, layout
+  상단/                   # Site header
+    header.1.html/.css    # Active header (new design — same as header.2)
+    header.2.html/.css    # Reference copy (identical to header.1)
+  하단/                   # Site footer
+    footer.1.html/.css    # Active footer (new design — same as footer.2)
+    footer.2.html/.css    # Reference copy (identical to footer.1)
+  메인/                   # Main page (main.html + main.css)
+  측면/                   # Side menus (menu.1, menu.2)
+  부가기능/               # Platform widgets (scroll, shopping_tab.1)
+  상품관련/               # Product pages
+    brand.html/.css           # Brand listing
+    shopsearch.html/.css      # Search results
+    review_list.html/.css     # All reviews
+    product_preview.html/.css # Quick-view popup widget
+    pop_soldout_alarm.html/.css # Restock alarm popup
+    pop_shopdetail.html/.css  # (platform popup)
+    상품분류페이지/           # shopbrand — product category listing
+    상품상세페이지/           # shopdetail — product detail + shopdetail_addinfo (고시 정보)
+    기획전관련/기본기획전/    # plan_list, plan.1 — special promotion pages
+    상품프로모션/             # best_cate, best_product, best_review, bigmatch
+    사은품관련/               # gift_list, gift_choice, pop_gift_choice
+    도매사입업체별화면/       # supply — wholesale vendor page
   개별페이지/     # (empty — not yet implemented)
   공지사항/       # (empty)
   마이페이지/     # (empty)
@@ -74,3 +84,133 @@ jQuery is provided by the platform. Template JS references MakeShop assets via a
 - Images reference the platform's design path: `/design/dpcomputer/9607/makeshop/...` — no local assets.
 - `sitemap.xml` lists the shop's URL structure and is the authoritative reference for page types.
 - The `mobile/` directory contains mobile-specific templates — ignore it unless explicitly asked about mobile.
+
+---
+
+## New design system (전체 리디자인 완료)
+
+All `desktop/` pages have been fully redesigned. The old Nanum Gothic / absolute-positioned / table-layout / GIF-button design has been replaced with the following system.
+
+### Design tokens (`common.css` `:root`)
+
+```css
+--primary: #2563eb
+--primary-dark: #1d4ed8
+--primary-light: #eff6ff
+--dark: #1e293b
+--gray: #64748b
+--gray-light: #e2e8f0
+--bg: #f8fafc
+--white: #ffffff
+--radius: 12px
+--sidebar-w: 240px
+--max-w: 1200px
+```
+
+### Typography
+
+- **Font**: Noto Sans KR (Google Fonts, 400/500/600/700) — replaces Nanum Gothic
+- **Base size**: 14px (was 12px)
+- Loaded via `@import` in `common.css`, `header.1.css`, `footer.1.css`
+
+### Component class prefix
+
+All new component classes use the `oaz-` prefix to avoid MakeShop platform conflicts.
+
+### Page layout pattern
+
+```html
+<div id="contentWrapper">     <!-- max-width: 1200px, centered -->
+  <div id="contentWrap">      <!-- flexbox row, gap: 24px -->
+    <!--/include_menu(1)/-->  <!-- #aside: 240px sidebar -->
+    <div id="content">        <!-- flex: 1; min-width: 0 -->
+      ...
+    </div>
+  </div>
+</div>
+```
+
+### Product grid
+
+`common.css` provides `.oaz-prd-grid` (CSS Grid, replaces all `<table>`-based product lists):
+
+```css
+.oaz-prd-grid                /* 4-column default */
+.oaz-prd-grid-3              /* 3-column */
+.oaz-prd-grid-5              /* 5-column */
+.oaz-prd-grid-2              /* 2-column */
+```
+
+**Important**: MakeShop renders product images with class `MS_prod_img_m`, not `oaz-prd-img`. The image sizing rule in `common.css` targets `.oaz-prd-img-wrap img` (the link wrapper) to catch the platform-injected class:
+
+```css
+.oaz-prd-img-wrap { display: block; aspect-ratio: 1; overflow: hidden; background: #f8fafc; }
+.oaz-prd-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+```
+
+**Loop pattern** (no `<!--/if_idx/-->` row breaks — CSS Grid handles columns):
+
+```html
+<div class="oaz-prd-grid oaz-prd-grid-4">
+  <!--/loop_product/-->
+  <div class="oaz-prd-card">
+    <a href="<!--/product@link/-->" class="oaz-prd-img-wrap">
+      <img src="<!--/product@image/-->" alt="<!--/product@name/-->">
+    </a>
+    <div class="oaz-prd-info">
+      <p class="oaz-prd-name"><a href="<!--/product@link/-->"><!--/product@name/--></a></p>
+      <p class="oaz-prd-price"><strong class="oaz-price-sell"><!--/product@price_sell/--></strong></p>
+    </div>
+  </div>
+  <!--/end_loop/-->
+</div>
+```
+
+### Board (게시판) table pattern
+
+`<thead>` is placed **outside** the MakeShop loop so it renders once; only `<tbody>` rows are inside the loop. The expand/collapse row uses both `.oaz-board-cnt` (new styling) and `.cnt` (kept for MakeShop platform JS compatibility):
+
+```html
+<table class="oaz-board-table">
+  <thead><tr><th>...</th></tr></thead>
+  <tbody>
+    <!--/loop_review_board/-->
+    <tr class="oaz-board-row"><td>...</td></tr>
+    <tr class="oaz-board-cnt cnt" id="<!--/review_board@id_content/-->">
+      <td colspan="...">...</td>
+    </tr>
+    <!--/end_loop/-->
+  </tbody>
+</table>
+```
+
+### MakeShop option widget compatibility
+
+The platform injects `#MK_innerOptWrap`, `#MK_optAddList`, `#MK_innerOptTotal` etc. into the product detail form. These IDs must be preserved in `shopdetail.css` — do not rename or remove them.
+
+### Size chart popup
+
+The platform JS identifies the size chart popup by `.size-chart-box` and `.btn-close-layer`. Always keep these classes alongside any new `oaz-*` classes:
+
+```html
+<div id="sizeChart" class="oaz-size-chart-layer size-chart-box">
+  ...
+  <a href="#" class="oaz-scl-close btn-close-layer">✕</a>
+</div>
+```
+
+### Payment button IDs
+
+MakeShop injects payment buttons by ID — do not rename: `#nhn_btn`, `#payco_order_btn`, `#kakaopay_order_btn`.
+
+### Header / GNB
+
+- Sticky white header (`position: sticky; top: 0; z-index: 100`)
+- Blue GNB bar (`background: #2563eb`) with CSS-only hover dropdowns
+- Search input uses `.MS_search_word` class (platform-injected)
+
+### Footer
+
+- Dark background (`background: #1e293b`)
+- Top link bar (`background: #0f172a`)
+- Uses MakeShop scalar variables: `<!--/company_name/-->`, `<!--/company_owner/-->`, `<!--/company_addr/-->`, `<!--/shop_tel/-->`, `<!--/company_number/-->`, `<!--/online_sale_number/-->`, `<!--/privacy_charge/-->`, `<!--/shop_email/-->`

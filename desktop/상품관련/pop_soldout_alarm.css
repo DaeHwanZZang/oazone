@@ -1,17 +1,48 @@
-html, body { *overflow-x:hidden; *overflow-y:auto; *width:100%; *height:100%; }
-#soldout_sms { width: 100%; color:#000; word-break:break-all; }
-#soldout_sms h1 { height: 59px; line-height: 61px; padding-left:20px; background:#fff; color: #000; font-size: 20px; font-weight:bold; text-align: left; }
-#soldout_sms .wrap { padding:0 20px; }
-#soldout_sms .user-guide { padding-top:15px; }
-#soldout_sms .user-guide .user { padding:16px 0; background:#f1f1f1; text-align:center; }
-#soldout_sms .user-guide .user p { height:30px; line-height:29px; margin:4px 0; }
-#soldout_sms .user-guide .user p span { display:inline-block; width:60px; color:#666; vertical-align:middle; text-align:left; }
-#soldout_sms .user-guide .user p select { width:58px; height:26px; line-height:26px; color:#333; vertical-align:middle; background:#eee; }
-#soldout_sms .user-guide .user p input { width:48px; height:24px; line-height:24px; padding-left:8px; border:1px solid rgba(118, 118, 118, 0.3); color:#333; background:#eee; vertical-align:middle; opacity: 0.7; }
-#soldout_sms .user-guide .user p input[name=hname] { width:192px; }
-#soldout_sms .user-guide .guide { padding:15px 0 15px 10px; color:#666; line-height:17px; text-indent:-10px; }
-#soldout_sms .btns { padding:20px 0; text-align:center; border-top:1px solid #d5d5d5; }
-#soldout_sms .btns a { display:inline-block; width:157px; height:46px; line-height:46px; border:1px solid #231f20; color:#fff; font-size:14px; background:#231f20; text-align:center; }
-#soldout_sms .btns a.btn-cancel { border:1px solid #231f20; background:#fff; color:#231f20; }
-#soldout_sms .privacy {padding:20px; margin:15px 0; background:#f1f1f1; font-size:12px; color:#333;}
-#soldout_sms .privacy .tit {font-weight:bold; margin-bottom:10px;}
+/* pop_soldout_alarm.css */
+
+html, body { margin: 0; padding: 0; }
+#soldout_sms { width: 480px; background: #fff; border-radius: 12px; overflow: hidden; font-size: 13px; color: #334155; }
+
+.oaz-alarm-hd { padding: 16px 24px; background: #1e293b; }
+.oaz-alarm-hd h1 { font-size: 16px; font-weight: 700; color: #fff; margin: 0; }
+
+.oaz-alarm-body { padding: 20px 24px; }
+
+.oaz-alarm-user { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.oaz-alarm-row { display: flex; align-items: center; gap: 12px; padding: 6px 0; }
+.oaz-alarm-label { min-width: 60px; font-size: 12px; color: #64748b; font-weight: 600; }
+.oaz-alarm-val { flex: 1; font-size: 13px; }
+.oaz-alarm-phone { display: flex; align-items: center; gap: 4px; }
+.oaz-alarm-val input { height: 28px; border: 1px solid #e2e8f0; border-radius: 4px; padding: 0 8px; font-size: 13px; }
+.oaz-alarm-val select { height: 28px; border: 1px solid #e2e8f0; border-radius: 4px; padding: 0 6px; font-size: 13px; background: #fff; }
+
+.oaz-alarm-guide { margin: 0 0 16px; padding: 0 0 0 16px; }
+.oaz-alarm-guide li { font-size: 12px; color: #64748b; line-height: 1.6; margin-bottom: 2px; }
+
+.oaz-alarm-privacy {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.8;
+}
+.oaz-alarm-privacy-tit { font-weight: 700; color: #334155; margin-bottom: 6px; }
+
+.oaz-alarm-btns { display: flex; gap: 8px; padding: 16px 24px; border-top: 1px solid #e2e8f0; }
+.oaz-alarm-btn {
+    flex: 1;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .15s;
+}
+.oaz-alarm-cancel { background: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+.oaz-alarm-cancel:hover { background: #e2e8f0; }
+.oaz-alarm-apply { background: #2563eb; color: #fff; }
+.oaz-alarm-apply:hover { background: #1d4ed8; }
