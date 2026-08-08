@@ -220,9 +220,11 @@
 /* 와이드 드롭다운 (그룹 분할용) */
 .oaz-dropdown-wide {
     min-width: auto;
+    max-width: calc(100vw - 48px);
     padding: 20px 24px;
     gap: 32px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .oaz-nav-item:hover .oaz-dropdown-wide {
     display: flex;
@@ -254,8 +256,6 @@
     padding-left: 16px;
 }
 
-/* 오른쪽 끝 영역에 위치한 메뉴들의 드롭다운이 화면 밖으로 벗어나지 않도록 우측 정렬 (마지막 2개 메뉴 대상) */
-.oaz-nav-item:nth-last-child(-n+2) .oaz-dropdown {
-    left: auto;
-    right: 0;
-}
+/* 드롭다운은 항상 자기 메뉴의 왼쪽 선에 맞춰 내려옴 (우측 정렬 시 좁은 화면에서
+   flex-wrap으로 메뉴가 줄바꿈되면 왼쪽으로 밀린 메뉴의 드롭다운이 화면 밖으로
+   잘려나가는 문제가 있어 제거함) */

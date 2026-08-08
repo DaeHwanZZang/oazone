@@ -1,0 +1,830 @@
+<!--/script_scroll(1)/-->
+    <div id="wrap">
+        <!--/include_header(1)/-->
+        <div id="contentWrapper">
+            <div id="contentWrap">
+                <!--/include_menu(1)/-->
+                <div id="content">
+                    <div id="productDetail">
+                        <dl class="loc-navi">
+                            <dt class="blind">현재 위치</dt>
+                            <dd>
+                                <a href="/">home</a>
+                                <!--/if_cate1_name/--> > <a href="<!--/link_cate1/-->"><!--/cate1_name/--></a><!--/end_if/-->
+                                <!--/if_cate2_name/--> > <a href="<!--/link_cate2/-->"><!--/cate2_name/--></a><!--/end_if/-->
+                                <!--/if_cate3_name/--> > <a href="<!--/link_cate3/-->"><!--/cate3_name/--></a><!--/end_if/-->
+                                > <!--/name/-->
+                            </dd>
+                        </dl>
+                        <div class="page-body">
+                            <div class="thumb-info">
+                                <div class="thumb-wrap">
+                                    <div class="thumb"><!--/zoom_image/--></div>
+                                    <div class="thumb-ctrl">
+                                        <a href="<!--/link_view_image/-->"><img src="/images/d3/modern_simple/common/icon_h15_closeup.gif" alt="확대" title="확대" />큰 이미지 보기</a>
+                                    </div>
+                                </div><!-- .thumb-wrap -->
+                                <!--/form_product/-->
+                                <div class="info">
+                                    <div class="prd-wish"><p><!--/block_wish_cnt/--><!--/wish_cnt/--><!--/end_block/--></p></div>
+                                    <h3 class="tit-prd"><!--/name/--> <!--/icons/--></h3>
+                                    <div class="table-opt">
+                                        <table summary="판매가격, 적립금, 주문수량, 옵션, 사이즈, sns">
+                                            <caption>상품 옵션</caption>
+                                            <colgroup>
+                                                <col width="70" />
+                                                <col width="*" />
+                                            </colgroup>
+                                            <tbody>
+                                                <!--/if_price_consumer(+1)/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">소비자가격</div></th>
+                                                    <td class="price">
+                                                        <div class="tb-left">
+                                                            <strike><!--/number/price_consumer/-->원</strike>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                                <!--/if_reserve(+1)/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">적립금</div></th>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <!--/reserve/--><!--/reserve_unit/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                            <!--/if_point(+1)/-->
+                                            <tr>
+                                                <th scope="row"><div class="tb-left">포인트</div></th>
+                                                <td>
+                                                    <div class="tb-left">
+                                                        <!--/point/--><!--/point_unit/-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!--/end_if/-->
+                                            <!--/if_weightdeli_use/-->
+                                            <tr>
+                                                <th scope="row"><div class="tb-left">상품무게</div></th>
+                                                <td class="weight"><div class="tb-left"><!--/weight/--></div></td>
+                                            </tr>
+                                            <!--/end_if/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">판매가격</div></th>
+                                                    <td class="price">
+                                                        <div class="tb-left">
+                                                            <!--/if_price_replace/-->
+                                                                <!--/price_replace/-->
+                                                            <!--/else/-->
+                                                                <!--/number/price_sell/-->원
+                                                            <!--/end_if/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                    <!--/if_multi_option_box/-->
+                                                    <!--/else/-->
+                                                        <!--/if_option_price_sell/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">옵션적용가격</div></th>
+                                                    <td class="price">
+                                                        <div class="tb-left">
+                                                            <!--/number/option_price_sell/-->원
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                        <!--/end_if/-->
+                                                    <!--/end_if/-->
+                                                    <!--/if_multi_option/-->
+                                                    <!--/loop_multi_option/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left"><!--/multi_option@title/--></div></th>
+                                                    <td>
+                                                        <div class="tb-left"><!--/multi_option@select/--></div>
+                                                    </td>
+                                                </tr>
+                                                    <!--/end_loop/-->
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="tb-left"><!--/multi_option_box/--></div>
+                                                    </td>
+                                                </tr>
+                                                    <!--/else/-->
+                                                        <!--/if_option/-->
+                                                            <!--/loop_option/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left"><!--/option@title/--></div></th>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <!--/option@select/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                            <!--/end_loop/-->
+                                                        <!--/end_if/-->
+                                                    <!--/end_if/-->
+                                                <!--/if_multi_option_box/-->
+                                                <!--/else/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">주문수량</div></th>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <div class="opt-spin">
+                                                                <!--/input_quantity/-->
+                                                                <span class="btns">
+                                                                    <a class="btn-up" href="<!--/link_quantity_up/-->">수량증가</a>
+                                                                    <a class="btn-dw" href="<!--/link_quantity_down/-->">수량감소</a>                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+
+                                                <!--/if_use_size_chart/-->
+                                                <tr><td colspan="2" class="area-btn-size-chart"><a href="javascript:;" class="btn-size-chart"><div class="box-btn-size-chart">Item size chart ▶</div></a></td></tr>
+                                                <!--/end_if/-->
+
+                                                <!--/if_addcode/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">특이사항</div></th>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <!--/addcode/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                                <!--/if_okcashbag_set/-->
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <!--/okcashbag_set/-->
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="tb-left">
+                                                            <!--/if_btn_scrap_fb/--><!--/btn_scrap_fb/--><!--/end_if/-->
+                                                                                                                        <!--/if_btn_scrap_tw/--><!--/btn_scrap_tw/--><!--/end_if/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!-- .table-opt -->
+                                    <div class="prd-btns">
+                                        <!--/if_soldout/-->
+                                        <div style="text-align: right; color: #525252; font-size: 12px; font-weight: bold;">상품이 품절되었습니다.</div>
+                                        <!--/else/-->
+                                        <a href="<!--/link_immediate/-->"><img src="/images/d3/modern_simple/btn/btn_h46_order.gif" alt="주문하기" title="주문하기" /></a>
+                                        <a href="<!--/link_basket/-->"><img src="/images/d3/modern_simple/btn/btn_h46_cart_add.gif" alt="장바구니 담기" title="장바구니 담기" /></a>
+                                        <a href="<!--/link_wish_toggle/-->" class="btn_wish"><!--/block_btn_wish/-->찜하기<!--/end_block/--></a>
+                                        <!--/end_if/-->
+                                        <!--/if_btn_kakaopay/-->
+                                        <!--/btn_kakaopay/-->
+                                        <!--/end_if/-->
+                                        <!--/if_btn_payco/-->
+                                    	<!--/btn_payco/-->
+                                        <!--/end_if/-->
+                                        <!--/if_btn_nhn/-->
+                                    	<!--/btn_nhn/-->
+                                        <!--/end_if/-->
+                                        <!--/if_btn_app/-->
+                                            <!--/btn_app/-->
+                                        <!--/end_if/-->
+                                    </div>
+                                </div><!-- .info -->
+                                <!--/end_form/-->
+                            </div><!-- .thumb-info -->
+
+                            <h3 class="tit-detail"><img src="/images/d3/modern_simple/prd_detail_tit.gif" alt="detail prdoduct - 상품상세설명" title="detail prdoduct - 상품상세설명" /></h3>
+                            <div class="prd-detail">
+                                <!--/if_detail_common/-->
+                                <div><!--/detail_common/--></div>
+                                <!--/end_if/-->
+                                <!--/detail/-->
+
+
+                                <!--/if_use_size_chart/-->
+                                    <!-- size chart start -->
+             	                 <div class="size-chart-cont">
+	                         <!--/if_size_chart_type(IMG)/-->
+		                       <img id="sc_img_chart" src="<!--/img_size_chart/-->" alt="사이즈 차트 이미지" />
+             	            <!--/else/-->
+                                            <table><colgroup><col style="width:200px;" /></colgroup>
+		                   <!--/if_size_chart_titles/-->
+                                            <thead>
+                                            <tr>
+                                                <th>사이즈 영역</th>
+                                            <!--/loop_size_chart_titles/-->
+                                                <th><!--/size_chart_titles@name/--></th>
+                                            <!--/end_loop/-->
+                                            </tr>
+                                            </thead>
+                                        <!--/end_if/-->
+                                        <!--/if_size_chart/-->
+                                            <tr>
+                                                <td rowspan="<!--/size_chart_row_cnt/-->">
+                                                    <img id="sc_img_guide" src="<!--/img_size_chart_guide/-->" alt="사이즈 차트 가이드 이미지" />
+                                                </td>
+                                            </tr>
+                                            <!--/loop_size_chart/-->
+                                            <tr>
+                                                <!--/loop_size_chart@values/-->
+                                                <td><!--/size_chart@values@name/--></td>
+                                                <!--/end_loop/-->
+                                            </tr>
+                                            <!--/end_loop/-->
+                                        <!--/end_if/-->
+                                            </table>
+                                    <!--/end_if/-->
+                                            <p>* 상품사이즈 치수는 재는 방법과 위치에 따라 1~3cm 오차가 있을 수 있습니다.</p>
+                                        </div>
+                                <!-- size chart end -->
+                            <!--/end_if/-->
+
+                                <!-- s: 상품 일반정보(상품정보제공 고시) -->
+                                <!--/if_product_info_list/-->
+                                <div id="productWrap">
+                                    <!--/loop_product_info_list/-->
+                                    <h3 class="tit-prd"><!--/if_product_info_list@product_name/--><!--/notag/product_info_list@product_name/--><!--/end_if/--></h3>
+                                    <table>
+                                        <colgroup>
+                                            <col width="190" /><col width="*" />
+                                        </colgroup>
+                                    <!--/loop_product_info_list@product_info/-->
+                                        <tr>
+                                            <th><span><!--/product_info_list@product_info@title/--></span></th>
+                                            <td><span><!--/product_info_list@product_info@content/--></span></td>
+                                        </tr>
+                                    <!--/end_loop/-->
+                                    </table>
+                                    <!--/end_loop/-->
+                                </div>
+                                <!--/end_if/-->
+                                <!-- e: 상품 일반정보(상품정보제공 고시) -->
+                                <!-- 쿠폰 관련 부분 -->
+                                <!--/if_coupon/-->
+                                <!--/loop_coupon/-->
+                                <div>
+                                    <!--/coupon@explain/--><br />
+                                    <a href="<!--/coupon@link/-->"><!--/coupon@image/--></a>
+                                </div>
+                                <!--/end_loop/-->
+                                <!--/end_if/-->
+                                <!-- 쿠폰관련 부분 끝 -->
+                                <!--/if_malltb/-->
+                                <!--/malltb/-->
+                                <!--/end_if/-->
+                            </div>
+
+                            <!--/if_related_product/-->
+                            <!--/form_related_product/-->
+                            <h3 class="tit-detail"><img src="/images/d3/modern_simple/prd_relation_tit.gif" alt="relation product - 관련상품" title="relation product - 관련상품" /></h3>
+                            <div class="prd-list">
+                                <table summary="상품이미지, 상품 설명, 가격">
+                                    <caption>관련 상품 리스트</caption>
+                                    <colgroup>
+                                        <col width="33.33%" />
+                                        <col width="33.33%" />
+                                        <col width="33.33%" />
+                                    </colgroup>
+                                    <tbody>
+                                            <!--/loop_related_product(6)/-->
+                                            <!--/if_idx(1,4)/-->
+                                        <tr>
+                                            <!--/end_if/-->
+                                            <td>
+                                                <div class="tb-center">
+                                                    <ul class="info">
+                                                        <li>
+                                                            <div class="thumb"><a href="<!--/related_product@link/-->"><img src="<!--/related_product@image_s/-->" alt="상품 섬네일" title="상품 섬네일" /></a></div>
+                                                        </li>
+                                                        <li class="dsc">
+                                                            <!--/related_product@checkbox/--><!--/related_product@name/--> <!--/related_product@subname/-->
+                                                        </li>
+                                                        <li class="price">
+                                                        <!--/if_related_product@price_replace/-->
+                                                            <!--/related_product@price_replace/-->
+                                                        <!--/else/-->
+                                                            <!--/number/related_product@price_sell/-->원
+                                                        <!--/end_if/-->
+                                                        <!--/if_related_product@discount_price_difference/--><span>할인 금액 : <!--/related_product@discount_price_difference/--></span><br /><!--/end_if/-->
+                                                        <!--/if_related_product@discount_info/--><span>할인 가격 or 할인율 : <!--/related_product@discount_info/--></span><br /><!--/end_if/-->
+                                                        <!--/if_related_product@discount_date_start/--><span>기간할인 시작일 : <!--/related_product@discount_date_start/--></span><br /><!--/end_if/-->
+                                                        <!--/if_related_product@discount_date_end/--><span>기간할인 종료일 : <!--/related_product@discount_date_end/--></span><br /><!--/end_if/-->
+                                                        <!--/if_related_product@discount_remain_term/--><span>기간할인 남은 기간 : <!--/related_product@discount_remain_term/--></span><br /><!--/end_if/-->
+                                                        </li>
+                                                        <!--/if_related_product@option/-->
+                                                        <li class="dsc">
+                                                            <!--/loop_related_product@option/-->
+                                                                <!--/if_related_product@option@title/--><!--/related_product@option@title/--> : <!--/end_if/-->
+                                                                <!--/if_related_product@option@select/--><!--/related_product@option@select/--><!--/end_if/-->
+                                                            <!--/end_loop/-->
+                                                        </li>
+                                                        <!--/end_if/-->
+                                                        <li class="dsc">
+                                                            <!--/related_product@input_quantity/-->
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <!--/if_idx(3)/-->
+                                        </tr>
+                                            <!--/end_if/-->
+                                            <!--/end_loop/-->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--/if_link_related_basket/--><div><a href="<!--/link_related_basket/-->"><img src="/images/common/allbasket.gif" align="absmiddle" border="0" /></a></div><!--/end_if/-->
+                            <!--/end_form/-->
+                            <!--/end_if/-->
+
+
+                            <!--/if_input_review_writer/-->
+                            <h3 class="tit-detail">
+                                <img src="/images/d3/modern_simple/prd_review_tit.gif" alt="review board - 상품후기" title="review board - 상품후기" />
+                                <span class="btns">
+                                    <a href="<!--/link_review_more/-->"><img src="/images/d3/modern_simple/btn/btn_h25_all_view.gif" alt="전체보기" title="전체보기" /></a>
+                                </span>
+                            </h3>
+                            <div class="review-write">
+                                <!--/form_review/-->
+                                    <fieldset>
+                                        <legend>review 작성 폼</legend>
+                                        <table summary="이름, 첨부파일, 내용">
+                                            <caption>review board</caption>
+                                            <colgroup>
+                                                <col width="70" />
+                                                <col width="200" />
+                                                <col width="*" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">이 름 :</div></th>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <!--/input_review_writer/-->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="tb-left">
+                                                            <!--/loop_review_score/-->
+                                                            <!--/review_score@title/--> : <!--/review_score@icon/--><br />
+                                                            <!--/end_loop/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/if_file_review_attach/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">첨 부 :</div></th>
+                                                    <td colspan="2">
+                                                        <div class="tb-left">
+                                                            <!--/file_review_attach/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                                <tr>
+                                                    <th scope="row"><div class="tb-left">내용</div></th>
+                                                    <td colspan="2">
+                                                        <div class="tb-left">
+                                                            <!--/text_review_content/-->
+                                                            <a href="<!--/link_review_write/-->"><img src="/images/d3/modern_simple/btn/btn_h49_buy_after.gif" alt="후기쓰기" title="후기쓰기" /></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </fieldset>
+                                <!--/end_form/-->
+                            </div><!-- .review-write -->
+                            <!--/review_target/-->
+                            <div class="table-slide review-list">
+                                <table summary="이름, 내용">
+                                    <caption>review 리스트</caption>
+                                    <colgroup>
+                                        <col width="80" />
+                                        <col width="*" />
+                                        <col width="140" />
+                                        <col width="80" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><div class="tb-center">이름</div></th>
+                                            <th scope="col"><div class="tb-center">내용</div></th>
+                                            <th scope="col"><div class="tb-center">평점</div></th>
+                                            <th scope="col"><div class="tb-center">날짜</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!--/block_review/-->
+                                        <!--/if_review/-->
+                                            <!--/loop_review/-->
+                                        <tr class="nbg">
+                                            <td><div class="tb-left writer"><!--/if_review@group_icon/--><img src="<!--/review@group_icon/-->" /><!--/end_if/--><!--/review@writer/-->
+                                            </div></td>
+                                            <td>
+                                                <div class="tb-left">
+                                                    <!--/if_review@link/-->
+                                                    <a href="<!--/review@link/-->"><!--/review@subject(20,...)/--></a>
+                                                    <!--/else/-->
+                                                    <!--/review@subject(20,...)/-->
+                                                    <!--/end_if/-->
+                                                    <!--/if_review@attach_icon/--><img src="<!--/review@attach_icon/-->" /><!--/end_if/-->
+                                                    <!--/if_review@reply/-->
+                                                        <img src="/images/common/replyicon.gif" />
+                                                    <!--/end_if/-->
+                                                    <!--/if_review@link_modify/-->
+                                                        <a href="<!--/review@link_modify/-->"><img src="/makeshop/newmanager/neoimages/btn/review_update_btn.gif" /></a>
+                                                    <!--/end_if/-->
+                                                    <!--/if_review@link_delete/-->
+                                                        <a href="<!--/review@link_delete/-->"><img src="/makeshop/newmanager/neoimages/btn/review_delete_btn.gif" /></a>
+                                                    <!--/end_if/-->
+                                                </div>
+                                            </td>
+                                            <td><div class="tb-center"><!--/review@score_text/--></div></td>
+                                            <td><div class="tb-center"><!--/date(%Y/%M/%D)/review@date_write/--></div></td>
+                                        </tr>
+                                        <tr class="cnt" id="<!--/review@id_content/-->">
+                                            <td>&nbsp;</td>
+                                            <td colspan="3">
+                                                <div class="tb-left cnttit">
+                                                    <!--/if_review@attach_image/--><div><img src="<!--/review@attach_image/-->" /></div><!--/end_if/-->
+                                                    <!--/review@content/-->
+                                                    <!--/if_review@link_report_popup/-->
+                                                    <a href="javascript:void(0);" class="btn-report clear" onclick="<!--/review@link_report_popup/-->">신고/차단</a>
+                                                    <!--/end_if/-->
+                                                    <!--/if_review@reply/-->
+                                                    <div>
+                                                        <img src="/images/common/reviewreply.gif" /><!--/review@reply/-->
+                                                    </div>
+                                                    <!--/end_if/-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                            <!--/end_loop/-->
+                                        <tr>
+                                            <td colspan="4" style="text-align:center">
+                                                <!--/if_pager_review/-->
+                                                <ol class="paging">
+                                                    <!--/if_pager_review::first/-->
+                                                    <li class="first"><a href="<!--/pager_review::first@link/-->">[처음]</a></li>
+                                                    <!--/end_if/-->
+                                                    <!--/if_pager_review::prev/-->
+                                                    <li class="prev"><a href="<!--/pager_review::prev@link/-->">[이전]</a></li>
+                                                    <!--/end_if/-->
+
+                                                    <!--/loop_pager_review::page/-->
+                                                        <!--/if_pager_review::page@current/-->
+                                                    <li class="now"><a href="<!--/pager_review::page@link/-->"><!--/pager_review::page/--></a></li>
+                                                        <!--/else/-->
+                                                    <li><a href="<!--/pager_review::page@link/-->"><!--/pager_review::page/--></a></li>
+                                                        <!--/end_if/-->
+                                                    <!--/end_loop/-->
+
+                                                    <!--/if_pager_review::next/-->
+                                                    <li class="next"><a href="<!--/pager_review::next@link/-->">[다음]</a></li>
+                                                    <!--/end_if/-->
+                                                    <!--/if_pager_review::last/-->
+                                                    <li class="last"><a href="<!--/pager_review::last@link/-->">[끝]</a></li>
+                                                    <!--/end_if/-->
+                                                </ol>
+                                                <!--/end_if/-->
+                                            </td>
+                                        </tr>
+                                        <!--/end_if/-->
+                                    <!--/end_block/-->
+                                    </tbody>
+                                </table>
+                            </div><!-- .review-list -->
+                            <!--/end_if/-->
+
+                            <!--/qna_board_target/-->
+                            <h3 class="tit-detail">
+                            <img src="/images/d3/modern_simple/prd_qna_tit.gif" alt="QnA board - 상품문의" title="QnA board - 상품문의" />
+                                <span class="btns">
+                                    <a href="<!--/link_qna_board_more/-->"><img src="/images/d3/modern_simple/btn/btn_h25_all_view.gif" alt="전체보기" title="전체보기" /></a>
+                                    <a href="<!--/link_qna_board_write/-->"><img src="/images/d3/modern_simple/btn/btn_h25_prd_qna.gif" alt="상품문의" title="상품문의" /></a>
+                                </span>
+                            </h3>
+                            <div class="table-slide qna-list">
+                                <table summary="번호, 제목, 작성자, 작성일, 조회">
+                                    <caption>QnA 리스트</caption>
+                                    <!--/if_qna_board/-->
+                                    <colgroup>
+                                        <col width="80" />
+                                        <col width="30" />
+                                        <col width="*" />
+                                        <col width="100" />
+                                        <col width="100" />
+                                        <col width="80" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><div class="tb-center">번호</div></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"><div class="tb-center">제목</div></th>
+                                            <th scope="col"><div class="tb-center">작성자</div></th>
+                                            <th scope="col"><div class="tb-center">작성일</div></th>
+                                            <th scope="col"><div class="tb-center">조회</div></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--/loop_qna_board/-->
+                                        <tr class="nbg">
+                                            <td><div class="tb-center"><!--/qna_board@number/--></div></td>
+                                            <td><div class="tb-center"><!--/if_qna_board@attach_icon/--><img src="<!--/qna_board@attach_icon/-->" /><!--/end_if/--></div></td>
+                                            <td><div class="tb-left reply_depth<!--/qna_board@depth/-->">
+                                                <!--/if_qna_board@delete_message/--><!--/qna_board@delete_message/--><!--/end_if/-->
+                                                <span>
+                                                    <!--/if_qna_board@depth(+1)/--><img src="/board/images/board2_reply2.gif" /><!--/end_if/-->
+                                                    <!--/if_qna_board@lock_icon/--><img src="<!--/qna_board@lock_icon/-->" /><!--/end_if/-->
+                                                    <a href="<!--/qna_board@link/-->"><!--/qna_board@subject(15)/--></a>
+                                                </span>
+                                                <!--/if_qna_board@cnt_comment/--><span style="font-size: 8pt;">(<!--/qna_board@cnt_comment/-->)</span><!--/end_if/-->
+                                                <!--/qna_board@reply_status/-->
+                                                <!--/if_qna_board@new_icon/--><img src="<!--/qna_board@new_icon/-->" /><!--/end_if/-->
+                                                <!--/if_qna_board@hit_icon/--><img src="<!--/qna_board@hit_icon/-->" /><!--/end_if/-->
+                                                </div></td>
+                                            <td><div class="tb-center pr-list-writer"><!--/if_qna_board@group_icon/--><img src="<!--/qna_board@group_icon/-->" /><!--/end_if/-->
+                                            <span><!--/qna_board@writer/--></span>                                    
+                                            </div></td>
+                                            <td><div class="tb-center"><!--/date(%Y/%M/%D)/qna_board@date_write/--></div></td>
+                                            <td><div class="tb-center"><!--/qna_board@cnt_read/--></div></td>
+                                        </tr>
+                                        <tr class="cnt" id="<!--/qna_board@id_content/-->">
+                                            <td colspan="6">
+                                                <div class="tb-left">
+                                                    <!--/block_qna_board/-->
+                                                    <div style="width:80%; padding-bottom: 30px; padding-left: 80px; padding-right: 15px; padding-top: 15px">
+                                                        <!--/if_qna_board_comment_attach_image/-->
+                                                        <div style="text-align: center; margin-bottom: 10px"><img src="<!--/qna_board_comment_attach_image/-->" /></div>
+                                                        <!--/end_if/-->
+                                                        <!--/qna_board_comment_content/-->
+                                                        <div class="btn-report-wrap">
+                                                            <!--/if_qna_board_comment_link_modify/-->
+                                                            <div style="text-align: center;">
+                                                                <a href ="<!--/qna_board_comment_link_modify/-->"><img src="<!--/qna_board_comment_modify_image/-->"></a>
+                                                            </div>
+                                                            <!--/end_if/-->
+                                                            <!--/if_qna_board_comment_link_report_popup/-->
+                                                            <a href="javascript:void(0);" class="btn-report clear" onclick="<!--/qna_board_comment_link_report_popup/-->">신고/차단</a>
+                                                            <!--/end_if/-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="MS_cmt_list_box">
+                                                        <!--/loop_qna_board_comment/-->
+                                                        <div class="comment_depth<!--/qna_board_comment@depth/-->">
+                                                            <table class="MS_cmt_list" border="0" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="MS_cmt_detail">
+                                                                        <span class="MS_cmt_hname MS_cmt_depth MS_cmt_depth01"><!--/qna_board_comment@writer/--></span>
+                                                                        <span class="MS_cmt_date"><!--/date(%Y-%M-%D %H:%i:%s)/qna_board_comment@date_write/--></span>
+                                                                        <div class="MS_cmt_content MS_cmt_depth01"><!--/qna_board_comment@content/--><!--/if_qna_board_comment@link_report_popup/--><a href="javascript:void(0);" class="btn-report clear" onclick="<!--/qna_board_comment@link_report_popup/-->">신고/차단</a><!--/end_if/--></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <!--/end_loop/-->
+                                                    </div>
+                                                    <!--/end_block/-->
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--/end_loop/-->
+                                        <!--/if_pager_qna_board/-->
+                                        <tr>
+                                            <td colspan="6" style="text-align:center;">
+                                                <ol class="paging">
+                                                    <!--/if_pager_qna_board::first/-->
+                                                    <li class="first"><a href="<!--/pager_qna_board::first@link/-->">[처음]</a></li>
+                                                    <!--/end_if/-->
+                                                    <!--/if_pager_qna_board::prev/-->
+                                                    <li class="prev"><a href="<!--/pager_qna_board::prev@link/-->">[이전]</a></li>
+                                                    <!--/end_if/-->
+
+                                                    <!--/loop_pager_qna_board::page/-->
+                                                        <!--/if_pager_qna_board::page@current/-->
+                                                    <li class="now"><a href="<!--/pager_qna_board::page@link/-->"><!--/pager_qna_board::page/--></a></li>
+                                                        <!--/else/-->
+                                                    <li><a href="<!--/pager_qna_board::page@link/-->"><!--/pager_qna_board::page/--></a></li>
+                                                        <!--/end_if/-->
+                                                    <!--/end_loop/-->
+
+                                                    <!--/if_pager_qna_board::next/-->
+                                                    <li class="next"><a href="<!--/pager_qna_board::next@link/-->">[다음]</a></li>
+                                                    <!--/end_if/-->
+                                                    <!--/if_pager_qna_board::last/-->
+                                                    <li class="last"><a href="<!--/pager_qna_board::last@link/-->">[끝]</a></li>
+                                                    <!--/end_if/-->
+                                                </ol>
+                                            </td>
+                                        </tr>
+                                        <!--/end_if/-->
+                                    <!--/else/-->
+                                    <tr>
+                                        <td colspan="5" style="text-align:center;">등록된 문의가 없습니다.</td>
+                                    </tr>
+                                    <!--/end_if/-->
+                                    </tbody>
+                                </table>
+                            </div><!-- .qna-list -->
+
+                            <!--/review_board_target/-->
+                            <h3 class="tit-detail">
+                            <img src="/images/d3/modern_simple/prd_review_tit.gif" alt="review board - 상품후기" title="review board - 상품후기" />
+                                <span class="btns">
+                                    <a href="<!--/link_review_board_more/-->"><img src="/images/d3/modern_simple/btn/btn_h25_all_view.gif" alt="전체보기" title="전체보기" /></a>
+                                    <a href="<!--/link_review_board_write/-->"><img src="/images/d3/modern_simple/btn/btn_h25_review_write.gif" alt="후기쓰기" title="후기쓰기" /></a>
+                                </span>
+                            </h3>
+                            <div class="table-slide review-list">
+                                <table summary="번호, 제목, 작성자, 작성일, 조회">
+                                    <caption>review 리스트</caption>
+                                    <!--/if_review_board/-->
+                                        <!--/loop_review_board/-->
+                                            <!--/if_idx(1)/-->
+                                            <colgroup>
+                                                <col width="80" />
+                                                <col width="30" />
+                                                <col width="*" />
+                                                <col width="100" />
+                                                <col width="100" />
+                                                <!--/if_review_board@score_text/--><col width="120" /><!--/end_if/-->
+                                                <col width="80" />
+                                            </colgroup>
+                                            <!--/end_if/-->
+                                            <!--/if_idx(1)/-->
+                                            <thead >
+                                                <tr>
+                                                    <th scope="col"><div class="tb-center">번호</div></th>
+                                                    <th scope="col"></th>
+                                                    <th scope="col"><div class="tb-center">제목</div></th>
+                                                    <th scope="col"><div class="tb-center">작성자</div></th>
+                                                    <th scope="col"><div class="tb-center">작성일</div></th>
+                                                    <!--/if_review_board@score_text/--><th scope="col"><div class="tb-center">평점</div></th><!--/end_if/-->
+                                                    <th scope="col"><div class="tb-center">조회</div></th>
+                                                </tr >
+                                            </thead>
+                                            <!--/end_if/-->
+                                            <tbody>
+                                                
+                                                <tr class="nbg">
+                                                    <td><div class="tb-center"><!--/review_board@number/--></div></td>
+                                                    <td><div class="tb-center"><!--/if_review_board@attach_icon/--><img src="<!--/review_board@attach_icon/-->" /><!--/end_if/--></div></td>
+                                                    <td><div class="tb-left reply_depth<!--/review_board@depth/-->">
+                                                        <!--/if_review_board@delete_message/--><!--/review_board@delete_message/--><!--/end_if/-->
+                                                        <span>
+                                                            <!--/if_review_board@depth(+1)/--><img src="/board/images/board2_reply2.gif" /><!--/end_if/-->
+                                                            <!--/if_review_board@lock_icon/--><img src="<!--/review_board@lock_icon/-->" /><!--/end_if/-->
+                                                            <a href="<!--/review_board@link/-->"><!--/review_board@subject(15)/--></a>
+                                                        </span>
+                                                        <!--/if_review_board@cnt_comment/--><span style="font-size: 8pt;">(<!--/review_board@cnt_comment/-->)</span><!--/end_if/-->
+                                                        <!--/review_board@reply_status/-->
+                                                        <!--/if_review_board@new_icon/--><img src="<!--/review_board@new_icon/-->" /><!--/end_if/-->
+                                                        <!--/if_review_board@hit_icon/--><img src="<!--/review_board@hit_icon/-->" /><!--/end_if/-->
+                                                        </div></td>
+                                                    <td><div class="tb-center writer"><!--/if_review_board@group_icon/--><img src="<!--/review_board@group_icon/-->" /><!--/end_if/-->
+                                                    <span><!--/review_board@writer/--></span>
+                                                    </div></td>
+                                                    <td><div class="tb-center"><!--/date(%Y/%M/%D)/review_board@date_write/--></div></td>
+                                                    <!--/if_review_board@score_text/--><td><div class="tb-center"><!--/review_board@score_text/--></div></td><!--/end_if/-->
+                                                    <td><div class="tb-center"><!--/review_board@cnt_read/--></div></td>
+                                                </tr>
+                                                <tr class="cnt" id="<!--/review_board@id_content/-->">
+                                                    <td colspan="6">
+                                                        <div class="tb-left">
+                                                            <!--/block_review_board/-->
+                                                            <div style="width:80%; padding-bottom: 30px; padding-left: 80px; padding-right: 15px; padding-top: 15px">
+                                                                <!--/if_review_board_comment_attach_image/-->
+                                                                <div style="text-align: center; margin-bottom: 10px"><img src="<!--/review_board_comment_attach_image/-->" /></div>
+                                                                <!--/end_if/-->
+                                                                <!--/review_board_comment_content/-->
+                                                                <div class="btn-report-wrap">
+                                                                    <!--/if_review_board_comment_link_modify/-->
+                                                                    <div style="text-align: center;">
+                                                                        <a href ="<!--/review_board_comment_link_modify/-->"><img src="<!--/review_board_comment_modify_image/-->"></a>
+                                                                    </div>
+                                                                    <!--/end_if/-->
+                                                                    <!--/if_review_board_comment_link_report_popup/-->
+                                                                    <a href="javascript:void(0);" class="btn-report clear" onclick="<!--/review_board_comment_link_report_popup/-->">신고/차단</a>
+                                                                    <!--/end_if/-->
+                                                                </div>
+                                                            </div>
+                                                            <div class="MS_cmt_list_box">
+                                                                <!--/loop_review_board_comment/-->
+                                                                <div class="comment_depth<!--/review_board_comment@depth/-->">
+                                                                    <table class="MS_cmt_list" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="MS_cmt_detail">
+                                                                                <span class="MS_cmt_hname MS_cmt_depth MS_cmt_depth01"><!--/review_board_comment@writer/--></span>
+                                                                                <span class="MS_cmt_date"><!--/date(%Y-%M-%D %H:%i:%s)/review_board_comment@date_write/--></span>
+                                                                                <div class="MS_cmt_content MS_cmt_depth01"><!--/review_board_comment@content/--><!--/if_review_board_comment@link_report_popup/--><a href="javascript:void(0);" class="btn-report clear" onclick="<!--/review_board_comment@link_report_popup/-->">신고/차단</a><!--/end_if/--></div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <!--/end_loop/-->
+                                                            </div>
+                                                            <!--/end_block/-->
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_loop/-->
+                                                <!--/if_pager_review_board/-->
+                                                <tr>
+                                                    <td colspan="6" style="text-align:center;">
+                                                        <ol class="paging">
+                                                            <!--/if_pager_review_board::first/-->
+                                                            <li class="first"><a href="<!--/pager_review_board::first@link/-->">[처음]</a></li>
+                                                            <!--/end_if/-->
+                                                            <!--/if_pager_review_board::prev/-->
+                                                            <li class="prev"><a href="<!--/pager_review_board::prev@link/-->">[이전]</a></li>
+                                                            <!--/end_if/-->
+
+                                                            <!--/loop_pager_review_board::page/-->
+                                                                <!--/if_pager_review_board::page@current/-->
+                                                            <li class="now"><a href="<!--/pager_review_board::page@link/-->"><!--/pager_review_board::page/--></a></li>
+                                                                <!--/else/-->
+                                                            <li><a href="<!--/pager_review_board::page@link/-->"><!--/pager_review_board::page/--></a></li>
+                                                                <!--/end_if/-->
+                                                            <!--/end_loop/-->
+
+                                                            <!--/if_pager_review_board::next/-->
+                                                            <li class="next"><a href="<!--/pager_review_board::next@link/-->">[다음]</a></li>
+                                                            <!--/end_if/-->
+                                                            <!--/if_pager_review_board::last/-->
+                                                            <li class="last"><a href="<!--/pager_review_board::last@link/-->">[끝]</a></li>
+                                                            <!--/end_if/-->
+                                                        </ol>
+                                                    </td>
+                                                </tr>
+                                                <!--/end_if/-->
+                                            <!--/else/-->
+                                            <tr>
+                                                <td colspan="5" style="text-align:center;">등록된 리뷰가 없습니다.</td>
+                                            </tr>
+                                            <!--/end_if/-->
+                                            </tbody>
+                                </table>
+                            </div><!-- .review-list -->
+                            <!--/if_sorivu/-->
+                            <div id="sorivu"><!--/sorivu/--></div>
+                            <!--/end_if/-->
+                        </div><!-- .page-body -->
+                    </div><!-- #productDetail -->
+                </div><!-- #content -->
+            </div><!-- #contentWrap -->
+        </div><!-- #contentWrapper-->
+        <hr />
+        <!--/include_footer(1)/-->
+
+        <!-- sizeChart Layer start -->
+        <div id="sizeChart" class="size-chart-box">
+            <div class="btn-close-box"><a href="javascript:;" class="btn-close-layer"><span>X</span></a></div>
+            <h4>Item size chart 사이즈 기준표</h4>
+            <div class="size-chart-cont">
+            <!--/if_size_chart_type(IMG)/-->
+                <img class="sc-img-chart" src="<!--/img_size_chart/-->" alt="사이즈 차트 이미지" />
+            <!--/else/-->
+                <table>
+                    <colgroup><col style="width:200px;" /></colgroup>
+                <!--/if_size_chart_titles/-->
+                    <thead>
+                    <tr>
+                        <th>사이즈 영역</th>
+                        <!--/loop_size_chart_titles/-->
+                        <th><!--/size_chart_titles@name/--></th>
+                        <!--/end_loop/-->
+                    </tr>
+                    </thead>
+                <!--/end_if/-->
+                <!--/if_size_chart/-->
+                    <tr>
+                        <td rowspan="<!--/size_chart_row_cnt/-->">
+                            <img class="sc-img-guide" src="<!--/img_size_chart_guide/-->" alt="사이즈 차트 가이드 이미지" />
+                        </td>
+                    </tr>
+                    <!--/loop_size_chart/-->
+                    <tr>
+                        <!--/loop_size_chart@values/-->
+                        <td><!--/size_chart@values@name/--></td>
+                        <!--/end_loop/-->
+                    </tr>
+                    <!--/end_loop/-->
+                <!--/end_if/-->
+                </table>
+            <!--/end_if/-->
+                <p>* 상품사이즈 치수는 재는 방법과 위치에 따라 1~3cm 오차가 있을 수 있습니다.</p>
+            </div>
+        </div>
+        <!-- sizeChart Layer end -->
+
+    </div><!-- #wrap -->

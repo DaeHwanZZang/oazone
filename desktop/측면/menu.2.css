@@ -1,4 +1,4 @@
-/* menu.2.css — 쇼핑정보 사이드바 */
+/* menu.2.css - 쇼핑정보 사이드바 */
 #aside { width: 240px; flex-shrink: 0; }
 .oaz-sidebar { display: flex; flex-direction: column; gap: 0; }
 

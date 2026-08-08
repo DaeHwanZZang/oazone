@@ -17,12 +17,53 @@
 .oaz-bc-current { color: #1e293b; font-weight: 600; }
 
 /* ── 상품 상단 (이미지 + 정보) ── */
-.oaz-prd-top { display: flex; gap: 36px; padding: 24px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 20px; }
+.oaz-prd-top { display: flex; flex-wrap: nowrap; gap: 36px; padding: 24px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; margin-bottom: 20px; }
+/* 브라우저 창이 1000px보다 좁아질 때만 이미지가 위, 정보가 아래로 쌓임 */
+@media (max-width: 1000px) {
+    .oaz-prd-top { flex-wrap: wrap; }
+}
 
-/* 이미지 영역 */
-.oaz-prd-thumb { width: 360px; flex-shrink: 0; }
-.oaz-prd-zoom { width: 360px; height: 360px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.oaz-prd-zoom img { max-width: 100%; max-height: 100%; object-fit: contain; }
+/* 이미지 영역 (고정폭이 아니라 비율 기반이라 좌측 사이드바가 있어도
+   1000px 구간까지 항상 정보 영역과 함께 한 줄에 들어맞음) */
+.oaz-prd-thumb { flex: 1 1 55%; max-width: 460px; }
+.oaz-prd-zoom { width: 100%; box-sizing: border-box; padding: 16px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; overflow: visible; }
+/*
+ * MakeShop 확대(zoom) 스크립트가 이미지를 감싸는 .zoomPad에 자바스크립트로
+ * style="width:11px" 를 직접 박아넣어서, 외부 CSS로 .oaz-prd-zoom을 아무리 키워도
+ * 실제 이미지 컨테이너는 11px로 눌려 있었다. 인라인 스타일을 이기려면 !important가
+ * 필요하다 (여기서는 정당한 예외). 확대 미리보기(.zoomWindow)가 잘리지 않도록
+ * overflow도 어디서든 clip하지 않는다.
+ */
+.oaz-prd-zoom .zoomPad {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+.oaz-prd-zoom .zoomPad img.detail_image {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 460px;
+    display: block;
+    margin: 0 auto;
+}
+.oaz-prd-zoom .zoomWatermark {
+    width: auto !important;
+    height: auto !important;
+    padding: 4px 10px !important;
+    border: none !important;
+    opacity: .75 !important;
+    background: rgba(255,255,255,.9) !important;
+    color: #64748b !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    white-space: nowrap;
+    text-align: left !important;
+    left: 8px !important;
+    bottom: 8px !important;
+}
+.oaz-prd-zoom .zoomWindow { border-color: #e2e8f0 !important; box-shadow: 0 8px 24px rgba(0,0,0,.15); }
 .oaz-prd-thumb-ctrl { margin-top: 10px; text-align: center; }
 .oaz-thumb-btn {
     display: inline-block; padding: 6px 16px; background: #f1f5f9;
@@ -31,9 +72,15 @@
 }
 .oaz-thumb-btn:hover { background: #e2e8f0; color: #1e293b; }
 
-/* 정보 영역 */
-.oaz-prd-info { flex: 1; min-width: 0; }
+/* 정보 영역
+ * form_product 태그가 만드는 <form>이 .oaz-prd-top의 실제 flex item이고
+ * .oaz-prd-info는 그 안의 손자 요소라서, flex 관련 속성은 form 쪽에 줘야 실제로 먹는다.
+ */
+.oaz-prd-top > form { flex: 1 1 45%; min-width: 200px; }
+.oaz-prd-info { width: 100%; }
 .oaz-prd-wish-wrap { text-align: right; margin-bottom: 8px; font-size: 13px; color: #64748b; }
+/* MakeShop이 관심상품 버튼 옆에 자동으로 붙이는 위시 카운트("0") 배지 숨김 */
+#MS_wish_count { display: none; }
 .oaz-prd-name { font-size: 20px; font-weight: 700; color: #1e293b; margin: 0 0 20px; line-height: 1.4; }
 .oaz-prd-icons { font-size: 12px; color: #2563eb; font-weight: 400; vertical-align: middle; }
 
@@ -41,7 +88,7 @@
 .oaz-prd-opts-tbl { width: 100%; border-collapse: collapse; border-top: 2px solid #1e293b; margin-bottom: 20px; }
 .oaz-prd-opts-tbl th,
 .oaz-prd-opts-tbl td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; text-align: left; vertical-align: middle; }
-.oaz-prd-opts-tbl th { background: #f8fafc; color: #64748b; font-weight: 600; white-space: nowrap; width: 90px; }
+.oaz-prd-opts-tbl th { background: #f8fafc; color: #64748b; font-weight: 600; white-space: normal; word-break: keep-all; width: 110px; }
 .oaz-prd-opts-tbl td { color: #334155; }
 .oaz-price-consumer { color: #94a3b8; font-size: 12px; }
 .oaz-price-row th { color: #1e293b; font-weight: 700; }
@@ -114,9 +161,25 @@
 #MK_innerOptWrap #MK_innerOpt_01 li .MK_p-name { margin-right: 140px; }
 #MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl { width: 50px; top: 3px; right: 90px; }
 #MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl input.MK_count { width: 30px; height: 20px; text-align: center; }
-#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a { position: absolute; right: 0; font-size: 0; line-height: 0; }
+/* 수량 증가/감소 버튼: MakeShop이 넣는 basket_up.gif/basket_down.gif 이미지는
+   숨기고 CSS 삼각형 화살표로 대체 */
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a {
+    position: absolute; right: 0; width: 16px; height: 9px;
+    background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 2px;
+    text-decoration: none;
+}
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a:hover { background: #e2e8f0; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a img { display: none; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a::before {
+    content: ""; display: block; margin: 3px auto 0; width: 0; height: 0;
+    border-left: 3px solid transparent; border-right: 3px solid transparent;
+}
 #MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-up { top: 2px; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-up::before { border-bottom: 4px solid #64748b; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-up:hover::before { border-bottom-color: #2563eb; }
 #MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-dw { top: 12px; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-dw::before { border-top: 4px solid #64748b; margin-top: 2px; }
+#MK_innerOptWrap #MK_innerOpt_01 li .MK_qty-ctrl a.MK_btn-dw:hover::before { border-top-color: #2563eb; }
 #MK_innerOptWrap #MK_innerOpt_02 li .MK_p-name { margin-right: 80px; }
 #MK_innerOptTotal { padding: 10px; font-size: 13px; color: #334155; text-align: right; background: #f8fafc; }
 #MK_innerOptTotal .MK_total { color: #2563eb; font-weight: 700; }
@@ -164,21 +227,6 @@
 .oaz-info-table td { padding: 9px 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; text-align: left; vertical-align: top; }
 .oaz-info-table th { background: #f8fafc; color: #64748b; font-weight: 600; width: 190px; }
 .oaz-coupon-item { padding: 12px 0; }
-
-/* ── 관련 상품 ── */
-.oaz-prd-grid { display: grid; gap: 16px; }
-.oaz-prd-grid-3 { grid-template-columns: repeat(3, 1fr); }
-.oaz-prd-card { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
-.oaz-prd-img-wrap { display: block; aspect-ratio: 1; overflow: hidden; background: #f8fafc; }
-.oaz-prd-img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
-.oaz-prd-card:hover .oaz-prd-img { transform: scale(1.04); }
-.oaz-prd-body { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
-.oaz-prd-title { font-size: 13px; color: #334155; line-height: 1.4; margin: 0; }
-.oaz-prd-price { font-size: 14px; font-weight: 700; color: #2563eb; margin: 4px 0 0; }
-.oaz-prd-discount { font-size: 11px; color: #ef4444; margin: 0; }
-.oaz-prd-opt-row { font-size: 12px; color: #94a3b8; margin: 0; }
-.oaz-prd-qty { margin-top: 8px; }
-.oaz-related-basket { margin-top: 20px; text-align: center; }
 
 /* ── 리뷰 작성 폼 ── */
 .oaz-review-write { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin-bottom: 20px; }

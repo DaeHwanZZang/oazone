@@ -9,10 +9,10 @@
 
                     <nav class="oaz-breadcrumb">
                         <a href="/">홈</a>
-                        <!--/if_cate1_name/--> <span class="oaz-bc-sep">›</span> <a href="<!--/link_cate1/-->"><!--/cate1_name/--></a><!--/end_if/-->
-                        <!--/if_cate2_name/--> <span class="oaz-bc-sep">›</span> <a href="<!--/link_cate2/-->"><!--/cate2_name/--></a><!--/end_if/-->
-                        <!--/if_cate3_name/--> <span class="oaz-bc-sep">›</span> <a href="<!--/link_cate3/-->"><!--/cate3_name/--></a><!--/end_if/-->
-                        <span class="oaz-bc-sep">›</span> <span class="oaz-bc-current"><!--/name/--></span>
+                        <!--/if_cate1_name/--> <span class="oaz-bc-sep">&rsaquo;</span> <a href="<!--/link_cate1/-->"><!--/cate1_name/--></a><!--/end_if/-->
+                        <!--/if_cate2_name/--> <span class="oaz-bc-sep">&rsaquo;</span> <a href="<!--/link_cate2/-->"><!--/cate2_name/--></a><!--/end_if/-->
+                        <!--/if_cate3_name/--> <span class="oaz-bc-sep">&rsaquo;</span> <a href="<!--/link_cate3/-->"><!--/cate3_name/--></a><!--/end_if/-->
+                        <span class="oaz-bc-sep">&rsaquo;</span> <span class="oaz-bc-current"><!--/name/--></span>
                     </nav>
 
                     <!-- ★ 상품 상단: 이미지 + 옵션 -->
@@ -30,7 +30,7 @@
                             <h2 class="oaz-prd-name"><!--/name/--> <span class="oaz-prd-icons"><!--/icons/--></span></h2>
 
                             <table class="oaz-prd-opts-tbl">
-                                <colgroup><col width="90" /><col width="*" /></colgroup>
+                                <colgroup><col width="110" /><col width="*" /></colgroup>
                                 <tbody>
                                     <!--/if_price_consumer(+1)/-->
                                     <tr>
@@ -167,8 +167,6 @@
                     <!-- ★ 탭 네비게이션 -->
                     <nav class="oaz-detail-tabs">
                         <a href="#tab-detail" class="oaz-tab-link active">상품상세</a>
-                        <a href="#tab-info" class="oaz-tab-link">상품정보</a>
-                        <a href="#tab-related" class="oaz-tab-link">관련상품</a>
                         <a href="#tab-review" class="oaz-tab-link">리뷰</a>
                         <a href="#tab-qna" class="oaz-tab-link">상품문의</a>
                         <a href="#tab-photorev" class="oaz-tab-link">포토후기</a>
@@ -221,10 +219,8 @@
                             <p class="oaz-size-note">* 상품사이즈 치수는 재는 방법과 위치에 따라 1~3cm 오차가 있을 수 있습니다.</p>
                         </div>
                         <!--/end_if/-->
-                    </div>
 
-                    <!-- ★ 상품 정보 -->
-                    <div id="tab-info" class="oaz-section">
+                        <!-- 상품 정보 (상품상세 탭에 통합) -->
                         <!--/if_product_info_list/-->
                         <div class="oaz-section-hd">
                             <h3 class="oaz-section-title">상품 정보</h3>
@@ -258,49 +254,6 @@
                         <!--/malltb/-->
                         <!--/end_if/-->
                     </div>
-
-                    <!-- ★ 관련 상품 -->
-                    <!--/if_related_product/-->
-                    <!--/form_related_product/-->
-                    <div id="tab-related" class="oaz-section">
-                        <div class="oaz-section-hd">
-                            <h3 class="oaz-section-title">관련 상품</h3>
-                        </div>
-                        <div class="oaz-prd-grid oaz-prd-grid-3">
-                            <!--/loop_related_product(6)/-->
-                            <div class="oaz-prd-card">
-                                <a href="<!--/related_product@link/-->" class="oaz-prd-img-wrap">
-                                    <img src="<!--/related_product@image_s/-->" alt="<!--/related_product@name/-->" class="oaz-prd-img" />
-                                </a>
-                                <div class="oaz-prd-body">
-                                    <p class="oaz-prd-title"><!--/related_product@checkbox/--><!--/related_product@name/--> <!--/related_product@subname/--></p>
-                                    <p class="oaz-prd-price">
-                                        <!--/if_related_product@price_replace/-->
-                                        <!--/related_product@price_replace/-->
-                                        <!--/else/-->
-                                        <!--/number/related_product@price_sell/-->원
-                                        <!--/end_if/-->
-                                    </p>
-                                    <!--/if_related_product@discount_price_difference/--><p class="oaz-prd-discount">할인 금액 : <!--/related_product@discount_price_difference/--></p><!--/end_if/-->
-                                    <!--/if_related_product@discount_info/--><p class="oaz-prd-discount"><!--/related_product@discount_info/--></p><!--/end_if/-->
-                                    <!--/if_related_product@option/-->
-                                    <!--/loop_related_product@option/-->
-                                    <p class="oaz-prd-opt-row"><!--/if_related_product@option@title/--><!--/related_product@option@title/--> : <!--/end_if/--><!--/if_related_product@option@select/--><!--/related_product@option@select/--><!--/end_if/--></p>
-                                    <!--/end_loop/-->
-                                    <!--/end_if/-->
-                                    <div class="oaz-prd-qty"><!--/related_product@input_quantity/--></div>
-                                </div>
-                            </div>
-                            <!--/end_loop/-->
-                        </div>
-                        <!--/if_link_related_basket/-->
-                        <div class="oaz-related-basket">
-                            <a href="<!--/link_related_basket/-->" class="oaz-btn-cart">선택 상품 장바구니 담기</a>
-                        </div>
-                        <!--/end_if/-->
-                    </div>
-                    <!--/end_form/-->
-                    <!--/end_if/-->
 
                     <!-- ★ 리뷰 작성 + 리뷰 목록 -->
                     <!--/if_input_review_writer/-->
@@ -655,7 +608,7 @@
     <div id="sizeChart" class="oaz-size-chart-layer size-chart-box">
         <div class="oaz-scl-hd">
             <h4>Item size chart 사이즈 기준표</h4>
-            <a href="javascript:;" class="oaz-scl-close btn-close-layer">✕</a>
+            <a href="javascript:;" class="oaz-scl-close btn-close-layer">&times;</a>
         </div>
         <div class="oaz-scl-body size-chart-cont">
             <!--/if_size_chart_type(IMG)/-->
